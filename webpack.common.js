@@ -18,6 +18,10 @@ export default {
     module: {
         rules: [
             {
+                test: /\.html$/i, // 👈 New rule for HTML files
+                loader: 'html-loader'
+            },
+            {
                 test: /\.css$/i,
                 use: ['style-loader', 'css-loader']
             },
