@@ -329,6 +329,10 @@ main {
             font-size: min(3vw, 2rem);
         }
     }
+
+    .hero-text {
+        gap: 1.5rem;
+    }
 }
 
 /*  
