@@ -264,6 +264,7 @@ header {
 main {
     max-width: 75em;
     margin: 0 auto;
+    height: 2000px;
 }
 
 /*  
@@ -271,6 +272,20 @@ main {
              HERO SECTION         
 ======================================
 */
+
+.random-and-eris-hero {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+    padding: 20px;
+}
+
+@media screen and (min-width: 48em) {
+    .random-and-eris-hero {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 20px;
+    }
+}
 
 /*  
 ======================================
