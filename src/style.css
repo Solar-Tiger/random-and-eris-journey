@@ -277,13 +277,57 @@ main {
     display: grid;
     grid-template-columns: 1fr;
     row-gap: 20px;
-    padding: 20px;
+    padding: 10px;
+}
+
+.hero-text {
+    display: grid;
+    align-content: space-evenly;
+    gap: 2rem;
+
+    h1,
+    p,
+    a {
+        text-align: center;
+    }
+
+    & h1 {
+        font-size: min(9vw, 4.5rem);
+    }
+
+    & p {
+        font-size: min(8vw, 3rem);
+    }
+
+    & a {
+        justify-self: center;
+        text-decoration: none;
+        color: #ffffffdc;
+        background-color: var(--lighter-orange);
+        padding: max(2.4vw, 10px) max(2.8vw, 16px);
+        font-size: min(5vw, 2rem);
+        border: none;
+        border-radius: var(--button-card-border-radius);
+    }
 }
 
 @media screen and (min-width: 48em) {
     .random-and-eris-hero {
         grid-template-columns: repeat(2, 1fr);
-        column-gap: 20px;
+        column-gap: 10px;
+
+        & h1 {
+            font-size: min(4vw, 3rem);
+        }
+
+        & p {
+            font-size: min(3.5vw, 2.5rem);
+        }
+
+        & a {
+            padding: min(2.4vw, 10px) min(2.8vw, 16px);
+            font-size: min(3vw, 2rem);
+        }
     }
 }
 
