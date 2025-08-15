@@ -278,6 +278,10 @@ main {
     grid-template-columns: 1fr;
     row-gap: 20px;
     padding: 10px;
+
+    & img {
+        border-radius: 50%;
+    }
 }
 
 .hero-text {
