@@ -89,6 +89,10 @@ header {
     & .audioengine-logo {
         width: min(47vw, 222px);
     }
+
+    & a {
+        margin: auto;
+    }
 }
 
 @media screen and (min-width: 63.125em) {
@@ -98,6 +102,10 @@ header {
 
         & .audioengine-logo {
             padding: 13px 0;
+        }
+
+        & a {
+            margin: 0;
         }
     }
 }
