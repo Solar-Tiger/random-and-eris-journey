@@ -31,7 +31,7 @@ document.body.addEventListener('click', (e) => {
     }
 });
 
-// IF USER OPEN NAV MENU AND THE SCREEN GOES TOO WIDE AND THEY SCROLL, THIS RESETS EVERYTHING IF THE SCREEN GOES SHRINKS
+// IF USER OPEN NAV MENU AND THE SCREEN GOES TOO WIDE AND THEY SCROLL, THIS RESETS EVERYTHING IF THE SCREEN SHRINKS AGAIN
 
 window.addEventListener('resize', () => {
     if (
@@ -41,5 +41,20 @@ window.addEventListener('resize', () => {
     ) {
         // window.scrollTo(0, 0);
         window.scrollTo(0, 0);
+    }
+});
+
+// APPLY MOBILE OR DESKTOP NAV MENU DEPENDING ON SCREEN SIZE
+
+window.addEventListener('resize', () => {
+    if (
+        window.innerWidth <= 1010 &&
+        !mobileNavMenu.classList.contains('mobile-nav-menu')
+    ) {
+        mobileNavMenu.classList.remove('desktop-nav-menu');
+        mobileNavMenu.classList.add('mobile-nav-menu');
+    } else if (window.innerWidth >= 1010) {
+        mobileNavMenu.classList.remove('mobile-nav-menu');
+        mobileNavMenu.classList.add('desktop-nav-menu');
     }
 });
