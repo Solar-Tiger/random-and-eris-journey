@@ -53,7 +53,28 @@ window.addEventListener('resize', () => {
     ) {
         mobileNavMenu.classList.remove('desktop-nav-menu');
         mobileNavMenu.classList.add('mobile-nav-menu');
-    } else if (window.innerWidth >= 1010) {
+    } else if (
+        window.innerWidth >= 1010 &&
+        !mobileNavMenu.classList.contains('desktop-nav-menu')
+    ) {
+        mobileNavMenu.classList.remove('mobile-nav-menu');
+        mobileNavMenu.classList.add('desktop-nav-menu');
+    }
+});
+
+// LOAD PROPER NAV MENU WHEN PAGE LOADS
+
+window.addEventListener('load', () => {
+    if (
+        window.innerWidth <= 1010 &&
+        !mobileNavMenu.classList.contains('mobile-nav-menu')
+    ) {
+        mobileNavMenu.classList.remove('desktop-nav-menu');
+        mobileNavMenu.classList.add('mobile-nav-menu');
+    } else if (
+        window.innerWidth >= 1010 &&
+        !mobileNavMenu.classList.contains('desktop-nav-menu')
+    ) {
         mobileNavMenu.classList.remove('mobile-nav-menu');
         mobileNavMenu.classList.add('desktop-nav-menu');
     }
