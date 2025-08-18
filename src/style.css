@@ -48,7 +48,7 @@ body {
 
 /* USED FOR MOBILE NAV MENU TO KEEP PAGE FROM SCROLLING */
 
-@media screen and (max-width: 63.063em) {
+@media screen and (max-width: 63.125em) {
     .overflow-body--hidden {
         overflow: hidden;
     }
@@ -94,6 +94,7 @@ header {
 @media screen and (min-width: 63.125em) {
     header {
         padding: 0 20px;
+        flex-direction: row-reverse;
 
         & .audioengine-logo {
             padding: 13px 0;
@@ -126,7 +127,6 @@ header {
     display: flex;
     list-style-type: none;
     width: 647px;
-    padding-right: 22px;
 
     & li {
         height: 60px;
@@ -178,6 +178,7 @@ header {
     right: 24px;
     top: 24px;
     width: 2rem;
+    cursor: pointer;
 }
 
 /* STYLES FOR MOBILE NAV */
