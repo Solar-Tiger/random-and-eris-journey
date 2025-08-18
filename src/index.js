@@ -35,7 +35,7 @@ document.body.addEventListener('click', (e) => {
 
 window.addEventListener('resize', () => {
     if (
-        window.innerWidth <= 1010 &&
+        window.innerWidth <= 920 &&
         window.scrollY !== 0 &&
         documentBody.classList.contains('overflow-body--hidden')
     ) {
@@ -58,13 +58,13 @@ window.addEventListener('load', () => {
 
 function changeToCorrectNavMenu() {
     if (
-        window.innerWidth <= 1010 &&
+        window.innerWidth < 920 &&
         !mobileNavMenu.classList.contains('mobile-nav-menu')
     ) {
         mobileNavMenu.classList.remove('desktop-nav-menu');
         mobileNavMenu.classList.add('mobile-nav-menu');
     } else if (
-        window.innerWidth >= 1010 &&
+        window.innerWidth >= 920 &&
         !mobileNavMenu.classList.contains('desktop-nav-menu')
     ) {
         mobileNavMenu.classList.remove('mobile-nav-menu');
