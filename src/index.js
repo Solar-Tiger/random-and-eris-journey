@@ -47,24 +47,16 @@ window.addEventListener('resize', () => {
 // APPLY MOBILE OR DESKTOP NAV MENU DEPENDING ON SCREEN SIZE
 
 window.addEventListener('resize', () => {
-    if (
-        window.innerWidth <= 1010 &&
-        !mobileNavMenu.classList.contains('mobile-nav-menu')
-    ) {
-        mobileNavMenu.classList.remove('desktop-nav-menu');
-        mobileNavMenu.classList.add('mobile-nav-menu');
-    } else if (
-        window.innerWidth >= 1010 &&
-        !mobileNavMenu.classList.contains('desktop-nav-menu')
-    ) {
-        mobileNavMenu.classList.remove('mobile-nav-menu');
-        mobileNavMenu.classList.add('desktop-nav-menu');
-    }
+    changeToCorrectNavMenu();
 });
 
 // LOAD PROPER NAV MENU WHEN PAGE LOADS
 
 window.addEventListener('load', () => {
+    changeToCorrectNavMenu();
+});
+
+function changeToCorrectNavMenu() {
     if (
         window.innerWidth <= 1010 &&
         !mobileNavMenu.classList.contains('mobile-nav-menu')
@@ -78,4 +70,4 @@ window.addEventListener('load', () => {
         mobileNavMenu.classList.remove('mobile-nav-menu');
         mobileNavMenu.classList.add('desktop-nav-menu');
     }
-});
+}
