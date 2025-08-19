@@ -453,44 +453,22 @@ main {
         display: none;
     }
 
-    & h2 {
-        font-size: min(12vw, 4.5rem);
-        font-weight: 500;
-    }
-
     & h2,
-    p,
-    a {
+    p {
         color: white;
     }
 
-    & h2,
-    a {
-        text-transform: uppercase;
-    }
-
-    & p,
-    a {
+    & h2 {
+        font-size: min(12vw, 4.5rem);
         font-weight: 500;
+        text-transform: uppercase;
     }
 
     & p {
         font-size: min(6vw, 2.2rem);
         text-align: center;
         line-height: 1.45;
-    }
-
-    & a {
-        text-decoration: none;
-        background-color: var(--lighter-orange);
-        padding: clamp(7px, 2.4vw, 14.5px) clamp(12px, 4vw, 24px);
-        font-size: min(4.5vw, 1.4rem);
-        border: none;
-        border-radius: var(--button-card-border-radius);
-    }
-
-    & a:hover {
-        transform: var(--button-scale-size);
+        font-weight: 500;
     }
 }
 
@@ -515,11 +493,6 @@ main {
         p {
             font-size: min(4vw, 2.2rem);
             margin-bottom: 1.4rem;
-        }
-
-        & a {
-            font-size: min(3vw, 1.6rem);
-            margin-bottom: 1.1rem;
         }
     }
 }
