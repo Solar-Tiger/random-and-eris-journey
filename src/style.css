@@ -356,12 +356,12 @@ main {
 
 /* STYLES FOR BEST SELLERS */
 
-.best-sellers {
+.our-shared-adventures {
     background-color: #747474;
     padding-bottom: 48px;
 }
 
-.best-sellers h2 {
+.our-shared-adventures h2 {
     text-align: center;
     font-size: min(8vw, 2.5rem);
     font-weight: 300;
@@ -369,12 +369,12 @@ main {
 }
 
 @media screen and (min-width: 48em) {
-    .best-sellers h2 {
+    .our-shared-adventures h2 {
         padding: 60px 0 80px;
     }
 }
 
-.current-best-sellers {
+.our-shared-adventures ul {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -389,7 +389,7 @@ main {
     }
 
     & li img {
-        width: min(60vw, 17rem);
+        width: min(60vw, 18rem);
     }
 
     & li h3 {
