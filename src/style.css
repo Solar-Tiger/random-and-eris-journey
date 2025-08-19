@@ -421,6 +421,142 @@ main {
 
 /*  
 ======================================
+           OUR STORY SECTION         
+======================================
+*/
+
+/* STYLES FOR OUR STORY IMAGE */
+
+.our-story {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & picture {
+        z-index: -10;
+    }
+}
+
+/* STYLES FOR OUR STORY IMAGE CARD */
+
+.our-story-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    gap: 4vw;
+    width: min(91vw, 33rem);
+    aspect-ratio: 1 / 1;
+
+    & br:last-child {
+        display: none;
+    }
+
+    & h2 {
+        font-size: min(12vw, 4.5rem);
+        font-weight: 500;
+    }
+
+    & h2,
+    p,
+    a {
+        color: white;
+    }
+
+    & h2,
+    a {
+        text-transform: uppercase;
+    }
+
+    & p,
+    a {
+        font-weight: 500;
+    }
+
+    & p {
+        font-size: min(6vw, 2.2rem);
+        text-align: center;
+        line-height: 1.45;
+    }
+
+    & a {
+        text-decoration: none;
+        background-color: var(--lighter-orange);
+        padding: clamp(7px, 2.4vw, 14.5px) clamp(12px, 4vw, 24px);
+        font-size: min(4.5vw, 1.4rem);
+        border: none;
+        border-radius: var(--button-card-border-radius);
+    }
+
+    & a:hover {
+        transform: var(--button-scale-size);
+    }
+}
+
+/* STYLES FOR TABLET OUR STORY CARD TABLET */
+
+@media screen and (min-width: 38em) {
+    .our-story-card {
+        justify-content: center;
+        gap: 2vw;
+        width: min(95vw, 52.5rem);
+        height: 17.8rem;
+
+        & br {
+            display: block;
+        }
+
+        & h2 {
+            font-size: min(8vw, 4.5rem);
+            margin: -16px 0 6px;
+        }
+
+        p {
+            font-size: min(4vw, 2.2rem);
+            margin-bottom: 1.4rem;
+        }
+
+        & a {
+            font-size: min(3vw, 1.6rem);
+            margin-bottom: 1.1rem;
+        }
+    }
+}
+
+/* STYLES FOR DESKTOP OUR STORY CARD DESKTOP */
+
+@media screen and (min-width: 64em) {
+    .our-story-card {
+        justify-content: center;
+        gap: 0.5rem;
+        padding: 30px 36px 0 44px;
+        width: min(69vw, 42.5rem);
+        height: 17.8rem;
+
+        & br {
+            display: block;
+        }
+
+        & h2 {
+            font-size: min(6vw, 3.9rem);
+            padding-top: 6px;
+        }
+
+        p {
+            font-size: min(2.5vw, 1.55rem);
+            margin-bottom: 1.6rem;
+        }
+
+        & a {
+            font-size: min(1.8vw, 1.2rem);
+            margin-bottom: 1.1rem;
+        }
+    }
+}
+
+/*  
+======================================
                 FOOTER     
 ======================================
 */
