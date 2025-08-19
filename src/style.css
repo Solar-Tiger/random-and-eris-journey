@@ -273,7 +273,6 @@ header {
 main {
     max-width: 75em;
     margin: 0 auto;
-    height: 2000px;
 }
 
 /*  
@@ -287,6 +286,7 @@ main {
     grid-template-columns: 1fr;
     row-gap: 20px;
     padding: 10px;
+    background-color: #666666;
 
     & img {
         border-radius: 50%;
@@ -345,6 +345,77 @@ main {
 
     .hero-text {
         gap: 1.5rem;
+    }
+}
+
+/*  
+======================================
+      BEST SELLERS SECTION     
+======================================
+*/
+
+/* STYLES FOR BEST SELLERS */
+
+.best-sellers {
+    background-color: #747474;
+    padding-bottom: 48px;
+}
+
+.best-sellers h2 {
+    text-align: center;
+    font-size: min(8vw, 2.5rem);
+    font-weight: 300;
+    padding: 40px 0 50px;
+}
+
+@media screen and (min-width: 48em) {
+    .best-sellers h2 {
+        padding: 60px 0 80px;
+    }
+}
+
+.current-best-sellers {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5.5rem;
+    list-style-type: none;
+    padding: 0 24px;
+
+    & li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    & li img {
+        width: min(60vw, 17rem);
+    }
+
+    & li h3 {
+        text-align: center;
+        font-weight: 300;
+        margin: 0.69rem 0 1.95rem;
+        font-size: 1.33rem;
+        text-wrap: auto;
+        width: 15rem;
+        line-height: 1.4;
+    }
+
+    & li a {
+        text-decoration: none;
+        color: white;
+        background-color: var(--lighter-orange);
+        border: none;
+        border-radius: var(--button-card-border-radius);
+        padding: clamp(10px, 2.4vw, 14.8px) clamp(12px, 2.8vw, 22px);
+        margin-top: auto;
+        font-size: min(4.5vw, 1.2rem);
+        font-weight: 500;
+    }
+
+    & li a:hover {
+        transform: var(--button-scale-size);
     }
 }
 
