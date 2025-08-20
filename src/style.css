@@ -456,6 +456,7 @@ main {
     & h2,
     p {
         color: white;
+        text-align: center;
     }
 
     & h2 {
@@ -466,7 +467,6 @@ main {
 
     & p {
         font-size: min(6vw, 2.2rem);
-        text-align: center;
         line-height: 1.45;
         font-weight: 500;
     }
