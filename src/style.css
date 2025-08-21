@@ -75,7 +75,7 @@ body {
 
 /* STYLES FOR HEADER. THE max-width KEEPS THE CONTENT FROM EXPANDING */
 
-header {
+.random-and-eris-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -86,7 +86,7 @@ header {
     margin: 0 auto;
     z-index: 10;
 
-    & .audioengine-logo {
+    & .random-and-eris-logo {
         width: min(47vw, 222px);
     }
 
@@ -96,11 +96,11 @@ header {
 }
 
 @media screen and (min-width: 57.5em) {
-    header {
+    .random-and-eris-header {
         padding: 0 20px;
         flex-direction: row-reverse;
 
-        & .audioengine-logo {
+        & .random-and-eris-logo {
             padding: 13px 0;
         }
 
@@ -293,7 +293,7 @@ main {
     }
 }
 
-.hero-text {
+.random-and-eris-hero-text {
     display: grid;
     align-content: space-evenly;
     gap: 2rem;
@@ -343,7 +343,7 @@ main {
         }
     }
 
-    .hero-text {
+    .random-and-eris-hero-text {
         gap: 1.5rem;
     }
 }
@@ -566,6 +566,115 @@ main {
         & a {
             font-size: min(1.8vw, 1.2rem);
             margin-bottom: 1.1rem;
+        }
+    }
+}
+
+/*  
+======================================
+            ALL NEW SECTION         
+======================================
+*/
+
+/* STYLES FOR ALL NEW HERO IMAGE */
+
+.all-new-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    & picture {
+        z-index: -10;
+    }
+}
+
+/* STYLES FOR ALL NEW HERO IMAGE CARD */
+
+.all-new-section-card::before {
+    content: '';
+    background-color: #000000b7;
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.7;
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: var(--button-card-border-radius);
+}
+
+.all-new-section-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    width: 54vw;
+    aspect-ratio: 1 / 1.35;
+
+    & h2 {
+        font-size: min(10vw, 4.2rem);
+        font-weight: 400;
+    }
+
+    & h2,
+    p {
+        color: white;
+    }
+
+    & h2,
+    a {
+        text-transform: uppercase;
+    }
+
+    & p {
+        font-weight: 300;
+        font-size: min(7.2vw, 2.55rem);
+        text-wrap: wrap;
+        text-align: center;
+        margin-bottom: min(2.4vw, 1.8rem);
+    }
+
+    & a {
+        text-decoration: none;
+        color: var(--gray-font-color);
+        background-color: white;
+        padding: min(2.2vw, 20px) min(4.9vw, 36px);
+        font-size: min(4.9vw, 1.3rem);
+        border: none;
+        border-radius: var(--button-card-border-radius);
+    }
+
+    & a:hover {
+        transform: var(--button-scale-size);
+    }
+}
+
+/* STYLES FOR DESKTOP ALL NEW HERO CARD */
+
+@media screen and (min-width: 48em) {
+    .all-new-section-card::before {
+        border-radius: 0;
+    }
+
+    .all-new-section-card {
+        justify-content: center;
+        align-items: flex-start;
+        gap: 0.4rem;
+        right: 0;
+        padding-left: 44px;
+        width: 32.2rem;
+        height: 18rem;
+        transform: translate(0, -6px);
+
+        p {
+            text-align: left;
+        }
+
+        & a {
+            padding: 16px 24.5px 13px;
+            font-size: min(2vw, 1.2rem);
+            font-weight: 500;
         }
     }
 }
