@@ -509,14 +509,14 @@ main {
 
 .our-shared-adventures {
     background-color: #747474;
-    padding-bottom: 48px;
+    padding-bottom: 36px;
 }
 
 .our-shared-adventures h2 {
     text-align: center;
     font-size: min(8vw, 2.5rem);
     font-weight: 600;
-    padding: 40px 0 50px;
+    padding: 30px 0;
 }
 
 @media screen and (min-width: 48em) {
@@ -572,44 +572,27 @@ main {
 
 /*  
 ======================================
- OUR BINGE WATCHING ADVENTURE SECTION         
+ OUR BINGE WATCHING ESCAPE SECTION         
 ======================================
 */
 
-/* STYLES FOR OUR BINGE WATCHING ADVENTURE IMAGE */
+/* STYLES FOR OUR BINGE WATCHING ESCAPE IMAGE */
 
 .our-binge-watching-escape {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-
-    & picture {
-        z-index: -10;
-    }
+    background-color: #747474;
 }
 
-/* STYLES FOR OUR BINGE WATCHING ADVENTURE IMAGE CARD */
+/* STYLES FOR OUR BINGE WATCHING ESCAPE IMAGE CARD */
 
 .our-binge-watching-escape-card {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    position: absolute;
-    width: 54vw;
-    aspect-ratio: 1 / 1.35;
-    z-index: 100;
-    background-color: rgba(71, 71, 71, 0.5);
+    gap: 0.4rem;
+    padding: 10px 9px 24px 30px;
 
     & h2 {
-        font-size: min(10vw, 4.2rem);
-        font-weight: 400;
-    }
-
-    & h2,
-    p {
-        color: white;
+        font-size: min(8vw, 2.5rem);
+        font-weight: 600;
     }
 
     & h2,
@@ -619,18 +602,18 @@ main {
 
     & p {
         font-weight: 300;
-        font-size: min(7.2vw, 2.55rem);
+        font-size: min(6vw, 2rem);
         text-wrap: wrap;
-        text-align: center;
         margin-bottom: min(2.4vw, 1.8rem);
     }
 
     & a {
+        align-self: flex-start;
         text-decoration: none;
         color: var(--gray-font-color);
         background-color: white;
         padding: min(2.2vw, 20px) min(4.9vw, 36px);
-        font-size: min(4.9vw, 1.3rem);
+        font-size: min(4vw, 1.2rem);
         border: none;
         border-radius: var(--button-card-border-radius);
     }
@@ -640,9 +623,28 @@ main {
     }
 }
 
-/* STYLES FOR DESKTOP OUR BINGE WATCHING ADVENTURE CARD */
+/* STYLES FOR DESKTOP */
 
 @media screen and (min-width: 48em) {
+    /* STYLES FOR OUR BINGE WATCHING ESCAPE IMAGE */
+
+    .our-binge-watching-escape {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        & picture {
+            z-index: -10;
+        }
+    }
+
+    /* STYLES FOR OUR BINGE WATCHING ESCAPE CARD */
+
+    .our-binge-watching-escape {
+        z-index: 100;
+    }
+
     .our-binge-watching-escape-card::before {
         border-radius: 0;
     }
@@ -651,19 +653,28 @@ main {
         justify-content: center;
         align-items: flex-start;
         gap: 0.4rem;
-        right: 0;
-        padding-left: 44px;
-        width: 32.2rem;
-        /* height: 18rem; */
-        transform: translate(0, -6px);
+        position: absolute;
+        left: 7rem;
+        width: 26rem;
+        background-color: rgba(71, 71, 71, 0.9);
+
+        & h2,
+        p {
+            color: white;
+        }
+
+        h2 {
+            font-size: 2rem;
+        }
 
         p {
             text-align: left;
+            font-size: 1.5rem;
         }
 
         & a {
-            padding: 16px 24.5px 13px;
-            font-size: min(2vw, 1.2rem);
+            padding: 10px 20px;
+            font-size: min(2vw, 1.1rem);
             font-weight: 500;
         }
     }
