@@ -277,7 +277,7 @@ main {
 
 /*  
 ======================================
-             HERO SECTION         
+     RANDOM AND ERIS HERO SECTION         
 ======================================
 */
 
@@ -350,11 +350,11 @@ main {
 
 /*  
 ======================================
-      BEST SELLERS SECTION     
+    OUR SHARED ADVENTURES SECTION     
 ======================================
 */
 
-/* STYLES FOR BEST SELLERS */
+/* STYLES FOROUR SHARED ADVENTURES */
 
 .our-shared-adventures {
     background-color: #747474;
@@ -364,7 +364,7 @@ main {
 .our-shared-adventures h2 {
     text-align: center;
     font-size: min(8vw, 2.5rem);
-    font-weight: 300;
+    font-weight: 600;
     padding: 40px 0 50px;
 }
 
@@ -394,7 +394,7 @@ main {
 
     & li h3 {
         text-align: center;
-        font-weight: 300;
+        font-weight: 400;
         margin: 0.69rem 0 1.95rem;
         font-size: 1.33rem;
         text-wrap: auto;
@@ -421,7 +421,7 @@ main {
 
 /*  
 ======================================
-           OUR STORY SECTION         
+     OUR FATEFUL ENCOUNTER SECTION         
 ======================================
 */
 
@@ -572,13 +572,13 @@ main {
 
 /*  
 ======================================
-            ALL NEW SECTION         
+ OUR BINGE WATCHING ADVENTURE SECTION         
 ======================================
 */
 
-/* STYLES FOR ALL NEW HERO IMAGE */
+/* STYLES FOR OUR BINGE WATCHING ADVENTURE IMAGE */
 
-.all-new-section {
+.our-binge-watching-escape {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -589,20 +589,9 @@ main {
     }
 }
 
-.all-new-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(71, 71, 71, 0.5);
-    z-index: 10;
-}
+/* STYLES FOR OUR BINGE WATCHING ADVENTURE IMAGE CARD */
 
-/* STYLES FOR ALL NEW HERO IMAGE CARD */
-
-.all-new-section-card {
+.our-binge-watching-escape-card {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -611,6 +600,7 @@ main {
     width: 54vw;
     aspect-ratio: 1 / 1.35;
     z-index: 100;
+    background-color: rgba(71, 71, 71, 0.5);
 
     & h2 {
         font-size: min(10vw, 4.2rem);
@@ -650,21 +640,21 @@ main {
     }
 }
 
-/* STYLES FOR DESKTOP ALL NEW HERO CARD */
+/* STYLES FOR DESKTOP OUR BINGE WATCHING ADVENTURE CARD */
 
 @media screen and (min-width: 48em) {
-    .all-new-section-card::before {
+    .our-binge-watching-escape-card::before {
         border-radius: 0;
     }
 
-    .all-new-section-card {
+    .our-binge-watching-escape-card {
         justify-content: center;
         align-items: flex-start;
         gap: 0.4rem;
         right: 0;
         padding-left: 44px;
         width: 32.2rem;
-        height: 18rem;
+        /* height: 18rem; */
         transform: translate(0, -6px);
 
         p {
