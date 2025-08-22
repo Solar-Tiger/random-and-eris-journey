@@ -420,7 +420,7 @@ main {
     }
 
     & p {
-        font-size: min(5vw, 2.2rem);
+        font-size: min(4.8vw, 2.2rem);
         line-height: 1.45;
     }
 
