@@ -296,7 +296,7 @@ main {
 .random-and-eris-hero-text {
     display: grid;
     align-content: space-evenly;
-    gap: 2rem;
+    gap: 1.2rem;
 
     h1,
     p,
@@ -509,19 +509,19 @@ main {
 
 .our-shared-adventures {
     background-color: #747474;
-    padding-bottom: 36px;
+    padding-bottom: 60px;
 }
 
 .our-shared-adventures h2 {
     text-align: center;
-    font-size: min(8vw, 2.5rem);
+    font-size: min(7vw, 2.5rem);
     font-weight: 600;
     padding: 30px 0;
 }
 
 @media screen and (min-width: 48em) {
     .our-shared-adventures h2 {
-        padding: 60px 0 80px;
+        padding: 40px;
     }
 }
 
@@ -529,7 +529,7 @@ main {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 5.5rem;
+    gap: 4rem;
     list-style-type: none;
     padding: 0 24px;
 
@@ -546,8 +546,8 @@ main {
     & li h3 {
         text-align: center;
         font-weight: 400;
-        margin: 0.69rem 0 1.95rem;
-        font-size: 1.33rem;
+        margin: 0.69rem 0 1.2rem;
+        font-size: min(6vw, 1.7rem);
         text-wrap: auto;
         width: 15rem;
         line-height: 1.4;
