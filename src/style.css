@@ -526,6 +526,7 @@ main {
 
     & li img {
         width: min(60vw, 18rem);
+        border-radius: 5px;
     }
 
     & li h3 {
