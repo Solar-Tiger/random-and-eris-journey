@@ -7,7 +7,24 @@ export default {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: './src/pages/index.html'
+            template: './src/index.html',
+            filename: 'index.html'
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/pages/about.html',
+            filename: 'pages/about.html'
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/pages/ourstory.html',
+            filename: 'pages/ourstory.html'
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/pages/ffxivtales.html',
+            filename: 'pages/ffxivtales.html'
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/pages/watchlist.html',
+            filename: 'pages/watchlist.html'
         })
     ],
     output: {
