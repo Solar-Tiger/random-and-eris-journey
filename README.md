@@ -11,3 +11,19 @@ Just run "npm install" and you're good to go
 -   **"npm run watch"** to open a live server and preview live changes
 -   **"npm run devbuild"** to run a development build
 -   **"npm run build"** to run a production build
+
+# Ideas for each page
+
+## About
+
+## Our Story
+
+Collage
+
+## FFXIV Tales
+
+Gallery
+
+## Watchlist
+
+Table/Spreadsheet
