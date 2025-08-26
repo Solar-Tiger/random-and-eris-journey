@@ -341,6 +341,10 @@ main {
             padding: min(2.4vw, 10px) min(2.8vw, 16px);
             font-size: min(3vw, 2rem);
         }
+
+        & a:hover {
+            transform: var(--button-scale-size);
+        }
     }
 
     .random-and-eris-hero-text {
@@ -400,38 +404,17 @@ main {
         text-align: center;
     }
 
-    h2,
-    a {
-        text-transform: uppercase;
-    }
-
     & h2 {
         font-size: min(10vw, 4rem);
         font-weight: 500;
-    }
-
-    p,
-    a {
-        font-weight: 500;
+        text-transform: uppercase;
     }
 
     & p {
         font-size: min(4.8vw, 2.2rem);
         line-height: 1.45;
         margin-bottom: 0.5rem;
-    }
-
-    & a {
-        text-decoration: none;
-        background-color: var(--lighter-orange);
-        padding: clamp(7px, 2.4vw, 14.5px) clamp(12px, 4vw, 24px);
-        font-size: min(4.5vw, 1.4rem);
-        border: none;
-        border-radius: var(--button-card-border-radius);
-    }
-
-    & a:hover {
-        transform: var(--button-scale-size);
+        font-weight: 500;
     }
 }
 
@@ -452,11 +435,6 @@ main {
             font-size: min(4vw, 2.2rem);
             margin-bottom: 1.4rem;
         }
-
-        & a {
-            font-size: min(3vw, 1.6rem);
-            margin-bottom: 1.1rem;
-        }
     }
 }
 
@@ -475,11 +453,6 @@ main {
         p {
             font-size: min(2.5vw, 1.55rem);
             margin-bottom: 1.6rem;
-        }
-
-        & a {
-            font-size: min(1.8vw, 1.2rem);
-            margin-bottom: 1.1rem;
         }
     }
 }
