@@ -11,10 +11,6 @@ export default {
             filename: 'index.html'
         }),
         new HtmlWebpackPlugin({
-            template: './src/pages/about.html',
-            filename: 'pages/about.html'
-        }),
-        new HtmlWebpackPlugin({
             template: './src/pages/ourstory.html',
             filename: 'pages/ourstory.html'
         }),

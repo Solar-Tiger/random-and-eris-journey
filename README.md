@@ -14,8 +14,6 @@ Just run "npm install" and you're good to go
 
 # Ideas for each page
 
-## About
-
 ## Our Story
 
 Collage
