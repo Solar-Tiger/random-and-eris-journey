@@ -474,12 +474,12 @@ main {
     text-align: center;
     font-size: min(7vw, 2.5rem);
     font-weight: 600;
-    padding: 30px 0;
+    padding: 40px 0;
 }
 
 @media screen and (min-width: 48em) {
     .our-shared-adventures h2 {
-        padding: 40px;
+        padding: 60px 0;
     }
 }
 
@@ -491,12 +491,6 @@ main {
     list-style-type: none;
     padding: 0 24px;
 
-    & li {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
     & li img {
         width: min(60vw, 18rem);
         border-radius: 5px;
@@ -505,27 +499,12 @@ main {
     & li h3 {
         text-align: center;
         font-weight: 400;
-        margin: 0.69rem 0 1.2rem;
+        padding-top: 24px;
+        margin: 0 auto;
         font-size: min(6vw, 1.7rem);
         text-wrap: auto;
         width: 15rem;
         line-height: 1.4;
-    }
-
-    & li a {
-        text-decoration: none;
-        color: white;
-        background-color: var(--lighter-orange);
-        border: none;
-        border-radius: var(--button-card-border-radius);
-        padding: clamp(10px, 2.4vw, 14.8px) clamp(12px, 2.8vw, 22px);
-        margin-top: auto;
-        font-size: min(4.5vw, 1.2rem);
-        font-weight: 500;
-    }
-
-    & li a:hover {
-        transform: var(--button-scale-size);
     }
 }
 
