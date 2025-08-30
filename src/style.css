@@ -491,6 +491,11 @@ main {
     list-style-type: none;
     padding: 0 24px;
 
+    & li img,
+    li h3 {
+        margin: 0 auto;
+    }
+
     & li img {
         width: min(60vw, 18rem);
         border-radius: 5px;
@@ -500,7 +505,6 @@ main {
         text-align: center;
         font-weight: 400;
         padding-top: 24px;
-        margin: 0 auto;
         font-size: min(6vw, 1.7rem);
         text-wrap: auto;
         width: 15rem;
