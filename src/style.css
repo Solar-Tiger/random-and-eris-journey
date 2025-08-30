@@ -514,6 +514,63 @@ main {
 
 /*  
 ======================================
+       OUR FFXIV TALES SECTION         
+======================================
+*/
+
+/* STYLES FOR OUR BINGE WATCHING ESCAPE IMAGE */
+
+.our-ffxiv-tales {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(#7c0a0a, #111c6a);
+    color: white;
+    padding: 40px 0;
+
+    & h2 {
+        text-align: center;
+    }
+
+    & .image-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+        gap: 0.5rem;
+        padding: 30px 0.5rem;
+        max-width: 600px;
+        margin: 0 auto;
+
+        & img {
+            width: 250px;
+        }
+    }
+
+    & article {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: auto;
+
+        p {
+            text-align: center;
+        }
+
+        & a {
+            align-self: center;
+            text-decoration: none;
+            color: var(--gray-font-color);
+            background-color: white;
+            padding: min(2.2vw, 12px) min(4.9vw, 32px);
+            font-size: min(4vw, 1.2rem);
+            border: none;
+            border-radius: var(--button-card-border-radius);
+        }
+    }
+}
+
+/*  
+======================================
  OUR BINGE WATCHING ESCAPE SECTION         
 ======================================
 */
