@@ -1,5 +1,6 @@
 import './style.css';
 import './reset.css';
+import { createFFXIVTalesSection } from './components/OurFFXIVTales/OurFFXIVTales.js';
 
 // ELEMENTS FOR INTERACTIVE MOBILE NAV MENU
 
@@ -71,3 +72,9 @@ function changeToCorrectNavMenu() {
         mobileNavMenu.classList.add('desktop-nav-menu');
     }
 }
+
+// OUR FFXIV TALES SECTION
+
+const main = document.querySelector('main');
+
+main.appendChild(createFFXIVTalesSection());

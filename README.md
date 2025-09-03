@@ -16,12 +16,12 @@ Just run "npm install" and you're good to go
 
 ## Our Story
 
-Collage
+Collage telling how we met, where we're at currently and where we're going
 
 ## FFXIV Tales
 
-Gallery
+Gallery with images that enlarge when clicked with short descriptions
 
 ## Watchlist
 
-Table/Spreadsheet
+Table/Spreadsheet with search bar
