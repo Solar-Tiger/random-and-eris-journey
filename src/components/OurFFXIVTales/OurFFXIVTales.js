@@ -18,7 +18,6 @@ export function createFFXIVTalesSection() {
     const section = document.createElement('section');
     const title = document.createElement('h2');
     const imageContainer = document.createElement('div');
-    const myImage = document.createElement('img');
     const description = document.createElement('p');
     const btnLink = document.createElement('a');
 
@@ -32,7 +31,7 @@ export function createFFXIVTalesSection() {
     imageContainer.classList.add('image-container');
 
     ourFFXIVTalesContent[0].images.forEach((img) => {
-        console.log(img);
+        const myImage = document.createElement('img');
 
         myImage.src = img;
 
