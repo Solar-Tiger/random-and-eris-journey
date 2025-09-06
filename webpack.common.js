@@ -3,24 +3,32 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 export default {
     entry: {
-        app: './src/index.js'
+        // app: './src/index.js'
+        homepage: './src/index.js',
+        ourstory: './src/components/OurStory/index.js',
+        ffxivtales: './src/components/FFXIVTales/index.js',
+        watchlist: './src/components/Watchlist/index.js'
     },
     plugins: [
         new HtmlWebpackPlugin({
             template: './src/index.html',
-            filename: 'index.html'
+            filename: 'index.html',
+            chunks: ['homepage', 'runtime']
         }),
         new HtmlWebpackPlugin({
             template: './src/pages/ourstory.html',
-            filename: 'pages/ourstory.html'
+            filename: 'pages/ourstory.html',
+            chunks: ['ourstory', 'runtime']
         }),
         new HtmlWebpackPlugin({
             template: './src/pages/ffxivtales.html',
-            filename: 'pages/ffxivtales.html'
+            filename: 'pages/ffxivtales.html',
+            chunks: ['ffxivtales', 'runtime']
         }),
         new HtmlWebpackPlugin({
             template: './src/pages/watchlist.html',
-            filename: 'pages/watchlist.html'
+            filename: 'pages/watchlist.html',
+            chunks: ['watchlist', 'runtime']
         })
     ],
     output: {
