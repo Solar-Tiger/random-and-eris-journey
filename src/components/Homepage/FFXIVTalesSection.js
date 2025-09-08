@@ -1,6 +1,6 @@
 import randomAndErisImg1 from '../../assets/images/portrait_images/random-and-eris-tale-ffxiv.png';
 import rengiaAndMiraImg1 from '../../assets/images/portrait_images/rengia-and-mira-tale-ffxiv.png';
-import { createFFXIVTalesSection } from './Homepage';
+import { createFFXIVTalesSection } from './Homepage.js';
 
 // array of objects
 const ourFFXIVTalesContent = [
@@ -47,3 +47,5 @@ function previousSlide(slideIndex, totalSlideLength) {
         (slideIndex - 1 + totalSlideLength) % totalSlideLength;
     createFFXIVTalesSection(previousSlideIndex);
 }
+
+export { ourFFXIVTalesContent };
