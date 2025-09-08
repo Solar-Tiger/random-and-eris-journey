@@ -1,40 +1,54 @@
+import { ourFFXIVTalesContent } from './FFXIVTalesSection.js';
+
+// FUNCTION TO CREATE HERO SECTION
+
+function createRandomAndErisHeroSection() {
+    const heroSection = 'My hero';
+}
+
 // FUNCTION TO CREATE FFXIV TALES SECTION
 
 function createFFXIVTalesSection(currentIndex = 0) {
-    const section = document.createElement('section');
-    const title = document.createElement('h2');
-    const imageContainer = document.createElement('div');
-    const description = document.createElement('p');
-    const btnLink = document.createElement('a');
+    const ffxivTalesSection = document.createElement('section');
+    const ffxivTalesTitle = document.createElement('h2');
+    const ffxivTalesImageContainer = document.createElement('div');
+    const ffxivTalesDescription = document.createElement('p');
+    const ffxivTalesBtnLink = document.createElement('a');
 
     // Create section contianing all information
-    section.classList.add('our-ffxiv-tales');
+    ffxivTalesSection.classList.add('our-ffxiv-tales');
 
     // Create title
-    title.textContent = ourFFXIVTalesContent[currentIndex].title;
+    ffxivTalesTitle.textContent = ourFFXIVTalesContent[currentIndex].title;
 
     // Create image container and images
-    imageContainer.classList.add('image-container');
+    ffxivTalesImageContainer.classList.add('image-container');
 
     ourFFXIVTalesContent[currentIndex].images.forEach((img) => {
         const myImage = document.createElement('img');
 
         myImage.src = img;
 
-        imageContainer.appendChild(myImage);
+        ffxivTalesImageContainer.appendChild(myImage);
     });
 
     // Create description
-    description.textContent = ourFFXIVTalesContent[currentIndex].paragraph;
+    ffxivTalesDescription.textContent =
+        ourFFXIVTalesContent[currentIndex].paragraph;
 
     // Create link
-    btnLink.textContent = ourFFXIVTalesContent[currentIndex].linkText;
-    btnLink.href = ourFFXIVTalesContent[currentIndex].link;
+    ffxivTalesBtnLink.textContent = ourFFXIVTalesContent[currentIndex].linkText;
+    ffxivTalesBtnLink.href = ourFFXIVTalesContent[currentIndex].link;
 
     // Append all elements
-    section.append(title, imageContainer, description, btnLink);
+    ffxivTalesSection.append(
+        ffxivTalesTitle,
+        ffxivTalesImageContainer,
+        ffxivTalesDescription,
+        ffxivTalesBtnLink
+    );
 
-    return section;
+    return ffxivTalesSection;
 }
 
 export { createFFXIVTalesSection };
