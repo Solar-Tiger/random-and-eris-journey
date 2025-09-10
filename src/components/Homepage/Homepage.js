@@ -40,12 +40,19 @@ function createFFXIVTalesSection(currentIndex = 0) {
     ffxivTalesBtnLink.textContent = ourFFXIVTalesContent[currentIndex].linkText;
     ffxivTalesBtnLink.href = ourFFXIVTalesContent[currentIndex].link;
 
+    // Button test
+    const nextBtn = document.createElement('button');
+
+    nextBtn.textContent = 'Next';
+    nextBtn.classList.add('next-btn');
+
     // Append all elements
     ffxivTalesSection.append(
         ffxivTalesTitle,
         ffxivTalesImageContainer,
         ffxivTalesDescription,
-        ffxivTalesBtnLink
+        ffxivTalesBtnLink,
+        nextBtn
     );
 
     return ffxivTalesSection;

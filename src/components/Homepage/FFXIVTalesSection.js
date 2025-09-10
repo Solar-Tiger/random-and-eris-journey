@@ -1,6 +1,5 @@
 import randomAndErisImg1 from '../../assets/images/portrait_images/random-and-eris-tale-ffxiv.png';
 import rengiaAndMiraImg1 from '../../assets/images/portrait_images/rengia-and-mira-tale-ffxiv.png';
-import { createFFXIVTalesSection } from './Homepage.js';
 
 // array of objects
 const ourFFXIVTalesContent = [
@@ -14,38 +13,57 @@ const ourFFXIVTalesContent = [
     },
     {
         title: 'Rengia and Mira',
-        image: [rengiaAndMiraImg1, rengiaAndMiraImg1, rengiaAndMiraImg1],
+        images: [rengiaAndMiraImg1, rengiaAndMiraImg1, rengiaAndMiraImg1],
         paragraph:
             'These two end up in Eorzea due to an unknown force and have more in common than they think, and you can experience their walk through Eorzea!',
+        linkText: 'Relive their tale',
         link: 'pages/ffxivtales.html'
     }
 ];
 
+function updateFFXIVTalesContent(slideIndex) {
+    const ffxivTalesTitle = document.querySelector('.our-ffxiv-tales h2');
+    const ffxivTalesImageContainer = document.querySelector('.image-container');
+    const ffxivTalesDescription = document.querySelector('.our-ffxiv-tales p');
+    const ffxivTalesBtnLink = document.querySelector('.our-ffxiv-tales a');
+
+    ffxivTalesTitle.textContent = ourFFXIVTalesContent[slideIndex].title;
+
+    ffxivTalesImageContainer.textContent = '';
+
+    ourFFXIVTalesContent[slideIndex].images.forEach((img) => {
+        const myImage = document.createElement('img');
+
+        myImage.src = img;
+
+        ffxivTalesImageContainer.appendChild(myImage);
+    });
+
+    ffxivTalesDescription.textContent =
+        ourFFXIVTalesContent[slideIndex].paragraph;
+
+    ffxivTalesBtnLink.textContent = ourFFXIVTalesContent[slideIndex].linkText;
+    ffxivTalesBtnLink.href = ourFFXIVTalesContent[slideIndex].link;
+}
+
 function changeDisplayedContent() {
     let currentIndex = 0;
-    let slideLength = ourFFXIVTalesContent.length;
+    let totalSlideLength = ourFFXIVTalesContent.length;
 
-    nextSlide(currentIndex, slideLength);
-    previousSlide(currentIndex, slideLength);
+    return {
+        nextSlide: () => {
+            currentIndex = (currentIndex + 1) % totalSlideLength;
+
+            updateFFXIVTalesContent(currentIndex);
+        },
+
+        previousSlide: () => {
+            currentIndex =
+                (slideIndex - 1 + totalSlideLength) % totalSlideLength;
+
+            updateFFXIVTalesContent(previousSlideIndex);
+        }
+    };
 }
 
-function nextSlide(slideIndex, totalSlideLength) {
-    const ourFFXIVTalesSection = document.querySelector('.our-ffxiv-tales');
-
-    ourFFXIVTalesSection.textContent = '';
-
-    let nextSlideIndex = (slideIndex + 1) % totalSlideLength;
-    createFFXIVTalesSection(nextSlideIndex);
-}
-
-function previousSlide(slideIndex, totalSlideLength) {
-    const ourFFXIVTalesSection = document.querySelector('.our-ffxiv-tales');
-
-    ourFFXIVTalesSection.textContent = '';
-
-    let previousSlideIndex =
-        (slideIndex - 1 + totalSlideLength) % totalSlideLength;
-    createFFXIVTalesSection(previousSlideIndex);
-}
-
-export { ourFFXIVTalesContent };
+export { ourFFXIVTalesContent, changeDisplayedContent };

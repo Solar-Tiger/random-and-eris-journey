@@ -1,5 +1,7 @@
 import './style.css';
 import './reset.css';
+import { createFFXIVTalesSection } from './components/Homepage/Homepage.js';
+import { changeDisplayedContent } from './components/Homepage/FFXIVTalesSection.js';
 
 // ELEMENTS FOR INTERACTIVE MOBILE NAV MENU
 
@@ -71,3 +73,16 @@ function changeToCorrectNavMenu() {
         mobileNavMenu.classList.add('desktop-nav-menu');
     }
 }
+
+// External code for testing
+
+const main = document.querySelector('main');
+
+main.appendChild(createFFXIVTalesSection());
+
+const changeContent = changeDisplayedContent();
+const nextBtn = document.querySelector('.next-btn');
+
+nextBtn.addEventListener('click', () => {
+    changeContent.nextSlide();
+});
