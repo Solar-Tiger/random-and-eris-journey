@@ -40,7 +40,7 @@ function createRandomAndErisHeroSection() {
 
     // Append every to Random and Eris hero section
     randomAndErisHeroSection.append(
-        randomAndErisHeroImage,
+        randomAndErisHeroImg,
         randomAndErisHeroTextSection
     );
 
