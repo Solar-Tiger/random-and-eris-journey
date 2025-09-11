@@ -1,3 +1,4 @@
+import { createOurSharedAdventuresListContent } from './OurSharedAdventuresSection.js';
 import { ourFFXIVTalesContent } from './FFXIVTalesSection.js';
 import randomAndErisHeroImage from '../../assets/images/hero_images/random-and-eris-hugging-in-ffxiv.png';
 import ourFatefulEncounterMobile from '../../assets/images/banner/banner-random-and-eris-our-fateful-encounter-mobile.png';
@@ -115,6 +116,28 @@ function createOurFatefulEncounterSection() {
     return ourFatefulEncounterSection;
 }
 
+// FUNCTION TO CREATE OUR SHARED ADVENTURES
+
+function createOurSharedAdventuresSection() {
+    // Create section container Our Shared Adventures content
+    const ourSharedAdventuresSection = document.createElement('section');
+
+    ourSharedAdventuresSection.classList.add('our-shared-adventures');
+
+    // Create section containing Our Shared Adventures content
+    const ourSharedAdventuresTitle = document.createElement('h2');
+
+    ourSharedAdventuresTitle.textContent = 'Our Shared Adventures';
+
+    // Append Our Shared Adventures list content
+    ourSharedAdventuresSection.append(
+        ourSharedAdventuresTitle,
+        createOurSharedAdventuresListContent()
+    );
+
+    return ourSharedAdventuresSection;
+}
+
 // FUNCTION TO CREATE FFXIV TALES SECTION
 
 function createFFXIVTalesSection(currentIndex = 0) {
@@ -124,7 +147,7 @@ function createFFXIVTalesSection(currentIndex = 0) {
     const ffxivTalesDescription = document.createElement('p');
     const ffxivTalesBtnLink = document.createElement('a');
 
-    // Create section contianing all information
+    // Create section contianing FFXIV Tales content
     ffxivTalesSection.classList.add('our-ffxiv-tales');
 
     // Create title
@@ -170,5 +193,6 @@ function createFFXIVTalesSection(currentIndex = 0) {
 export {
     createRandomAndErisHeroSection,
     createOurFatefulEncounterSection,
+    createOurSharedAdventuresSection,
     createFFXIVTalesSection
 };
