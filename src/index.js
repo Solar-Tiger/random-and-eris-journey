@@ -3,6 +3,7 @@ import './reset.css';
 import {
     createRandomAndErisHeroSection,
     createOurFatefulEncounterSection,
+    createOurSharedAdventuresSection,
     createFFXIVTalesSection
 } from './components/Homepage/Homepage.js';
 import { changeDisplayedContent } from './components/Homepage/FFXIVTalesSection.js';
@@ -85,6 +86,7 @@ const main = document.querySelector('main');
 main.append(
     createRandomAndErisHeroSection(),
     createOurFatefulEncounterSection(),
+    createOurSharedAdventuresSection(),
     createFFXIVTalesSection()
 );
 
