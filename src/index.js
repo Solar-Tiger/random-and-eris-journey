@@ -2,6 +2,7 @@ import './style.css';
 import './reset.css';
 import {
     createRandomAndErisHeroSection,
+    createOurFatefulEncounterSection,
     createFFXIVTalesSection
 } from './components/Homepage/Homepage.js';
 import { changeDisplayedContent } from './components/Homepage/FFXIVTalesSection.js';
@@ -81,7 +82,11 @@ function changeToCorrectNavMenu() {
 
 const main = document.querySelector('main');
 
-main.append(createRandomAndErisHeroSection(), createFFXIVTalesSection());
+main.append(
+    createRandomAndErisHeroSection(),
+    createOurFatefulEncounterSection(),
+    createFFXIVTalesSection()
+);
 
 const changeContent = changeDisplayedContent();
 const nextBtn = document.querySelector('.next-btn');
