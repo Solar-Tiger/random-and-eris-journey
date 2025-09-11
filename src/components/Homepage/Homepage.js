@@ -1,21 +1,25 @@
 import { ourFFXIVTalesContent } from './FFXIVTalesSection.js';
 import randomAndErisHeroImage from '../../assets/images/hero_images/random-and-eris-hugging-in-ffxiv.png';
+import ourFatefulEncounterMobile from '../../assets/images/banner/banner-random-and-eris-our-fateful-encounter-mobile.png';
+import ourFatefulEncounterTablet from '../../assets/images/banner/banner-random-and-eris-our-fateful-encounter-tablet.png';
+import ourFatefulEncounterDesktop from '../../assets/images/banner/banner-random-and-eris-our-fateful-encounter.png';
 
 // FUNCTION TO CREATE HERO SECTION
 
 function createRandomAndErisHeroSection() {
     const randomAndErisHeroSection = document.createElement('section');
     const randomAndErisHeroImg = document.createElement('img');
-    const randomAndErisHeroTextSection = document.createElement('section');
-    const randomAndErisHeroTitle = document.createElement('h1');
-    const randomAndErisHeroDescription = document.createElement('p');
-    const randomAndErisHeroLink = document.createElement('a');
 
     // Add class to hero section
     randomAndErisHeroSection.classList.add('random-and-eris-hero');
 
     // Add hero image
     randomAndErisHeroImg.src = randomAndErisHeroImage;
+
+    const randomAndErisHeroTextSection = document.createElement('section');
+    const randomAndErisHeroTitle = document.createElement('h1');
+    const randomAndErisHeroDescription = document.createElement('p');
+    const randomAndErisHeroLink = document.createElement('a');
 
     // Add class to text section of hero
     randomAndErisHeroTextSection.classList.add('random-and-eris-hero-text');
@@ -45,6 +49,70 @@ function createRandomAndErisHeroSection() {
     );
 
     return randomAndErisHeroSection;
+}
+
+// FUNCTION TO CREATE OUR FATEFUL ENCOUNTER SECTION
+
+function createOurFatefulEncounterSection() {
+    // Create Our Fateful Encounter Section and add Class
+    const ourFatefulEncounterSection = document.createElement('section');
+
+    ourFatefulEncounterSection.classList.add('our-fateful-encounter');
+
+    // Create Picture element and add sources
+    const ourFatefulEncounterBackgroundImage =
+        document.createElement('picture');
+    const ourFatefulEncounterPictureMobile = document.createElement('source');
+    const ourFatefulEncounterPictureTablet = document.createElement('source');
+    const ourFatefulEncounterDefaultDesktop = document.createElement('img');
+
+    ourFatefulEncounterPictureMobile.srcset = ourFatefulEncounterMobile;
+    ourFatefulEncounterPictureMobile.media = '(max-width: 37.938em)';
+
+    ourFatefulEncounterPictureTablet.srcset = ourFatefulEncounterTablet;
+    ourFatefulEncounterPictureTablet.media = '(max-width: 63.938em)';
+
+    ourFatefulEncounterDefaultDesktop.src = ourFatefulEncounterDesktop;
+    ourFatefulEncounterDefaultDesktop.alt =
+        'Random and Eris sitting on the Island Santuary mount looking at each other under the night sky';
+
+    ourFatefulEncounterBackgroundImage.append(
+        ourFatefulEncounterPictureMobile,
+        ourFatefulEncounterPictureTablet,
+        ourFatefulEncounterDefaultDesktop
+    );
+
+    // Create Our Fateful Encounter card and append card information
+    const ourFatefulEncounterCard = document.createElement('article');
+    const ourFatefulEncounterTitle = document.createElement('h2');
+    const ourFatefulEncounterDescription = document.createElement('p');
+    const ourFatefulEncounterQuoteWrap = document.createElement('em');
+
+    ourFatefulEncounterCard.classList.add('our-fateful-encounter-card');
+
+    ourFatefulEncounterTitle.textContent = 'Our Fateful Encounter';
+    ourFatefulEncounterDescription.textContent =
+        'Everything changed when I sat down next to her...';
+    ourFatefulEncounterQuoteWrap.textContent =
+        'When she was on the verge of quitting FFXIV and I had just disconnected from my old BFF, in an old FC I was in, I chose to sit down next to her as she sat alone in a corner. That descision changed both our lives.';
+
+    // Appened <br> and quote to <p>
+    ourFatefulEncounterDescription.appendChild(document.createElement('br'));
+    ourFatefulEncounterDescription.appendChild(ourFatefulEncounterQuoteWrap);
+
+    // Append title and description to card
+    ourFatefulEncounterCard.append(
+        ourFatefulEncounterTitle,
+        ourFatefulEncounterDescription
+    );
+
+    // Append Picture and Card to Our Fateful Encounter Section
+    ourFatefulEncounterSection.append(
+        ourFatefulEncounterBackgroundImage,
+        ourFatefulEncounterCard
+    );
+
+    return ourFatefulEncounterSection;
 }
 
 // FUNCTION TO CREATE FFXIV TALES SECTION
@@ -99,4 +167,8 @@ function createFFXIVTalesSection(currentIndex = 0) {
     return ffxivTalesSection;
 }
 
-export { createRandomAndErisHeroSection, createFFXIVTalesSection };
+export {
+    createRandomAndErisHeroSection,
+    createOurFatefulEncounterSection,
+    createFFXIVTalesSection
+};
