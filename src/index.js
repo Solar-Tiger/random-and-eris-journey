@@ -4,7 +4,8 @@ import {
     createRandomAndErisHeroSection,
     createOurFatefulEncounterSection,
     createOurSharedAdventuresSection,
-    createFFXIVTalesSection
+    createFFXIVTalesSection,
+    createOurBingeWatchingEscapeSection
 } from './components/Homepage/Homepage.js';
 import { changeDisplayedContent } from './components/Homepage/FFXIVTalesSection.js';
 
@@ -87,7 +88,8 @@ main.append(
     createRandomAndErisHeroSection(),
     createOurFatefulEncounterSection(),
     createOurSharedAdventuresSection(),
-    createFFXIVTalesSection()
+    createFFXIVTalesSection(),
+    createOurBingeWatchingEscapeSection()
 );
 
 const changeContent = changeDisplayedContent();
