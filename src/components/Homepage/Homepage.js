@@ -4,6 +4,8 @@ import randomAndErisHeroImage from '../../assets/images/hero_images/random-and-e
 import ourFatefulEncounterMobile from '../../assets/images/banner/banner-random-and-eris-our-fateful-encounter-mobile.png';
 import ourFatefulEncounterTablet from '../../assets/images/banner/banner-random-and-eris-our-fateful-encounter-tablet.png';
 import ourFatefulEncounterDesktop from '../../assets/images/banner/banner-random-and-eris-our-fateful-encounter.png';
+import ourBingeWatchingEscapeMobile from '../../assets/images/banner/banner-watchlist-mobile.jpg';
+import ourBingeWatchingEscapeDesktop from '../../assets/images/banner/banner-watchlist.jpg';
 
 // FUNCTION TO CREATE HERO SECTION
 
@@ -190,9 +192,61 @@ function createFFXIVTalesSection(currentIndex = 0) {
     return ffxivTalesSection;
 }
 
+function createOurBingeWatchingEscapeSection() {
+    // Create Our Binge Watching Escape section and add class
+    const ourBingeWatchingEscapeSection = document.createElement('section');
+
+    ourBingeWatchingEscapeSection.classList.add('our-binge-watching-escape');
+
+    // Create Our Binge Watching Escape background image using picture element
+    const ourBingeWatchingEscapePicture = document.createElement('picture');
+    const ourBingeWatchingEscapePictureMobile =
+        document.createElement('source');
+    const ourBingeWatchingEscapePictureDesktop = document.createElement('img');
+
+    ourBingeWatchingEscapePictureMobile.srcset = ourBingeWatchingEscapeMobile;
+    ourBingeWatchingEscapePictureMobile.media = '(max-width: 47.938em)';
+
+    ourBingeWatchingEscapePictureDesktop.src = ourBingeWatchingEscapeDesktop;
+
+    ourBingeWatchingEscapePicture.append(
+        ourBingeWatchingEscapePictureMobile,
+        ourBingeWatchingEscapePictureDesktop
+    );
+
+    // Create Our Binge Watching Escape card and append title, description and link
+    const ourBingeWatchingEscapeCard = document.createElement('article');
+
+    ourBingeWatchingEscapeCard.classList.add('our-binge-watching-escape-card');
+
+    const ourBingeWatchingEscapeTitle = document.createElement('h2');
+    const ourBingeWatchingEscapeDescription = document.createElement('p');
+    const ourBingeWatchingEscapeBtnLink = document.createElement('a');
+
+    ourBingeWatchingEscapeTitle.textContent = 'Our Binge Watching Escape';
+    ourBingeWatchingEscapeDescription.textContent =
+        "Outside of FFXIV, we've taken to watching things together from anime to movies as a way to escape from reality.";
+    ourBingeWatchingEscapeBtnLink.textContent = 'Come Escape With Us';
+    ourBingeWatchingEscapeBtnLink.href = 'pages/watchlist.html';
+
+    ourBingeWatchingEscapeCard.append(
+        ourBingeWatchingEscapeTitle,
+        ourBingeWatchingEscapeDescription,
+        ourBingeWatchingEscapeBtnLink
+    );
+
+    ourBingeWatchingEscapeSection.append(
+        ourBingeWatchingEscapePicture,
+        ourBingeWatchingEscapeCard
+    );
+
+    return ourBingeWatchingEscapeSection;
+}
+
 export {
     createRandomAndErisHeroSection,
     createOurFatefulEncounterSection,
     createOurSharedAdventuresSection,
-    createFFXIVTalesSection
+    createFFXIVTalesSection,
+    createOurBingeWatchingEscapeSection
 };
