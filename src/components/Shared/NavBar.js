@@ -41,6 +41,9 @@ function createNavMenu() {
         navMenuContainer.appendChild(li);
     });
 
+    // Append nav menu container to nav menu
+    navMenu.appendChild(navMenuContainer);
+
     return navMenu;
 }
 
