@@ -1,5 +1,6 @@
 import './style.css';
 import './reset.css';
+import { createHeader } from './components/Shared/Header.js';
 import {
     createRandomAndErisHeroSection,
     createOurFatefulEncounterSection,
@@ -8,6 +9,12 @@ import {
     createOurBingeWatchingEscapeSection
 } from './components/Homepage/Homepage.js';
 import { changeDisplayedContent } from './components/Homepage/FFXIVTalesSection.js';
+
+// NAV MENU CREATION FUNCTION
+
+const headerWrapper = document.querySelector('.header-wrapper');
+
+headerWrapper.appendChild(createHeader());
 
 // ELEMENTS FOR INTERACTIVE MOBILE NAV MENU
 
@@ -80,7 +87,7 @@ function changeToCorrectNavMenu() {
     }
 }
 
-// External code for testing
+// HOMEPAGE MAIN CONTENT
 
 const main = document.querySelector('main');
 
