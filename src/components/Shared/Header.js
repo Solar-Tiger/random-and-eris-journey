@@ -4,9 +4,9 @@ import randomAndErisLogo from '../../assets/images/logo-audioengine.png';
 
 function createHeader() {
     // Create header
-    const randomAndErisheader = document.createElement('header');
+    const randomAndErisHeader = document.createElement('header');
 
-    randomAndErisheader.classList.add('random-and-eris-header');
+    randomAndErisHeader.classList.add('random-and-eris-header');
 
     // Create and appened hamburger menu to header
     const hamburgerMenu = document.createElement('img');
@@ -16,25 +16,28 @@ function createHeader() {
     hamburgerMenu.src = hamburgerMenuIcon;
     hamburgerMenu.alt = 'Mobile Nav Hamburger Menu icon';
 
-    randomAndErisheader.appendChild(hamburgerMenu);
+    randomAndErisHeader.appendChild(hamburgerMenu);
 
     // Append Nav Menu to header
-    randomAndErisheader.append(createNavMenu(), createMobileNavOverlay());
+    randomAndErisHeader.append(createNavMenu(), createMobileNavOverlay());
 
-    // Create and append logo link to header
+    // Create and append logo to a tag
     const logoLink = document.createElement('a');
 
     logoLink.href = 'index.html';
 
     const logoLinkImg = document.createElement('img');
 
-    logoLinkImg.classList.add('random-and-eris-log');
+    logoLinkImg.classList.add('random-and-eris-logo');
     logoLinkImg.src = randomAndErisLogo;
     logoLinkImg.alt = 'Audio Engine logo';
 
-    randomAndErisheader.appendChild(logoLink);
+    logoLink.appendChild(logoLinkImg);
 
-    return randomAndErisheader;
+    // Append logo link to header
+    randomAndErisHeader.appendChild(logoLink);
+
+    return randomAndErisHeader;
 }
 
 export { createHeader };
