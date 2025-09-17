@@ -2,19 +2,19 @@ import closeXIcon from '../../assets/images/icons/icon-close.png';
 
 const navMenuItems = [
     {
-        pageLink: 'index.html',
+        pageLink: '/index.html',
         pageName: 'Home'
     },
     {
-        pageLink: 'pages/ourstory.html',
+        pageLink: '/pages/ourstory.html',
         pageName: 'Our Story'
     },
     {
-        pageLink: 'pages/ffxivtales.html',
+        pageLink: '/pages/ffxivtales.html',
         pageName: 'FFXIV tales'
     },
     {
-        pageLink: 'pages/watchlist.html',
+        pageLink: '/pages/watchlist.html',
         pageName: 'The watchlist'
     }
 ];
