@@ -7,28 +7,29 @@ export default {
         homepage: './src/index.js',
         ourstory: './src/components/OurStory/index.js',
         ffxivtales: './src/components/FFXIVTales/index.js',
-        watchlist: './src/components/Watchlist/index.js'
+        watchlist: './src/components/Watchlist/index.js',
+        navmenu: './src/components/Shared/index.js'
     },
     plugins: [
         new HtmlWebpackPlugin({
             template: './src/index.html',
             filename: 'index.html',
-            chunks: ['homepage', 'runtime']
+            chunks: ['navmenu', 'homepage', 'runtime']
         }),
         new HtmlWebpackPlugin({
             template: './src/pages/ourstory.html',
             filename: 'pages/ourstory.html',
-            chunks: ['ourstory', 'runtime']
+            chunks: ['navmenu', 'ourstory', 'runtime']
         }),
         new HtmlWebpackPlugin({
             template: './src/pages/ffxivtales.html',
             filename: 'pages/ffxivtales.html',
-            chunks: ['ffxivtales', 'runtime']
+            chunks: ['navmenu', 'ffxivtales', 'runtime']
         }),
         new HtmlWebpackPlugin({
             template: './src/pages/watchlist.html',
             filename: 'pages/watchlist.html',
-            chunks: ['watchlist', 'runtime']
+            chunks: ['navmenu', 'watchlist', 'runtime']
         })
     ],
     output: {
