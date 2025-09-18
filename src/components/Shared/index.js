@@ -1,12 +1,5 @@
 import '../../style.css';
 import '../../reset.css';
-import { createHeader } from './Header.js';
-
-// NAV MENU CREATION FUNCTION
-
-const headerWrapper = document.querySelector('.header-wrapper');
-
-headerWrapper.appendChild(createHeader());
 
 // ELEMENTS FOR INTERACTIVE MOBILE NAV MENU
 
