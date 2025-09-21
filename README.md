@@ -14,6 +14,10 @@ Just run "npm install" and you're good to go
 
 # Ideas for each page
 
+## Homepage
+
+Allow in page content linking to each section from "Our Shared Adventures" section aka clicking Binge Watching Escape would link you to that section
+
 ## Our Story
 
 Collage telling how we met, where we're at currently and where we're going
