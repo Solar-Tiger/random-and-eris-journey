@@ -25,6 +25,8 @@ Collage telling how we met, where we're at currently and where we're going
 ## FFXIV Tales
 
 Gallery with images that enlarge when clicked with short descriptions
+Each "gallery" will have a sub category to display which expansion they're in/what content they're/were doing
+These will update the **main content** area with the respective images to save on load times
 
 ## Watchlist
 
