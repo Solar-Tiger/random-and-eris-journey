@@ -35,7 +35,7 @@ function createRandomAndErisHeroSection() {
         "This website documents my best friend and I's chaotic journey of FFXIV, anime & Discord!";
 
     // Add link to text section of hero
-    randomAndErisHeroLink.href = 'pages/ourstory.html';
+    randomAndErisHeroLink.href = 'pages/our_story/ourstory.html';
     randomAndErisHeroLink.textContent = 'Start the Journey Here';
 
     // Append text content to Random and Eris text section of hero

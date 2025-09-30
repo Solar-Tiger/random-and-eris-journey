@@ -17,8 +17,8 @@ export default {
             chunks: ['shared', 'homepage', 'runtime']
         }),
         new HtmlWebpackPlugin({
-            template: './src/pages/ourstory.html',
-            filename: 'pages/ourstory.html',
+            template: './src/pages/our_story/ourstory.html',
+            filename: 'pages/our_story/ourstory.html',
             chunks: ['shared', 'ourstory', 'runtime']
         }),
         new HtmlWebpackPlugin({
