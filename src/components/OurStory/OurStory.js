@@ -1,4 +1,7 @@
 import randomAndEris from '../../assets/images/portrait_images/random-and-eris-tale-ffxiv.png';
+import ourFatefulEncounterMobile from '../../assets/images/banner/banner-random-and-eris-our-fateful-encounter-mobile.png';
+import ourFatefulEncounterTablet from '../../assets/images/banner/banner-random-and-eris-our-fateful-encounter-tablet.png';
+import ourFatefulEncounterDesktop from '../../assets/images/banner/banner-random-and-eris-our-fateful-encounter.png';
 
 const imageCardInformation = [
     { cardImage: randomAndEris, cardTitle: 'Random and Eris' },
@@ -50,4 +53,118 @@ function createOurStoryReasonSection() {
     return ourStorySectionContainer;
 }
 
-export { createOurStoryReasonSection };
+function createOurStoryExampleSection() {
+    // Create Our Story Example section
+    const ourStoryExampleSection = document.createElement('section');
+
+    ourStoryExampleSection.classList.add('our-story-example-section');
+
+    // Create Our Story Example title
+    const ourStoryExampleTitle = document.createElement('h2');
+
+    ourStoryExampleTitle.textContent = 'Life with your bestie';
+
+    // Append Our Story Example title to Our Story Example section
+    ourStoryExampleSection.appendChild(ourStoryExampleTitle);
+
+    // Create example image container and paragraph
+    for (let i = 0; i < 3; i++) {
+        // Create container for each Our Story Example article
+        const ourStoryExampleArticle = document.createElement('article');
+
+        // Create Our Story Example image container and containing images
+        const ourStoryExampleImageContainer = document.createElement('div');
+
+        for (let j = 0; j < 4; j++) {
+            const ourStoryExampleImage = document.createElement('img');
+
+            ourStoryExampleImage.src = randomAndEris;
+            ourStoryExampleImage.style.width = '100px';
+
+            ourStoryExampleImageContainer.appendChild(ourStoryExampleImage);
+        }
+
+        // Create Our Story Example paragraph
+        const ourStoryExampleParagraph = document.createElement('p');
+
+        ourStoryExampleParagraph.textContent =
+            'We first met through our old Free Company. I don’t know what it was that caused me to sit down next to her that day, but it’s a choice I’d make every time again and again. At first, we often joked that each other were too cool to hangout with the other one. But as we hung out more in game, we learned we had more in common than we’ve ever found with anyone in our lives.';
+
+        ourStoryExampleArticle.appendChild(
+            ourStoryExampleImageContainer,
+            ourStoryExampleParagraph
+        );
+
+        ourStoryExampleSection.appendChild(ourStoryExampleArticle);
+    }
+
+    return ourStoryExampleSection;
+}
+
+function createOurFatefulEncounterEndingSection() {
+    // Create Our Fateful Encounter Section and add Class
+    const ourFatefulEncounterSection = document.createElement('section');
+
+    ourFatefulEncounterSection.classList.add('our-fateful-encounter');
+
+    // Create Picture element and add sources
+    const ourFatefulEncounterBackgroundImage =
+        document.createElement('picture');
+    const ourFatefulEncounterPictureMobile = document.createElement('source');
+    const ourFatefulEncounterPictureTablet = document.createElement('source');
+    const ourFatefulEncounterDefaultDesktop = document.createElement('img');
+
+    ourFatefulEncounterPictureMobile.srcset = ourFatefulEncounterMobile;
+    ourFatefulEncounterPictureMobile.media = '(max-width: 37.938em)';
+
+    ourFatefulEncounterPictureTablet.srcset = ourFatefulEncounterTablet;
+    ourFatefulEncounterPictureTablet.media = '(max-width: 63.938em)';
+
+    ourFatefulEncounterDefaultDesktop.src = ourFatefulEncounterDesktop;
+    ourFatefulEncounterDefaultDesktop.alt =
+        'Random and Eris sitting on the Island Santuary mount looking at each other under the night sky';
+
+    ourFatefulEncounterBackgroundImage.append(
+        ourFatefulEncounterPictureMobile,
+        ourFatefulEncounterPictureTablet,
+        ourFatefulEncounterDefaultDesktop
+    );
+
+    // Create Our Fateful Encounter card and append card information
+    const ourFatefulEncounterCard = document.createElement('article');
+    const ourFatefulEncounterTitle = document.createElement('h2');
+    const ourFatefulEncounterDescription = document.createElement('p');
+    const ourFatefulEncounterQuoteWrap = document.createElement('em');
+
+    ourFatefulEncounterCard.classList.add('our-fateful-encounter-card');
+
+    ourFatefulEncounterTitle.textContent = 'Our Fateful Encounter';
+    ourFatefulEncounterDescription.textContent =
+        'Everything changed when I sat down next to her...';
+    ourFatefulEncounterQuoteWrap.textContent =
+        'When she was on the verge of quitting FFXIV and I had just disconnected from my old BFF, in an old FC I was in, I chose to sit down next to her as she sat alone in a corner. That descision changed both our lives.';
+
+    // Appened <br> and quote to <p>
+    ourFatefulEncounterDescription.appendChild(document.createElement('br'));
+    ourFatefulEncounterDescription.appendChild(ourFatefulEncounterQuoteWrap);
+
+    // Append title and description to card
+    ourFatefulEncounterCard.append(
+        ourFatefulEncounterTitle,
+        ourFatefulEncounterDescription
+    );
+
+    // Append Picture and Card to Our Fateful Encounter Section
+    ourFatefulEncounterSection.append(
+        ourFatefulEncounterBackgroundImage,
+        ourFatefulEncounterCard
+    );
+
+    return ourFatefulEncounterSection;
+}
+
+export {
+    createOurStoryReasonSection,
+    createOurStoryExampleSection,
+    createOurFatefulEncounterEndingSection
+};

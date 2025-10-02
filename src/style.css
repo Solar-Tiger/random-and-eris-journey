@@ -358,6 +358,8 @@ main {
 ======================================
 */
 
+/* ======== OUR FATEFUL ENCOUNTER IMAGE ======== */
+
 /* STYLES FOR OUR FATEFUL ENCOUNTER IMAGE */
 
 .our-fateful-encounter {
@@ -455,6 +457,20 @@ main {
             margin-bottom: 1.6rem;
         }
     }
+}
+
+/* ======== OUR STORY EXAMPLE ======== */
+
+.our-story-example-section article:nth-child(2) {
+    background-color: darkred;
+}
+
+.our-story-example-section article:nth-child(3) {
+    background-color: darkgreen;
+}
+
+.our-story-example-section article:nth-child(4) {
+    background-color: darkblue;
 }
 
 /*  
