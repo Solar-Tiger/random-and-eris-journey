@@ -72,16 +72,12 @@ function createOurStoryExampleSection() {
         // Create container for each Our Story Example article
         const ourStoryExampleArticle = document.createElement('article');
 
-        // Create Our Story Example image container and containing images
-        const ourStoryExampleImageContainer = document.createElement('div');
-
         for (let j = 0; j < 4; j++) {
             const ourStoryExampleImage = document.createElement('img');
 
             ourStoryExampleImage.src = randomAndEris;
-            ourStoryExampleImage.style.width = '100px';
 
-            ourStoryExampleImageContainer.appendChild(ourStoryExampleImage);
+            ourStoryExampleArticle.appendChild(ourStoryExampleImage);
         }
 
         // Create Our Story Example paragraph
@@ -90,10 +86,7 @@ function createOurStoryExampleSection() {
         ourStoryExampleParagraph.textContent =
             'We first met through our old Free Company. I don’t know what it was that caused me to sit down next to her that day, but it’s a choice I’d make every time again and again. At first, we often joked that each other were too cool to hangout with the other one. But as we hung out more in game, we learned we had more in common than we’ve ever found with anyone in our lives.';
 
-        ourStoryExampleArticle.appendChild(
-            ourStoryExampleImageContainer,
-            ourStoryExampleParagraph
-        );
+        ourStoryExampleArticle.append(ourStoryExampleParagraph);
 
         ourStoryExampleSection.appendChild(ourStoryExampleArticle);
     }
