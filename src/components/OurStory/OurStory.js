@@ -53,6 +53,45 @@ function createOurStoryReasonSection() {
     return ourStorySectionContainer;
 }
 
+const ourStoryExampleImageInformation = [
+    {
+        mainImage: ourFatefulEncounterDesktop,
+        imgOne: randomAndEris,
+        imgTwo: randomAndEris,
+        imgThree: randomAndEris,
+        imgFour: randomAndEris,
+        description:
+            'We first met through our old Free Company. I don’t know what it was that caused me to sit down next to her that day, but it’s a choice I’d make every time again and again. At first, we often joked that each other were too cool to hangout with the other one. But as we hung out more in game, we learned we had more in common than we’ve ever found with anyone in our lives.'
+    },
+    {
+        mainImage: ourFatefulEncounterDesktop,
+        imgOne: randomAndEris,
+        imgTwo: randomAndEris,
+        imgThree: randomAndEris,
+        imgFour: randomAndEris,
+        description:
+            'We first met through our old Free Company. I don’t know what it was that caused me to sit down next to her that day, but it’s a choice I’d make every time again and again. At first, we often joked that each other were too cool to hangout with the other one. But as we hung out more in game, we learned we had more in common than we’ve ever found with anyone in our lives.'
+    },
+    {
+        mainImage: ourFatefulEncounterDesktop,
+        imgOne: randomAndEris,
+        imgTwo: randomAndEris,
+        imgThree: randomAndEris,
+        imgFour: randomAndEris,
+        description:
+            'We first met through our old Free Company. I don’t know what it was that caused me to sit down next to her that day, but it’s a choice I’d make every time again and again. At first, we often joked that each other were too cool to hangout with the other one. But as we hung out more in game, we learned we had more in common than we’ve ever found with anyone in our lives.'
+    },
+    {
+        mainImage: ourFatefulEncounterDesktop,
+        imgOne: randomAndEris,
+        imgTwo: randomAndEris,
+        imgThree: randomAndEris,
+        imgFour: randomAndEris,
+        description:
+            'We first met through our old Free Company. I don’t know what it was that caused me to sit down next to her that day, but it’s a choice I’d make every time again and again. At first, we often joked that each other were too cool to hangout with the other one. But as we hung out more in game, we learned we had more in common than we’ve ever found with anyone in our lives.'
+    }
+];
+
 function createOurStoryExampleSection() {
     // Create Our Story Example section
     const ourStoryExampleSection = document.createElement('section');
@@ -67,29 +106,42 @@ function createOurStoryExampleSection() {
     // Append Our Story Example title to Our Story Example section
     ourStoryExampleSection.appendChild(ourStoryExampleTitle);
 
-    // Create example image container and paragraph
-    for (let i = 0; i < 3; i++) {
+    ourStoryExampleImageInformation.forEach((ourStoryExampleImageInfo) => {
         // Create container for each Our Story Example article
         const ourStoryExampleArticle = document.createElement('article');
 
-        for (let j = 0; j < 4; j++) {
-            const ourStoryExampleImage = document.createElement('img');
+        // Create div to contain images
+        const ourStoryExampleImagesContainer = document.createElement('div');
 
-            ourStoryExampleImage.src = randomAndEris;
+        const ourStoryExampleImageOne = document.createElement('img');
+        const ourStoryExampleImageTwo = document.createElement('img');
+        const ourStoryExampleImageThree = document.createElement('img');
+        const ourStoryExampleImageFour = document.createElement('img');
 
-            ourStoryExampleArticle.appendChild(ourStoryExampleImage);
-        }
+        ourStoryExampleImageOne.src = ourStoryExampleImageInfo.imgOne;
+        ourStoryExampleImageTwo.src = ourStoryExampleImageInfo.imgTwo;
+        ourStoryExampleImageThree.src = ourStoryExampleImageInfo.imgThree;
+        ourStoryExampleImageFour.src = ourStoryExampleImageInfo.imgFour;
+
+        ourStoryExampleImagesContainer.append(
+            ourStoryExampleImageOne,
+            ourStoryExampleImageTwo,
+            ourStoryExampleImageThree,
+            ourStoryExampleImageFour
+        );
+
+        ourStoryExampleArticle.appendChild(ourStoryExampleImagesContainer);
 
         // Create Our Story Example paragraph
-        const ourStoryExampleParagraph = document.createElement('p');
+        const ourStoryExampleArticleDescription = document.createElement('p');
 
-        ourStoryExampleParagraph.textContent =
-            'We first met through our old Free Company. I don’t know what it was that caused me to sit down next to her that day, but it’s a choice I’d make every time again and again. At first, we often joked that each other were too cool to hangout with the other one. But as we hung out more in game, we learned we had more in common than we’ve ever found with anyone in our lives.';
+        ourStoryExampleArticleDescription.textContent =
+            ourStoryExampleImageInfo.description;
 
-        ourStoryExampleArticle.append(ourStoryExampleParagraph);
+        ourStoryExampleArticle.append(ourStoryExampleArticleDescription);
 
         ourStoryExampleSection.appendChild(ourStoryExampleArticle);
-    }
+    });
 
     return ourStoryExampleSection;
 }
