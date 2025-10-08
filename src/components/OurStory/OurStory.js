@@ -80,15 +80,6 @@ const ourStoryExampleImageInformation = [
         imgFour: randomAndEris,
         description:
             'We first met through our old Free Company. I don’t know what it was that caused me to sit down next to her that day, but it’s a choice I’d make every time again and again. At first, we often joked that each other were too cool to hangout with the other one. But as we hung out more in game, we learned we had more in common than we’ve ever found with anyone in our lives.'
-    },
-    {
-        mainImage: ourFatefulEncounterDesktop,
-        imgOne: randomAndEris,
-        imgTwo: randomAndEris,
-        imgThree: randomAndEris,
-        imgFour: randomAndEris,
-        description:
-            'We first met through our old Free Company. I don’t know what it was that caused me to sit down next to her that day, but it’s a choice I’d make every time again and again. At first, we often joked that each other were too cool to hangout with the other one. But as we hung out more in game, we learned we had more in common than we’ve ever found with anyone in our lives.'
     }
 ];
 
@@ -113,15 +104,17 @@ function createOurStoryExampleSection() {
         // Create div to contain images
         const ourStoryExampleImagesContainer = document.createElement('div');
 
-        const ourStoryExampleImageOne = document.createElement('img');
-        const ourStoryExampleImageTwo = document.createElement('img');
-        const ourStoryExampleImageThree = document.createElement('img');
-        const ourStoryExampleImageFour = document.createElement('img');
+        const ourStoryExampleImageOne = document.createElement('div');
+        const ourStoryExampleImageTwo = document.createElement('div');
+        const ourStoryExampleImageThree = document.createElement('div');
+        const ourStoryExampleImageFour = document.createElement('div');
 
-        ourStoryExampleImageOne.src = ourStoryExampleImageInfo.imgOne;
-        ourStoryExampleImageTwo.src = ourStoryExampleImageInfo.imgTwo;
-        ourStoryExampleImageThree.src = ourStoryExampleImageInfo.imgThree;
-        ourStoryExampleImageFour.src = ourStoryExampleImageInfo.imgFour;
+        ourStoryExampleImageOne.style.backgroundImage = `url(${ourStoryExampleImageInfo.imgOne})`;
+        ourStoryExampleImageTwo.style.backgroundImage = `url(${ourStoryExampleImageInfo.imgTwo})`;
+        ourStoryExampleImageThree.style.backgroundImage = `url(${ourStoryExampleImageInfo.imgThree})`;
+        ourStoryExampleImageFour.style.backgroundImage = `url(${ourStoryExampleImageInfo.imgFour})`;
+
+        console.log(ourStoryExampleImageOne);
 
         ourStoryExampleImagesContainer.append(
             ourStoryExampleImageOne,
