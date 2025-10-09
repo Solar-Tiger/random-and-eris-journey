@@ -471,10 +471,8 @@ main {
         position: relative;
         width: min(550px, 100%);
         aspect-ratio: 600 / 350;
-        background: url('/src/assets/images/banner/banner-random-and-eris-our-fateful-encounter.png');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 95%;
+        background: url('/src/assets/images/banner/banner-random-and-eris-our-fateful-encounter.png')
+            center / cover no-repeat;
         box-shadow: inset 0 0 20px 20px #7b510e;
         border-radius: 50%;
     }
@@ -826,4 +824,64 @@ footer .attribution-links {
 .next-btn {
     padding: 5px 50px;
     cursor: pointer;
+}
+
+/*  
+======================================
+                TEST CODE     
+======================================
+*/
+
+.test-container {
+    /* 1. Set the container's max size */
+    width: min(600px, 80vw);
+    padding: 3rem;
+
+    /* 2. Establish a positioning context for the image and pseudo-elements */
+    position: relative;
+
+    /* 3. The background color layer (behind the image) - NO BOX-SHADOW HERE */
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        /* THE BACKGROUND COLOR */
+        background-color: darkred;
+
+        /* This layer is the lowest, behind the image and the shadow */
+        z-index: 1;
+    }
+
+    /* 4. The image layer (in the middle) */
+    & img {
+        /* The crucial fix: Set position to 'relative' to enable z-index */
+        position: relative;
+        z-index: 2; /* In front of the background (z-index: 1) */
+
+        /* Ensure it still sizes the container and is responsive */
+        border-radius: 50%;
+    }
+
+    /* 5. The box-shadow layer (on top of the image) */
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        pointer-events: none;
+        border-radius: 50%;
+
+        /* THE BOX-SHADOW */
+        /* Use inset box-shadow to achieve the effect of a shadowed border on the *inside* */
+        box-shadow: inset 0 0 25px 75px darkred;
+
+        /* This layer is the highest, on top of the image (z-index: 2) */
+        z-index: 3;
+    }
 }
