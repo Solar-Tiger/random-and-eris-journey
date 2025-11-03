@@ -104,19 +104,23 @@ function createOurStoryExampleSection() {
         // Create div to contain images
         const ourStoryExampleImagesContainer = document.createElement('div');
 
-        const ourStoryExampleImageOne = document.createElement('div');
-        const ourStoryExampleImageTwo = document.createElement('div');
-        const ourStoryExampleImageThree = document.createElement('div');
-        const ourStoryExampleImageFour = document.createElement('div');
+        // Create main img for images container
+        const ourStoryExampleMainImage = document.createElement('img');
 
-        ourStoryExampleImageOne.style.backgroundImage = `url(${ourStoryExampleImageInfo.imgOne})`;
-        ourStoryExampleImageTwo.style.backgroundImage = `url(${ourStoryExampleImageInfo.imgTwo})`;
-        ourStoryExampleImageThree.style.backgroundImage = `url(${ourStoryExampleImageInfo.imgThree})`;
-        ourStoryExampleImageFour.style.backgroundImage = `url(${ourStoryExampleImageInfo.imgFour})`;
+        ourStoryExampleMainImage.src = ourStoryExampleImageInfo.mainImage;
 
-        console.log(ourStoryExampleImageOne);
+        const ourStoryExampleImageOne = document.createElement('img');
+        const ourStoryExampleImageTwo = document.createElement('img');
+        const ourStoryExampleImageThree = document.createElement('img');
+        const ourStoryExampleImageFour = document.createElement('img');
+
+        ourStoryExampleImageOne.src = ourStoryExampleImageInfo.imgOne;
+        ourStoryExampleImageTwo.src = ourStoryExampleImageInfo.imgTwo;
+        ourStoryExampleImageThree.src = ourStoryExampleImageInfo.imgThree;
+        ourStoryExampleImageFour.src = ourStoryExampleImageInfo.imgFour;
 
         ourStoryExampleImagesContainer.append(
+            ourStoryExampleMainImage,
             ourStoryExampleImageOne,
             ourStoryExampleImageTwo,
             ourStoryExampleImageThree,
