@@ -461,16 +461,23 @@ main {
 
 /* ======== OUR STORY EXAMPLE ======== */
 
+/* Reverse row direction for second article on larger screens for alternating layout */
+
+.our-story-example-section article:nth-of-type(2) {
+    flex-direction: row-reverse;
+}
+
 .our-story-example-section article {
     display: flex;
     flex-wrap: wrap;
     background-color: #7b510e;
-    padding: 80px 0;
+    padding: 60px 0;
 
     & > div {
         position: relative;
         width: min(600px, 80vw);
         padding: 1rem;
+        margin: 0 auto;
 
         &::before {
             content: '';
@@ -506,8 +513,8 @@ main {
     & div > img:not(:first-child) {
         position: absolute;
         z-index: 10;
-        width: 100px;
-        height: 100px;
+        width: min(100px, 10vw);
+        height: min(100px, 10vw);
         border-radius: 50%;
         top: 10px;
         left: 10px;
