@@ -19,7 +19,7 @@ function createOurStoryReasonSection() {
     // Create and append Our Story title to Our Story Section
     const ourStoryTitle = document.createElement('h2');
 
-    ourStoryTitle.textContent = 'Random and Eris: Finding your bestie';
+    ourStoryTitle.textContent = 'Finding your bestie';
 
     ourStorySectionContainer.appendChild(ourStoryTitle);
 
