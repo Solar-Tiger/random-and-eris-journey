@@ -463,8 +463,15 @@ main {
 
 /* Reverse row direction for second article on larger screens for alternating layout */
 
-.our-story-example-section article:nth-of-type(2) {
-    flex-direction: row-reverse;
+@media screen and (min-width: 48em) {
+    .our-story-example-section article:nth-of-type(2) {
+        flex-direction: row-reverse;
+    }
+
+    .our-story-example-section div,
+    .our-story-example-section p {
+        flex: 1 1 50%;
+    }
 }
 
 .our-story-example-section article {
