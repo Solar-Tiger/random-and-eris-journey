@@ -472,6 +472,12 @@ main {
     .our-story-example-section p {
         flex: 1 1 50%;
     }
+
+    .our-story-example-section article {
+        & div > img:not(:first-child) {
+            box-shadow: 0 0 15px 1px black;
+        }
+    }
 }
 
 /* Styles for each articles images and floating image bubbles */
