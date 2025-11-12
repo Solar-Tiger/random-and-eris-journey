@@ -474,8 +474,12 @@ main {
     }
 }
 
+/* Styles for each articles images and floating image bubbles */
+
 .our-story-example-section article {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     background-color: #7b510e;
     padding: 60px 0;
@@ -520,16 +524,36 @@ main {
     & div > img:not(:first-child) {
         position: absolute;
         z-index: 10;
-        width: min(100px, 18vw);
-        height: min(100px, 18vw);
+        width: min(115px, 18vw);
+        aspect-ratio: 1;
         border-radius: 50%;
+        box-shadow: 0 0 5px 1px black;
+        object-fit: cover;
+        object-position: 50% 30%;
+    }
+}
+
+/* Styles for individual floating bubble placements */
+
+.our-story-example-section article div {
+    & img:nth-child(2) {
         top: 10px;
-        left: 10px;
-        box-shadow: 0 0 15px 1px black;
+        left: 30px;
     }
 
-    & p {
-        flex: 1 1 50%;
+    & img:nth-child(3) {
+        top: 20px;
+        right: 20px;
+    }
+
+    & img:nth-child(4) {
+        bottom: 20px;
+        left: 20px;
+    }
+
+    & img:nth-child(5) {
+        bottom: 15px;
+        right: 25px;
     }
 }
 
