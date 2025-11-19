@@ -4,10 +4,26 @@ import ourFatefulEncounterTablet from '../../assets/images/banner/banner-random-
 import ourFatefulEncounterDesktop from '../../assets/images/banner/banner-random-and-eris-our-fateful-encounter.png';
 
 const imageCardInformation = [
-    { cardImage: randomAndEris, cardTitle: 'Random and Eris' },
-    { cardImage: randomAndEris, cardTitle: 'Random and Eris' },
-    { cardImage: randomAndEris, cardTitle: 'Random and Eris' },
-    { cardImage: randomAndEris, cardTitle: 'Random and Eris' }
+    {
+        cardImage: randomAndEris,
+        cardTitle:
+            'When you’re not looking, is when you find what you’re looking for'
+    },
+    {
+        cardImage: randomAndEris,
+        cardTitle:
+            'When you’re not looking, is when you find what you’re looking for'
+    },
+    {
+        cardImage: randomAndEris,
+        cardTitle:
+            'When you’re not looking, is when you find what you’re looking for'
+    },
+    {
+        cardImage: randomAndEris,
+        cardTitle:
+            'When you’re not looking, is when you find what you’re looking for'
+    }
 ];
 
 function createOurStoryReasonSection() {
@@ -36,7 +52,6 @@ function createOurStoryReasonSection() {
         const ourStoryImage = document.createElement('img');
 
         ourStoryImage.src = imageCard.cardImage;
-        ourStoryImage.style.width = '200px';
 
         const ourStoryCaption = document.createElement('figcaption');
 
