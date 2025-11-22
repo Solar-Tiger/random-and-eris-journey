@@ -466,8 +466,9 @@ main {
 
     & h2 {
         color: white;
-        font-size: 3rem;
+        font-size: clamp(2.5rem, 11vw, 3.5rem);
         padding: 30px 0;
+        text-align: center;
     }
 }
 
@@ -486,7 +487,7 @@ main {
         padding: 30px 40px;
 
         & img {
-            width: 375px;
+            width: clamp(200px, 40vw, 350px);
             border: 5px solid black;
             border-radius: 25px;
             aspect-ratio: 1 / 1;
@@ -498,10 +499,11 @@ main {
             position: relative;
             top: -20px;
             background-color: #d9d9d9;
-            font-size: 1.625rem;
+            font-size: clamp(1.1rem, 5vw, 1.75rem);
             border-radius: 25px;
-            padding: 10px 40px;
-            width: 456px;
+            padding: 5px 15px;
+            /* max-width: 456px; */
+            width: clamp(210px, 75vw, 456px);
             text-align: center;
         }
 
@@ -540,11 +542,23 @@ main {
     }
 }
 
-@media screen and (min-width: 60em) {
+@media screen and (min-width: 67.5em) {
     /* Styles to move all images up */
 
     figure:not(:first-child) {
-        margin-top: -250px;
+        margin-top: -140px;
+    }
+}
+
+@media screen and (min-width: 43.75em) {
+    .image-card-container figure {
+        padding: 30px 120px;
+    }
+}
+
+@media screen and (min-width: 24.813em) {
+    .image-card-container figure figcaption {
+        padding: 5px 40px;
     }
 }
 
@@ -571,60 +585,75 @@ main {
 
 /* Styles for each articles images and floating image bubbles */
 
-.our-story-example-section article {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+.our-story-example-section {
     background-color: #7b510e;
-    padding: 60px 0;
 
-    & > div {
-        position: relative;
-        width: min(600px, 100vw);
-        padding: 1rem;
-        margin: 0 auto;
-
-        &::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: #7b510e;
-            z-index: 1;
-        }
-
-        & img:first-child {
-            position: relative;
-            z-index: 2;
-            border-radius: 50%;
-        }
-
-        &::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            pointer-events: none;
-            border-radius: 50%;
-            box-shadow: inset 0 0 15px 35px #7b510e;
-            z-index: 3;
-        }
+    & h2 {
+        color: white;
+        font-size: clamp(2.5rem, 11vw, 3.5rem);
+        padding: 30px 0;
+        text-align: center;
     }
 
-    & div > img:not(:first-child) {
-        position: absolute;
-        z-index: 10;
-        width: min(115px, 18vw);
-        aspect-ratio: 1;
-        border-radius: 50%;
-        box-shadow: 0 0 5px 1px black;
-        object-fit: cover;
-        object-position: 50% 30%;
+    & article {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 60px 0;
+
+        & div {
+            position: relative;
+            width: min(600px, 100vw);
+            padding: 1rem;
+            margin: 0 auto;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 1;
+            }
+
+            & img:first-child {
+                position: relative;
+                z-index: 2;
+                border-radius: 50%;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                pointer-events: none;
+                border-radius: 50%;
+                box-shadow: inset 0 0 15px 35px #7b510e;
+                z-index: 3;
+            }
+        }
+
+        /* Styles for paragraph */
+
+        & p {
+            padding: 0 min(5vw, 50px);
+        }
+
+        & div img:not(:first-child) {
+            position: absolute;
+            z-index: 10;
+            width: min(115px, 18vw);
+            aspect-ratio: 1;
+            border-radius: 50%;
+            box-shadow: 0 0 5px 1px black;
+            object-fit: cover;
+            object-position: 50% 30%;
+        }
     }
 }
 
@@ -649,6 +678,12 @@ main {
     & img:nth-child(5) {
         bottom: 15px;
         right: 25px;
+    }
+}
+
+@media screen and (min-width: 48em) {
+    .our-story-example-section article div img:not(:first-child) {
+        width: min(9.7vw, 115px);
     }
 }
 
