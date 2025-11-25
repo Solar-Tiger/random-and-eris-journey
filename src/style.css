@@ -566,7 +566,7 @@ main {
 
 /* Reverse row direction for second article on larger screens for alternating layout */
 
-@media screen and (min-width: 48em) {
+@media screen and (min-width: 60em) {
     .our-story-example-section article:nth-of-type(2) {
         flex-direction: row-reverse;
     }
@@ -586,7 +586,8 @@ main {
 /* Styles for each articles images and floating image bubbles */
 
 .our-story-example-section {
-    background-color: #7b510e;
+    color: white;
+    background-color: #380642;
 
     & h2 {
         color: white;
@@ -600,7 +601,7 @@ main {
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
-        padding: 60px 0;
+        padding-top: 30px;
 
         & div {
             position: relative;
@@ -633,7 +634,7 @@ main {
                 bottom: 0;
                 pointer-events: none;
                 border-radius: 50%;
-                box-shadow: inset 0 0 15px 35px #7b510e;
+                box-shadow: inset 0 0 15px 35px #380642;
                 z-index: 3;
             }
         }
@@ -641,7 +642,8 @@ main {
         /* Styles for paragraph */
 
         & p {
-            padding: 0 min(5vw, 50px);
+            font-size: clamp(1.2rem, 2vw, 1.5rem);
+            padding: 20px min(5vw, 40px);
         }
 
         & div img:not(:first-child) {
@@ -681,7 +683,7 @@ main {
     }
 }
 
-@media screen and (min-width: 48em) {
+@media screen and (min-width: 60em) {
     .our-story-example-section article div img:not(:first-child) {
         width: min(9.7vw, 115px);
     }
