@@ -75,8 +75,11 @@ const ourStoryExampleImageInformation = [
         imgTwo: randomAndEris,
         imgThree: randomAndEris,
         imgFour: randomAndEris,
-        description:
-            'We first met through our old Free Company. I don’t know what it was that caused me to sit down next to her that day, but it’s a choice I’d make every time again and again. At first, we often joked that each other were too cool to hangout with the other one. But as we hung out more in game, we learned we had more in common than we’ve ever found with anyone in our lives.'
+        title: 'The Beginning',
+        descriptionOne:
+            'We first met through our old Free Company. I don’t know what it was that caused me to sit down next to her that day, but it’s a choice I’d make every time again and again. ',
+        descriptionTwo:
+            'At first, we often joked that each other were too cool to hangout with the other one. But as we hung out more in game, we learned we had more in common than we’ve ever found with anyone in our lives.'
     },
     {
         mainImage: ourFatefulEncounterDesktop,
@@ -84,8 +87,11 @@ const ourStoryExampleImageInformation = [
         imgTwo: randomAndEris,
         imgThree: randomAndEris,
         imgFour: randomAndEris,
-        description:
-            'Our characters in game also grew closer, becoming near inseparable. We attended all our old FC’s Sunday night giveaways together, did all content we could together, etc. She could never do Savage content but I worked hard to find us content we could do. Eventually we ended up having both characters get married in game and she became my bestie for the resties.'
+        title: 'The Journey',
+        descriptionOne:
+            'Our characters in game also grew closer, becoming near inseparable. We attended all our old FC’s Sunday night giveaways together, did all content we could together, etc. ',
+        descriptionTwo:
+            'She could never do Savage content but I worked hard to find us content we could do. Eventually we ended up having both characters get married in game and she became my bestie for the resties.'
     },
     {
         mainImage: ourFatefulEncounterDesktop,
@@ -93,8 +99,11 @@ const ourStoryExampleImageInformation = [
         imgTwo: randomAndEris,
         imgThree: randomAndEris,
         imgFour: randomAndEris,
-        description:
-            'We mostly stuck to the MSQ and, as time went on, we started clearing older content along with New Game+ content. It kept us entertained for a couple months with how it wrapped up a lot of quest. From there we’d move on to mount collecting for the ones we could get and eventually got a house of our own together. Our adventures seemed to never end when we were together.'
+        title: 'The Future',
+        descriptionOne:
+            'We mostly stuck to the MSQ and, as time went on, we started clearing older content along with New Game+ content. It kept us entertained for a couple months with how it wrapped up a lot of quest. ',
+        descriptionTwo:
+            'From there we’d move on to mount collecting for the ones we could get and eventually got a house of our own together. Our adventures seemed to never end when we were together.'
     }
 ];
 
@@ -144,13 +153,34 @@ function createOurStoryExampleSection() {
 
         ourStoryExampleArticle.appendChild(ourStoryExampleImagesContainer);
 
-        // Create Our Story Example paragraph
-        const ourStoryExampleArticleDescription = document.createElement('p');
+        // Create container for Our Story Example title and paragraph
+        const ourStoryExampleArticleDescriptionContainer =
+            document.createElement('div');
 
-        ourStoryExampleArticleDescription.textContent =
-            ourStoryExampleImageInfo.description;
+        // Create Our Story Example title and paragraph
+        const ourStoryExampleArticleTitle = document.createElement('h3');
+        const ourStoryExampleArticleDescriptionOne =
+            document.createElement('p');
+        const ourStoryExampleArticleDescriptionTwo =
+            document.createElement('p');
 
-        ourStoryExampleArticle.append(ourStoryExampleArticleDescription);
+        ourStoryExampleArticleTitle.textContent =
+            ourStoryExampleImageInfo.title;
+        ourStoryExampleArticleDescriptionOne.textContent =
+            ourStoryExampleImageInfo.descriptionOne;
+        ourStoryExampleArticleDescriptionTwo.textContent =
+            ourStoryExampleImageInfo.descriptionTwo;
+
+        // Append title and both descriptions
+        ourStoryExampleArticleDescriptionContainer.append(
+            ourStoryExampleArticleTitle,
+            ourStoryExampleArticleDescriptionOne,
+            ourStoryExampleArticleDescriptionTwo
+        );
+
+        ourStoryExampleArticle.appendChild(
+            ourStoryExampleArticleDescriptionContainer
+        );
 
         ourStoryExampleSection.appendChild(ourStoryExampleArticle);
     });
