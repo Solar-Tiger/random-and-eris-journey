@@ -3,30 +3,30 @@ import ourFatefulEncounterMobile from '../../assets/images/banner/banner-random-
 import ourFatefulEncounterTablet from '../../assets/images/banner/banner-random-and-eris-our-fateful-encounter-tablet.png';
 import ourFatefulEncounterDesktop from '../../assets/images/banner/banner-random-and-eris-our-fateful-encounter.png';
 
-const imageCardInformation = [
-    {
-        cardImage: randomAndEris,
-        cardTitle:
-            'When you’re not looking, is when you find what you’re looking for'
-    },
-    {
-        cardImage: randomAndEris,
-        cardTitle:
-            'When you’re not looking, is when you find what you’re looking for'
-    },
-    {
-        cardImage: randomAndEris,
-        cardTitle:
-            'When you’re not looking, is when you find what you’re looking for'
-    },
-    {
-        cardImage: randomAndEris,
-        cardTitle:
-            'When you’re not looking, is when you find what you’re looking for'
-    }
-];
-
 function createOurStoryReasonSection() {
+    const imageCardInformation = [
+        {
+            cardImage: randomAndEris,
+            cardTitle:
+                'When you’re not looking, is when you find what you’re looking for'
+        },
+        {
+            cardImage: randomAndEris,
+            cardTitle:
+                'When you’re not looking, is when you find what you’re looking for'
+        },
+        {
+            cardImage: randomAndEris,
+            cardTitle:
+                'When you’re not looking, is when you find what you’re looking for'
+        },
+        {
+            cardImage: randomAndEris,
+            cardTitle:
+                'When you’re not looking, is when you find what you’re looking for'
+        }
+    ];
+
     // Create Our Story section
     const ourStorySectionContainer = document.createElement('section');
 
@@ -68,46 +68,46 @@ function createOurStoryReasonSection() {
     return ourStorySectionContainer;
 }
 
-const ourStoryExampleImageInformation = [
-    {
-        mainImage: ourFatefulEncounterDesktop,
-        imgOne: randomAndEris,
-        imgTwo: randomAndEris,
-        imgThree: randomAndEris,
-        imgFour: randomAndEris,
-        title: 'The Beginning',
-        descriptionOne:
-            'We first met through our old Free Company. I don’t know what it was that caused me to sit down next to her that day, but it’s a choice I’d make every time again and again. ',
-        descriptionTwo:
-            'At first, we often joked that each other were too cool to hangout with the other one. But as we hung out more in game, we learned we had more in common than we’ve ever found with anyone in our lives.'
-    },
-    {
-        mainImage: ourFatefulEncounterDesktop,
-        imgOne: randomAndEris,
-        imgTwo: randomAndEris,
-        imgThree: randomAndEris,
-        imgFour: randomAndEris,
-        title: 'The Journey',
-        descriptionOne:
-            'Our characters in game also grew closer, becoming near inseparable. We attended all our old FC’s Sunday night giveaways together, did all content we could together, etc. ',
-        descriptionTwo:
-            'She could never do Savage content but I worked hard to find us content we could do. Eventually we ended up having both characters get married in game and she became my bestie for the resties.'
-    },
-    {
-        mainImage: ourFatefulEncounterDesktop,
-        imgOne: randomAndEris,
-        imgTwo: randomAndEris,
-        imgThree: randomAndEris,
-        imgFour: randomAndEris,
-        title: 'The Future',
-        descriptionOne:
-            'We mostly stuck to the MSQ and, as time went on, we started clearing older content along with New Game+ content. It kept us entertained for a couple months with how it wrapped up a lot of quest. ',
-        descriptionTwo:
-            'From there we’d move on to mount collecting for the ones we could get and eventually got a house of our own together. Our adventures seemed to never end when we were together.'
-    }
-];
-
 function createOurStoryExampleSection() {
+    const ourStoryExampleImageInformation = [
+        {
+            mainImage: ourFatefulEncounterDesktop,
+            imgOne: randomAndEris,
+            imgTwo: randomAndEris,
+            imgThree: randomAndEris,
+            imgFour: randomAndEris,
+            title: 'The Beginning',
+            descriptionOne:
+                'We first met through our old Free Company. I don’t know what it was that caused me to sit down next to her that day, but it’s a choice I’d make every time again and again. ',
+            descriptionTwo:
+                'At first, we often joked that each other were too cool to hangout with the other one. But as we hung out more in game, we learned we had more in common than we’ve ever found with anyone in our lives.'
+        },
+        {
+            mainImage: ourFatefulEncounterDesktop,
+            imgOne: randomAndEris,
+            imgTwo: randomAndEris,
+            imgThree: randomAndEris,
+            imgFour: randomAndEris,
+            title: 'The Journey',
+            descriptionOne:
+                'Our characters in game also grew closer, becoming near inseparable. We attended all our old FC’s Sunday night giveaways together, did all content we could together, etc. ',
+            descriptionTwo:
+                'She could never do Savage content but I worked hard to find us content we could do. Eventually we ended up having both characters get married in game and she became my bestie for the resties.'
+        },
+        {
+            mainImage: ourFatefulEncounterDesktop,
+            imgOne: randomAndEris,
+            imgTwo: randomAndEris,
+            imgThree: randomAndEris,
+            imgFour: randomAndEris,
+            title: 'The Future',
+            descriptionOne:
+                'We mostly stuck to the MSQ and, as time went on, we started clearing older content along with New Game+ content. It kept us entertained for a couple months with how it wrapped up a lot of quest. ',
+            descriptionTwo:
+                'From there we’d move on to mount collecting for the ones we could get and eventually got a house of our own together. Our adventures seemed to never end when we were together.'
+        }
+    ];
+
     // Create Our Story Example section
     const ourStoryExampleSection = document.createElement('section');
 
