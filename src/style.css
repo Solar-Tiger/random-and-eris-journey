@@ -547,9 +547,16 @@ main {
         border-radius: var(--button-card-border-radius);
     }
 
+    .btn-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
     .next-btn,
     .previous-btn {
-        padding: 5px 50px;
+        padding: 5px 40px;
         cursor: pointer;
     }
 }
