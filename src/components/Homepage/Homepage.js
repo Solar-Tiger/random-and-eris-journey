@@ -182,6 +182,7 @@ function createFFXIVTalesSection(currentIndex = 0) {
     nextBtn.textContent = 'Next';
     previousBtn.textContent = 'Previous';
 
+    btnContainer.classList.add('btn-container');
     nextBtn.classList.add('next-btn');
     previousBtn.classList.add('previous-btn');
 
