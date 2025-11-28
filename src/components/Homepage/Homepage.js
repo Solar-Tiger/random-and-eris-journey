@@ -151,6 +151,7 @@ function createFFXIVTalesSection(currentIndex = 0) {
 
     // Create section contianing FFXIV Tales content
     ffxivTalesSection.classList.add('our-ffxiv-tales');
+    ffxivTalesSection.id = 'our-ffxiv-tales';
 
     // Create title
     ffxivTalesTitle.textContent = ourFFXIVTalesContent[currentIndex].title;
@@ -205,6 +206,7 @@ function createOurBingeWatchingEscapeSection() {
     const ourBingeWatchingEscapeSection = document.createElement('section');
 
     ourBingeWatchingEscapeSection.classList.add('our-binge-watching-escape');
+    ourBingeWatchingEscapeSection.id = 'our-binge-watching-escape';
 
     // Create Our Binge Watching Escape background image using picture element
     const ourBingeWatchingEscapePicture = document.createElement('picture');
