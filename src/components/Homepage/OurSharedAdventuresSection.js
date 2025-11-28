@@ -19,7 +19,7 @@ const ourSharedAdventuresList = [
     {
         image: bingeWatchingEscape,
         altText: 'Random and Eris watching anime',
-        title: 'Our Shared Binge-Watching Escape',
+        title: 'Our Shared Binge−Watching Escape',
         sectionID: 'our-binge-watching-escape'
     }
 ];
