@@ -177,15 +177,15 @@ function createFFXIVTalesSection(currentIndex = 0) {
     // Next and Previous button with button container
     const btnContainer = document.createElement('div');
     const nextBtn = document.createElement('button');
-    const prevBtn = document.createElement('button');
+    const previousBtn = document.createElement('button');
 
     nextBtn.textContent = 'Next';
-    prevBtn.textContent = 'Previous';
+    previousBtn.textContent = 'Previous';
 
     nextBtn.classList.add('next-btn');
-    prevBtn.classList.add('previous-btn');
+    previousBtn.classList.add('previous-btn');
 
-    btnContainer.append(prevBtn, nextBtn);
+    btnContainer.append(previousBtn, nextBtn);
 
     // Append all elements
     ffxivTalesSection.append(
