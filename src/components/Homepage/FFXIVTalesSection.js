@@ -59,9 +59,9 @@ function changeDisplayedContent() {
 
         previousSlide: () => {
             currentIndex =
-                (slideIndex - 1 + totalSlideLength) % totalSlideLength;
+                (currentIndex - 1 + totalSlideLength) % totalSlideLength;
 
-            updateFFXIVTalesContent(previousSlideIndex);
+            updateFFXIVTalesContent(currentIndex);
         }
     };
 }
