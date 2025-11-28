@@ -48,7 +48,7 @@ body {
 
 /* USED FOR MOBILE NAV MENU TO KEEP PAGE FROM SCROLLING */
 
-@media screen and (max-width: 63.063em) {
+@media screen and (max-width: 57.5em) {
     .overflow-body--hidden {
         overflow: hidden;
     }
@@ -75,7 +75,7 @@ body {
 
 /* STYLES FOR HEADER. THE max-width KEEPS THE CONTENT FROM EXPANDING */
 
-header {
+.random-and-eris-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -86,17 +86,26 @@ header {
     margin: 0 auto;
     z-index: 10;
 
-    & .audioengine-logo {
+    & .random-and-eris-logo {
         width: min(47vw, 222px);
+    }
+
+    & a {
+        margin: auto;
     }
 }
 
-@media screen and (min-width: 63.125em) {
-    header {
+@media screen and (min-width: 57.5em) {
+    .random-and-eris-header {
         padding: 0 20px;
+        flex-direction: row-reverse;
 
-        & .audioengine-logo {
+        & .random-and-eris-logo {
             padding: 13px 0;
+        }
+
+        & a {
+            margin: 0;
         }
     }
 }
@@ -114,7 +123,7 @@ header {
     margin-left: auto;
 }
 
-@media screen and (min-width: 63.125em) {
+@media screen and (min-width: 57.5em) {
     .desktop-nav-menu {
         display: block;
     }
@@ -126,7 +135,6 @@ header {
     display: flex;
     list-style-type: none;
     width: 647px;
-    padding-right: 22px;
 
     & li {
         height: 60px;
@@ -178,6 +186,7 @@ header {
     right: 24px;
     top: 24px;
     width: 2rem;
+    cursor: pointer;
 }
 
 /* STYLES FOR MOBILE NAV */
@@ -191,7 +200,7 @@ header {
     transform: var(--button-scale-size);
 }
 
-@media screen and (min-width: 63.125em) {
+@media screen and (min-width: 57.5em) {
     .hamburger-menu {
         display: none;
     }
@@ -205,7 +214,7 @@ header {
     height: 100vh;
     background-color: black;
     border: 2px solid white;
-    z-index: 100;
+    z-index: 1000;
     transition: left 0.3s ease-in-out;
 }
 
@@ -213,9 +222,9 @@ header {
     left: 0;
 }
 
-/* REMOVE MOBILE NAV MENU AND OVERLAY WHEN SCREEN GOES ABOVE 63.125em */
+/* REMOVE MOBILE NAV MENU AND OVERLAY WHEN SCREEN GOES ABOVE 57.5em */
 
-@media screen and (min-width: 63.125em) {
+@media screen and (min-width: 57.5em) {
     .hamburger-menu,
     .mobile-nav-overlay,
     .mobile-nav-menu {
@@ -264,12 +273,11 @@ header {
 main {
     max-width: 75em;
     margin: 0 auto;
-    height: 2000px;
 }
 
 /*  
 ======================================
-             HERO SECTION         
+     RANDOM AND ERIS HERO SECTION         
 ======================================
 */
 
@@ -277,17 +285,18 @@ main {
     display: grid;
     grid-template-columns: 1fr;
     row-gap: 20px;
-    padding: 10px;
+    padding: 40px 10px;
+    background-color: #666666;
 
     & img {
         border-radius: 50%;
     }
 }
 
-.hero-text {
+.random-and-eris-hero-text {
     display: grid;
     align-content: space-evenly;
-    gap: 2rem;
+    gap: 1.2rem;
 
     h1,
     p,
@@ -332,10 +341,573 @@ main {
             padding: min(2.4vw, 10px) min(2.8vw, 16px);
             font-size: min(3vw, 2rem);
         }
+
+        & a:hover {
+            transform: var(--button-scale-size);
+        }
     }
 
-    .hero-text {
+    .random-and-eris-hero-text {
         gap: 1.5rem;
+    }
+}
+
+/*  
+======================================
+     OUR FATEFUL ENCOUNTER SECTION         
+======================================
+*/
+
+/* ======== OUR FATEFUL ENCOUNTER IMAGE ======== */
+
+/* STYLES FOR OUR FATEFUL ENCOUNTER IMAGE */
+
+.our-fateful-encounter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    & picture {
+        z-index: -10;
+    }
+}
+
+/* STYLES FOR BACGRKOUND DIM */
+
+.our-fateful-encounter::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(71, 71, 71, 0.6);
+    z-index: -9;
+}
+
+/* STYLES FOR OUR FATEFUL ENCOUNTER IMAGE CARD */
+
+.our-fateful-encounter-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    gap: 1.5rem;
+    width: 94vw;
+    aspect-ratio: 1 / 1;
+    z-index: 9;
+
+    & h2,
+    p,
+    a {
+        color: white;
+        text-align: center;
+    }
+
+    & h2 {
+        font-size: min(10vw, 4rem);
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+
+    & p {
+        font-size: min(4.8vw, 2.2rem);
+        line-height: 1.45;
+        margin-bottom: 0.5rem;
+        font-weight: 500;
+    }
+}
+
+/* STYLES FOR TABLET OUR FATEFUL ENCOUNTER CARD TABLET */
+
+@media screen and (min-width: 38em) {
+    .our-fateful-encounter-card {
+        justify-content: center;
+        width: min(95vw, 52.5rem);
+        height: 17.8rem;
+
+        & h2 {
+            font-size: min(8vw, 4rem);
+            margin: -16px 0 6px;
+        }
+
+        p {
+            font-size: min(4vw, 2.2rem);
+            margin-bottom: 1.4rem;
+        }
+    }
+}
+
+/* STYLES FOR DESKTOP OUR FATEFUL ENCOUNTER CARD DESKTOP */
+
+@media screen and (min-width: 64em) {
+    .our-fateful-encounter-card {
+        justify-content: center;
+        width: min(69vw, 42.5rem);
+
+        & h2 {
+            font-size: min(6vw, 4rem);
+            padding-top: 6px;
+        }
+
+        p {
+            font-size: min(2.5vw, 1.55rem);
+            margin-bottom: 1.6rem;
+        }
+    }
+}
+
+/* ======== OUR STORY SECTION ======== */
+
+.our-story-section {
+    background: linear-gradient(#860b0b, #0037ad);
+
+    & h2 {
+        color: white;
+        font-size: clamp(2.5rem, 11vw, 3.5rem);
+        padding: 30px 0;
+        text-align: center;
+    }
+}
+
+.our-story-section,
+.image-card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-card-container {
+    width: 100%;
+
+    /* Styles for img and figcaption */
+    figure {
+        padding: 30px 40px;
+
+        & img {
+            width: clamp(200px, 40vw, 350px);
+            border: 5px solid black;
+            border-radius: 25px;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            object-position: 50% 20%;
+        }
+
+        & figcaption {
+            position: relative;
+            top: -20px;
+            background-color: #d9d9d9;
+            font-size: clamp(1.1rem, 5vw, 1.75rem);
+            border-radius: 25px;
+            padding: 5px 15px;
+            /* max-width: 456px; */
+            width: clamp(210px, 75vw, 456px);
+            text-align: center;
+        }
+
+        & img,
+        figcaption {
+            margin: 0 auto;
+        }
+    }
+
+    /* Styles for img and figcaption placements */
+
+    & figure:nth-of-type(1),
+    figure:nth-of-type(3) {
+        align-self: flex-start;
+
+        & img {
+            transform: rotate(-10deg);
+        }
+
+        & figcaption {
+            transform: rotate(4deg);
+        }
+    }
+
+    & figure:nth-of-type(2),
+    figure:nth-of-type(4) {
+        align-self: flex-end;
+
+        & img {
+            transform: rotate(10deg);
+        }
+
+        & figcaption {
+            transform: rotate(-4deg);
+        }
+    }
+}
+
+@media screen and (min-width: 67.5em) {
+    /* Styles to move all images up */
+
+    figure:not(:first-child) {
+        margin-top: -140px;
+    }
+}
+
+@media screen and (min-width: 43.75em) {
+    .image-card-container figure {
+        padding: 30px 120px;
+    }
+}
+
+@media screen and (min-width: 24.813em) {
+    .image-card-container figure figcaption {
+        padding: 5px 40px;
+    }
+}
+
+/* ======== OUR STORY EXAMPLE SECTION ======== */
+
+/* Reverse row direction for second article on larger screens for alternating layout */
+
+@media screen and (min-width: 60em) {
+    .our-story-example-section article:nth-of-type(2) {
+        flex-direction: row-reverse;
+    }
+
+    .our-story-example-section div,
+    .our-story-example-section p {
+        flex: 1 1 50%;
+    }
+
+    .our-story-example-section article {
+        & div > img:not(:first-child) {
+            box-shadow: 0 0 15px 1px black;
+        }
+    }
+}
+
+/* Styles for each articles images and floating image bubbles */
+
+.our-story-example-section {
+    color: white;
+    background-color: #380642;
+    padding: 30px 0;
+
+    & h2 {
+        color: white;
+        font-size: clamp(2.5rem, 11vw, 3.5rem);
+        text-align: center;
+    }
+
+    & article {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding-top: 30px;
+
+        & div:first-child {
+            position: relative;
+            width: min(600px, 100vw);
+            padding: 1rem;
+            margin: 0 auto;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 1;
+            }
+
+            & img:first-child {
+                position: relative;
+                z-index: 2;
+                border-radius: 50%;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                pointer-events: none;
+                border-radius: 50%;
+                box-shadow: inset 0 0 15px 35px #380642;
+                z-index: 3;
+            }
+        }
+
+        /* Styles for paragraph and h3 */
+
+        & h3 {
+            text-align: center;
+            font-size: clamp(1.5rem, 2vw, 2rem);
+        }
+
+        & p {
+            font-size: clamp(1.1rem, 2vw, 1.5rem);
+            padding: 10px min(5vw, 40px);
+        }
+
+        & div img:not(:first-child) {
+            position: absolute;
+            z-index: 10;
+            width: min(115px, 18vw);
+            aspect-ratio: 1;
+            border-radius: 50%;
+            box-shadow: 0 0 5px 1px black;
+            object-fit: cover;
+            object-position: 50% 30%;
+        }
+    }
+}
+
+/* Styles for individual floating bubble placements */
+
+.our-story-example-section article div {
+    & img:nth-child(2) {
+        top: 10px;
+        left: 30px;
+    }
+
+    & img:nth-child(3) {
+        top: 20px;
+        right: 20px;
+    }
+
+    & img:nth-child(4) {
+        bottom: 20px;
+        left: 20px;
+    }
+
+    & img:nth-child(5) {
+        bottom: 15px;
+        right: 25px;
+    }
+}
+
+@media screen and (min-width: 60em) {
+    .our-story-example-section article div img:not(:first-child) {
+        width: min(9.7vw, 115px);
+    }
+}
+
+/*  
+======================================
+    OUR SHARED ADVENTURES SECTION     
+======================================
+*/
+
+/* STYLES FOROUR SHARED ADVENTURES */
+
+.our-shared-adventures {
+    background-color: #747474;
+    padding-bottom: 60px;
+}
+
+.our-shared-adventures h2 {
+    text-align: center;
+    font-size: min(7vw, 2.5rem);
+    font-weight: 600;
+    padding: 40px 0;
+}
+
+@media screen and (min-width: 48em) {
+    .our-shared-adventures h2 {
+        padding: 60px 0;
+    }
+}
+
+.our-shared-adventures ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+    list-style-type: none;
+    padding: 0 24px;
+
+    & li img,
+    li h3 {
+        margin: 0 auto;
+    }
+
+    & li img {
+        width: min(60vw, 18rem);
+        border-radius: 5px;
+    }
+
+    & li h3 {
+        text-align: center;
+        font-weight: 400;
+        padding-top: 24px;
+        font-size: min(6vw, 1.7rem);
+        text-wrap: auto;
+        width: 15rem;
+        line-height: 1.4;
+    }
+}
+
+/*  
+======================================
+       OUR FFXIV TALES SECTION         
+======================================
+*/
+
+/* STYLES FOR OUR FFXIV TALES SECTION */
+
+.our-ffxiv-tales {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    background: linear-gradient(#7c0a0a, #111c6a);
+    color: white;
+    padding: 30px 0 50px;
+
+    & h2 {
+        font-size: min(7vw, 2.5rem);
+    }
+
+    & .image-container {
+        display: flex;
+        padding: 0.5rem;
+        margin: 0 auto;
+        gap: 0.5rem;
+        overflow: auto;
+
+        & img {
+            width: 250px;
+        }
+    }
+
+    & p {
+        font-size: 1.5rem;
+        text-align: center;
+        max-width: 60ch;
+        padding: 0 8px;
+    }
+
+    & a {
+        text-decoration: none;
+        text-transform: capitalize;
+        color: var(--gray-font-color);
+        background-color: white;
+        padding: min(3vw, 12px) min(8vw, 32px);
+        font-size: min(6.3vw, 1.3rem);
+        border: none;
+        border-radius: var(--button-card-border-radius);
+    }
+}
+
+/*  
+======================================
+ OUR BINGE WATCHING ESCAPE SECTION         
+======================================
+*/
+
+/* STYLES FOR OUR BINGE WATCHING ESCAPE IMAGE */
+
+.our-binge-watching-escape {
+    background-color: #747474;
+}
+
+/* STYLES FOR OUR BINGE WATCHING ESCAPE IMAGE CARD */
+
+.our-binge-watching-escape-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 10px 9px 24px 30px;
+
+    & h2 {
+        font-size: min(8vw, 2.5rem);
+        font-weight: 600;
+    }
+
+    & h2,
+    a {
+        text-transform: uppercase;
+    }
+
+    & p {
+        font-weight: 300;
+        font-size: min(6vw, 2rem);
+        text-wrap: wrap;
+        margin-bottom: min(2.4vw, 1.8rem);
+    }
+
+    & a {
+        align-self: flex-start;
+        text-decoration: none;
+        color: var(--gray-font-color);
+        background-color: white;
+        padding: min(2.2vw, 20px) min(4.9vw, 36px);
+        font-size: min(4vw, 1.2rem);
+        border: none;
+        border-radius: var(--button-card-border-radius);
+    }
+
+    & a:hover {
+        transform: var(--button-scale-size);
+    }
+}
+
+/* STYLES FOR DESKTOP */
+
+@media screen and (min-width: 48em) {
+    /* STYLES FOR OUR BINGE WATCHING ESCAPE IMAGE */
+
+    .our-binge-watching-escape {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        & picture {
+            z-index: -10;
+        }
+    }
+
+    /* STYLES FOR OUR BINGE WATCHING ESCAPE CARD */
+
+    .our-binge-watching-escape {
+        z-index: 100;
+    }
+
+    .our-binge-watching-escape-card::before {
+        border-radius: 0;
+    }
+
+    .our-binge-watching-escape-card {
+        justify-content: center;
+        align-items: flex-start;
+        gap: 0.4rem;
+        position: absolute;
+        left: 7rem;
+        width: 26rem;
+        background-color: rgba(71, 71, 71, 0.9);
+
+        & h2,
+        p {
+            color: white;
+        }
+
+        h2 {
+            font-size: 2rem;
+        }
+
+        p {
+            text-align: left;
+            font-size: 1.5rem;
+        }
+
+        & a {
+            padding: 10px 20px;
+            font-size: min(2vw, 1.1rem);
+            font-weight: 500;
+        }
     }
 }
 
@@ -448,4 +1020,9 @@ footer .attribution-links {
             margin-bottom: 0.1rem;
         }
     }
+}
+
+.next-btn {
+    padding: 5px 50px;
+    cursor: pointer;
 }

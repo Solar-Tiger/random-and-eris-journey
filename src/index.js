@@ -1,45 +1,27 @@
-import './style.css';
-import './reset.css';
+import {
+    createRandomAndErisHeroSection,
+    createOurFatefulEncounterSection,
+    createOurSharedAdventuresSection,
+    createFFXIVTalesSection,
+    createOurBingeWatchingEscapeSection
+} from './components/Homepage/Homepage.js';
+import { changeDisplayedContent } from './components/Homepage/FFXIVTalesSection.js';
 
-// ELEMENTS FOR INTERACTIVE MOBILE NAV MENU
+// HOMEPAGE MAIN CONTENT
 
-const hamburgerMenu = document.querySelector('#hamburger-menu');
+const main = document.querySelector('main');
 
-const mobileNavMenu = document.querySelector('#mobile-nav-menu');
-const mobileNavOverlay = document.querySelector('#mobile-nav-overlay');
-const documentBody = document.querySelector('body');
+main.append(
+    createRandomAndErisHeroSection(),
+    createOurFatefulEncounterSection(),
+    createOurSharedAdventuresSection(),
+    createFFXIVTalesSection(),
+    createOurBingeWatchingEscapeSection()
+);
 
-// EVENT LISTENER FOR OPENING MOBILE NAV MENU
+const changeContent = changeDisplayedContent();
+const nextBtn = document.querySelector('.next-btn');
 
-hamburgerMenu.addEventListener('click', () => {
-    mobileNavMenu.classList.add('mobile-nav-menu--open');
-    mobileNavOverlay.classList.add('mobile-nav-overlay--display-block');
-    documentBody.classList.add('overflow-body--hidden');
-    window.scrollTo(0, 0);
-});
-
-// EVENT LISTENER FOR CLOSING MOBILE NAV MENU
-
-document.body.addEventListener('click', (e) => {
-    if (
-        e.target.classList.contains('mobile-nav-overlay') ||
-        e.target.classList.contains('close-x-icon')
-    ) {
-        mobileNavMenu.classList.remove('mobile-nav-menu--open');
-        mobileNavOverlay.classList.remove('mobile-nav-overlay--display-block');
-        documentBody.classList.remove('overflow-body--hidden');
-    }
-});
-
-// IF USER OPEN NAV MENU AND THE SCREEN GOES TOO WIDE AND THEY SCROLL, THIS RESETS EVERYTHING IF THE SCREEN GOES SHRINKS
-
-window.addEventListener('resize', () => {
-    if (
-        window.innerWidth <= 1010 &&
-        window.scrollY !== 0 &&
-        documentBody.classList.contains('overflow-body--hidden')
-    ) {
-        // window.scrollTo(0, 0);
-        window.scrollTo(0, 0);
-    }
+nextBtn.addEventListener('click', () => {
+    changeContent.nextSlide();
 });
