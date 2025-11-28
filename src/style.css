@@ -546,6 +546,12 @@ main {
         border: none;
         border-radius: var(--button-card-border-radius);
     }
+
+    .next-btn,
+    .previous-btn {
+        padding: 5px 50px;
+        cursor: pointer;
+    }
 }
 
 /* ======== OUR BINGE WATCHING ESCAPE SECTION ======== */
@@ -1002,9 +1008,4 @@ footer .attribution-links {
             margin-bottom: 0.1rem;
         }
     }
-}
-
-.next-btn {
-    padding: 5px 50px;
-    cursor: pointer;
 }
