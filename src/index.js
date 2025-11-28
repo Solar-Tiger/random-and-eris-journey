@@ -21,7 +21,12 @@ main.append(
 
 const changeContent = changeDisplayedContent();
 const nextBtn = document.querySelector('.next-btn');
+const previousBtn = document.querySelector('.previous-btn');
 
 nextBtn.addEventListener('click', () => {
     changeContent.nextSlide();
+});
+
+previousBtn.addEventListener('click', () => {
+    changeContent.previousSlide();
 });
