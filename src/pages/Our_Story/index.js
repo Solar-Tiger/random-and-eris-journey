@@ -1,4 +1,4 @@
-import { createOurFatefulEncounterSection } from '../Homepage/Homepage.js';
+import { createOurFatefulEncounterSection } from '../../components/Homepage/Homepage.js';
 import {
     createOurStoryReasonSection,
     createOurStoryExampleSection,

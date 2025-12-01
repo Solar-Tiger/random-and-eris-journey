@@ -9,7 +9,7 @@ const ourFFXIVTalesContent = [
         paragraph:
             "We get into all kinds of mischief on our adventure and enjoy recording the experience! Come check out all the images we've taken since October 2023!",
         linkText: 'Relive our tale',
-        link: 'pages/ffxivtales.html'
+        link: 'pages/FFXIV_Tales/ffxivtales.html'
     },
     {
         title: 'Rengia and Mira',
@@ -17,7 +17,7 @@ const ourFFXIVTalesContent = [
         paragraph:
             'These two end up in Eorzea due to an unknown force and have more in common than they think, and you can experience their walk through Eorzea!',
         linkText: 'Relive their tale',
-        link: 'pages/ffxivtales.html'
+        link: 'pages/FFXIV_Tales/ffxivtales.html'
     }
 ];
 

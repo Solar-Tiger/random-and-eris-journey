@@ -5,9 +5,9 @@ export default {
     entry: {
         // app: './src/index.js'
         homepage: './src/index.js',
-        ourstory: './src/components/OurStory/index.js',
-        ffxivtales: './src/components/FFXIVTales/index.js',
-        watchlist: './src/components/Watchlist/index.js',
+        ourstory: './src/pages/Our_Story/index.js',
+        ffxivtales: './src/pages/FFXIV_Tales/index.js',
+        watchlist: './src/pages/Watchlist/index.js',
         shared: './src/components/Shared/index.js'
     },
     plugins: [
@@ -27,8 +27,8 @@ export default {
             chunks: ['shared', 'ffxivtales', 'runtime']
         }),
         new HtmlWebpackPlugin({
-            template: './src/pages/watchlist.html',
-            filename: 'pages/watchlist.html',
+            template: './src/pages//Watchlist/watchlist.html',
+            filename: 'pages//Watchlist/watchlist.html',
             chunks: ['shared', 'watchlist', 'runtime']
         })
     ],
