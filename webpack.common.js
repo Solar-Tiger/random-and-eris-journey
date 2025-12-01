@@ -17,13 +17,13 @@ export default {
             chunks: ['shared', 'homepage', 'runtime']
         }),
         new HtmlWebpackPlugin({
-            template: './src/pages/our_story/ourstory.html',
-            filename: 'pages/our_story/ourstory.html',
+            template: './src/pages/Our_Story/ourstory.html',
+            filename: 'pages/Our_Story/ourstory.html',
             chunks: ['shared', 'ourstory', 'runtime']
         }),
         new HtmlWebpackPlugin({
-            template: './src/pages/ffxivtales.html',
-            filename: 'pages/ffxivtales.html',
+            template: './src/pages//FFXIV_Tales/ffxivtales.html',
+            filename: 'pages/FFXIV_Tales/ffxivtales.html',
             chunks: ['shared', 'ffxivtales', 'runtime']
         }),
         new HtmlWebpackPlugin({
