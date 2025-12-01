@@ -52,7 +52,7 @@ export default {
                 type: 'asset/resource',
                 generator: {
                     // This keeps the folder structure in 'dist' so you can debug easier
-                    filename: 'assets/images/[path][name].[contenthash][ext]'
+                    filename: '[path][name].[contenthash][ext]'
                 }
             },
             {
