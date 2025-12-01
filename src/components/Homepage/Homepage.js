@@ -151,6 +151,7 @@ function createFFXIVTalesSection(currentIndex = 0) {
 
     // Create section contianing FFXIV Tales content
     ffxivTalesSection.classList.add('our-ffxiv-tales');
+    ffxivTalesSection.id = 'our-ffxiv-tales';
 
     // Create title
     ffxivTalesTitle.textContent = ourFFXIVTalesContent[currentIndex].title;
@@ -174,11 +175,19 @@ function createFFXIVTalesSection(currentIndex = 0) {
     ffxivTalesBtnLink.textContent = ourFFXIVTalesContent[currentIndex].linkText;
     ffxivTalesBtnLink.href = ourFFXIVTalesContent[currentIndex].link;
 
-    // Button test
+    // Next and Previous button with button container
+    const btnContainer = document.createElement('div');
     const nextBtn = document.createElement('button');
+    const previousBtn = document.createElement('button');
 
     nextBtn.textContent = 'Next';
+    previousBtn.textContent = 'Previous';
+
+    btnContainer.classList.add('btn-container');
     nextBtn.classList.add('next-btn');
+    previousBtn.classList.add('previous-btn');
+
+    btnContainer.append(previousBtn, nextBtn);
 
     // Append all elements
     ffxivTalesSection.append(
@@ -186,7 +195,7 @@ function createFFXIVTalesSection(currentIndex = 0) {
         ffxivTalesImageContainer,
         ffxivTalesDescription,
         ffxivTalesBtnLink,
-        nextBtn
+        btnContainer
     );
 
     return ffxivTalesSection;
@@ -197,6 +206,7 @@ function createOurBingeWatchingEscapeSection() {
     const ourBingeWatchingEscapeSection = document.createElement('section');
 
     ourBingeWatchingEscapeSection.classList.add('our-binge-watching-escape');
+    ourBingeWatchingEscapeSection.id = 'our-binge-watching-escape';
 
     // Create Our Binge Watching Escape background image using picture element
     const ourBingeWatchingEscapePicture = document.createElement('picture');

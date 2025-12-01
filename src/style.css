@@ -277,9 +277,11 @@ main {
 
 /*  
 ======================================
-     RANDOM AND ERIS HERO SECTION         
+            HOME PAGE STYLES         
 ======================================
 */
+
+/* ======== RANDOM AND ERIS HERO SECTION ======== */
 
 .random-and-eris-hero {
     display: grid;
@@ -352,15 +354,7 @@ main {
     }
 }
 
-/*  
-======================================
-     OUR FATEFUL ENCOUNTER SECTION         
-======================================
-*/
-
-/* ======== OUR FATEFUL ENCOUNTER IMAGE ======== */
-
-/* STYLES FOR OUR FATEFUL ENCOUNTER IMAGE */
+/* ======== OUR FATEFUL ENCOUNTER SECTION ======== */
 
 .our-fateful-encounter {
     display: flex;
@@ -458,6 +452,228 @@ main {
         }
     }
 }
+
+/* ======== OUR SHARED ADVENTURES SECTION ======== */
+
+.our-shared-adventures {
+    background-color: #747474;
+    padding-bottom: 60px;
+}
+
+.our-shared-adventures h2 {
+    text-align: center;
+    font-size: min(7vw, 2.5rem);
+    font-weight: 600;
+    padding: 40px 0;
+}
+
+@media screen and (min-width: 48em) {
+    .our-shared-adventures h2 {
+        padding: 60px 0;
+    }
+}
+
+.our-shared-adventures ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+    list-style-type: none;
+    padding: 0 24px;
+
+    & li img,
+    li h3 {
+        margin: 0 auto;
+    }
+
+    & li img {
+        width: min(60vw, 18rem);
+        border-radius: 5px;
+    }
+
+    & li h3 {
+        text-align: center;
+        font-weight: 500;
+        padding-top: 24px;
+        font-size: min(6vw, 1.7rem);
+        text-wrap: auto;
+        width: min(60vw, 280px);
+        line-height: 1.4;
+    }
+
+    & a {
+        color: black;
+    }
+}
+
+/* ======== OUR FFXIV TALES SECTION ======== */
+
+.our-ffxiv-tales {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    background: linear-gradient(#7c0a0a, #111c6a);
+    color: white;
+    padding: 30px 0 50px;
+
+    & h2 {
+        font-size: min(7vw, 2.5rem);
+    }
+
+    & .image-container {
+        display: flex;
+        padding: 0.5rem;
+        margin: 0 auto;
+        gap: 0.5rem;
+        overflow: auto;
+
+        & img {
+            width: 250px;
+        }
+    }
+
+    & p {
+        font-size: 1.5rem;
+        text-align: center;
+        max-width: 60ch;
+        padding: 0 8px;
+    }
+
+    & a {
+        text-decoration: none;
+        text-transform: capitalize;
+        color: var(--gray-font-color);
+        background-color: white;
+        padding: min(3vw, 12px) min(8vw, 32px);
+        font-size: min(6.3vw, 1.3rem);
+        border: none;
+        border-radius: var(--button-card-border-radius);
+    }
+
+    .btn-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .next-btn,
+    .previous-btn {
+        padding: 5px 40px;
+        cursor: pointer;
+    }
+}
+
+/* ======== OUR BINGE WATCHING ESCAPE SECTION ======== */
+
+.our-binge-watching-escape {
+    background-color: #747474;
+}
+
+/* STYLES FOR OUR BINGE WATCHING ESCAPE IMAGE CARD */
+
+.our-binge-watching-escape-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 10px 9px 24px 30px;
+
+    & h2 {
+        font-size: min(8vw, 2.5rem);
+        font-weight: 600;
+    }
+
+    & h2,
+    a {
+        text-transform: uppercase;
+    }
+
+    & p {
+        font-weight: 300;
+        font-size: min(6vw, 2rem);
+        text-wrap: wrap;
+        margin-bottom: min(2.4vw, 1.8rem);
+    }
+
+    & a {
+        align-self: flex-start;
+        text-decoration: none;
+        color: var(--gray-font-color);
+        background-color: white;
+        padding: min(2.2vw, 20px) min(4.9vw, 36px);
+        font-size: min(4vw, 1.2rem);
+        border: none;
+        border-radius: var(--button-card-border-radius);
+    }
+
+    & a:hover {
+        transform: var(--button-scale-size);
+    }
+}
+
+/* STYLES FOR DESKTOP */
+
+@media screen and (min-width: 48em) {
+    /* STYLES FOR OUR BINGE WATCHING ESCAPE IMAGE */
+
+    .our-binge-watching-escape {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        & picture {
+            z-index: -10;
+        }
+    }
+
+    /* STYLES FOR OUR BINGE WATCHING ESCAPE CARD */
+
+    .our-binge-watching-escape {
+        z-index: 100;
+    }
+
+    .our-binge-watching-escape-card::before {
+        border-radius: 0;
+    }
+
+    .our-binge-watching-escape-card {
+        justify-content: center;
+        align-items: flex-start;
+        gap: 0.4rem;
+        position: absolute;
+        left: 7rem;
+        width: 26rem;
+        background-color: rgba(71, 71, 71, 0.9);
+
+        & h2,
+        p {
+            color: white;
+        }
+
+        h2 {
+            font-size: 2rem;
+        }
+
+        p {
+            text-align: left;
+            font-size: 1.5rem;
+        }
+
+        & a {
+            padding: 10px 20px;
+            font-size: min(2vw, 1.1rem);
+            font-weight: 500;
+        }
+    }
+}
+
+/*  
+======================================
+         OUR STORY PAGE STYLES         
+======================================
+*/
 
 /* ======== OUR STORY SECTION ======== */
 
@@ -696,223 +912,6 @@ main {
 
 /*  
 ======================================
-    OUR SHARED ADVENTURES SECTION     
-======================================
-*/
-
-/* STYLES FOROUR SHARED ADVENTURES */
-
-.our-shared-adventures {
-    background-color: #747474;
-    padding-bottom: 60px;
-}
-
-.our-shared-adventures h2 {
-    text-align: center;
-    font-size: min(7vw, 2.5rem);
-    font-weight: 600;
-    padding: 40px 0;
-}
-
-@media screen and (min-width: 48em) {
-    .our-shared-adventures h2 {
-        padding: 60px 0;
-    }
-}
-
-.our-shared-adventures ul {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 4rem;
-    list-style-type: none;
-    padding: 0 24px;
-
-    & li img,
-    li h3 {
-        margin: 0 auto;
-    }
-
-    & li img {
-        width: min(60vw, 18rem);
-        border-radius: 5px;
-    }
-
-    & li h3 {
-        text-align: center;
-        font-weight: 400;
-        padding-top: 24px;
-        font-size: min(6vw, 1.7rem);
-        text-wrap: auto;
-        width: 15rem;
-        line-height: 1.4;
-    }
-}
-
-/*  
-======================================
-       OUR FFXIV TALES SECTION         
-======================================
-*/
-
-/* STYLES FOR OUR FFXIV TALES SECTION */
-
-.our-ffxiv-tales {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-    background: linear-gradient(#7c0a0a, #111c6a);
-    color: white;
-    padding: 30px 0 50px;
-
-    & h2 {
-        font-size: min(7vw, 2.5rem);
-    }
-
-    & .image-container {
-        display: flex;
-        padding: 0.5rem;
-        margin: 0 auto;
-        gap: 0.5rem;
-        overflow: auto;
-
-        & img {
-            width: 250px;
-        }
-    }
-
-    & p {
-        font-size: 1.5rem;
-        text-align: center;
-        max-width: 60ch;
-        padding: 0 8px;
-    }
-
-    & a {
-        text-decoration: none;
-        text-transform: capitalize;
-        color: var(--gray-font-color);
-        background-color: white;
-        padding: min(3vw, 12px) min(8vw, 32px);
-        font-size: min(6.3vw, 1.3rem);
-        border: none;
-        border-radius: var(--button-card-border-radius);
-    }
-}
-
-/*  
-======================================
- OUR BINGE WATCHING ESCAPE SECTION         
-======================================
-*/
-
-/* STYLES FOR OUR BINGE WATCHING ESCAPE IMAGE */
-
-.our-binge-watching-escape {
-    background-color: #747474;
-}
-
-/* STYLES FOR OUR BINGE WATCHING ESCAPE IMAGE CARD */
-
-.our-binge-watching-escape-card {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    padding: 10px 9px 24px 30px;
-
-    & h2 {
-        font-size: min(8vw, 2.5rem);
-        font-weight: 600;
-    }
-
-    & h2,
-    a {
-        text-transform: uppercase;
-    }
-
-    & p {
-        font-weight: 300;
-        font-size: min(6vw, 2rem);
-        text-wrap: wrap;
-        margin-bottom: min(2.4vw, 1.8rem);
-    }
-
-    & a {
-        align-self: flex-start;
-        text-decoration: none;
-        color: var(--gray-font-color);
-        background-color: white;
-        padding: min(2.2vw, 20px) min(4.9vw, 36px);
-        font-size: min(4vw, 1.2rem);
-        border: none;
-        border-radius: var(--button-card-border-radius);
-    }
-
-    & a:hover {
-        transform: var(--button-scale-size);
-    }
-}
-
-/* STYLES FOR DESKTOP */
-
-@media screen and (min-width: 48em) {
-    /* STYLES FOR OUR BINGE WATCHING ESCAPE IMAGE */
-
-    .our-binge-watching-escape {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-
-        & picture {
-            z-index: -10;
-        }
-    }
-
-    /* STYLES FOR OUR BINGE WATCHING ESCAPE CARD */
-
-    .our-binge-watching-escape {
-        z-index: 100;
-    }
-
-    .our-binge-watching-escape-card::before {
-        border-radius: 0;
-    }
-
-    .our-binge-watching-escape-card {
-        justify-content: center;
-        align-items: flex-start;
-        gap: 0.4rem;
-        position: absolute;
-        left: 7rem;
-        width: 26rem;
-        background-color: rgba(71, 71, 71, 0.9);
-
-        & h2,
-        p {
-            color: white;
-        }
-
-        h2 {
-            font-size: 2rem;
-        }
-
-        p {
-            text-align: left;
-            font-size: 1.5rem;
-        }
-
-        & a {
-            padding: 10px 20px;
-            font-size: min(2vw, 1.1rem);
-            font-weight: 500;
-        }
-    }
-}
-
-/*  
-======================================
                 FOOTER     
 ======================================
 */
@@ -1020,9 +1019,4 @@ footer .attribution-links {
             margin-bottom: 0.1rem;
         }
     }
-}
-
-.next-btn {
-    padding: 5px 50px;
-    cursor: pointer;
 }

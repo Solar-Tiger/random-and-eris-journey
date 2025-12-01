@@ -21,11 +21,16 @@ const ourFFXIVTalesContent = [
     }
 ];
 
+let currentIndex = 0;
+
 function updateFFXIVTalesContent(slideIndex) {
     const ffxivTalesTitle = document.querySelector('.our-ffxiv-tales h2');
     const ffxivTalesImageContainer = document.querySelector('.image-container');
     const ffxivTalesDescription = document.querySelector('.our-ffxiv-tales p');
     const ffxivTalesBtnLink = document.querySelector('.our-ffxiv-tales a');
+
+    // Update currentIndex to correct Index
+    currentIndex = slideIndex;
 
     ffxivTalesTitle.textContent = ourFFXIVTalesContent[slideIndex].title;
 
@@ -47,7 +52,6 @@ function updateFFXIVTalesContent(slideIndex) {
 }
 
 function changeDisplayedContent() {
-    let currentIndex = 0;
     let totalSlideLength = ourFFXIVTalesContent.length;
 
     return {
@@ -59,11 +63,15 @@ function changeDisplayedContent() {
 
         previousSlide: () => {
             currentIndex =
-                (slideIndex - 1 + totalSlideLength) % totalSlideLength;
+                (currentIndex - 1 + totalSlideLength) % totalSlideLength;
 
-            updateFFXIVTalesContent(previousSlideIndex);
+            updateFFXIVTalesContent(currentIndex);
         }
     };
 }
 
-export { ourFFXIVTalesContent, changeDisplayedContent };
+export {
+    ourFFXIVTalesContent,
+    updateFFXIVTalesContent,
+    changeDisplayedContent
+};
