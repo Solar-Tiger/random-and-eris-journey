@@ -34,7 +34,6 @@ export default {
     ],
     output: {
         filename: '[name].[contenthash].js',
-        assetModuleFilename: 'images/[name].[contenthash][ext]',
         path: path.resolve('dist'),
         clean: true
     },
@@ -50,11 +49,15 @@ export default {
             },
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
-                type: 'asset'
+                type: 'asset/resource',
+                generator: {
+                    // This keeps the folder structure in 'dist' so you can debug easier
+                    filename: 'assets/images/[path][name].[contenthash][ext]'
+                }
             },
             {
                 test: /\.(woff|woff2|eot|ttf|otf)$/i,
-                type: 'asset'
+                type: 'asset/resource'
             }
         ]
     },
