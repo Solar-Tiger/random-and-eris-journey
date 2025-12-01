@@ -34,6 +34,7 @@ export default {
     ],
     output: {
         filename: '[name].[contenthash].js',
+        assetModuleFilename: 'images/[name].[contenthash][ext]',
         path: path.resolve('dist'),
         clean: true
     },
