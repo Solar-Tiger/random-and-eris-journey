@@ -43,6 +43,7 @@ function createOurSharedAdventuresListContent() {
         ourSharedAdventuresListItemTitleLink.textContent = listItem.title;
         ourSharedAdventuresListItemTitleLink.href = `#${listItem.sectionID}`;
 
+        // Update FFXIV Tales content if one of the first two links in Our Shared Adventures is clicked
         if (index < 2) {
             ourSharedAdventuresListItemTitleLink.addEventListener(
                 'click',
