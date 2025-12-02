@@ -35,8 +35,8 @@ export default {
         new CopyPlugin({
             patterns: [
                 {
-                    from: './src/assets/images/rengia_and_mira',
-                    to: './src/assets//images/[path][name].[contenthash][ext]'
+                    from: './src/assets/images',
+                    to: 'assets/images/[path][name][ext]'
                 }
             ]
         })
@@ -58,11 +58,7 @@ export default {
             },
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
-                type: 'asset/resource',
-                generator: {
-                    // This keeps the folder structure in 'dist' so you can debug easier
-                    filename: '[path][name].[contenthash][ext]'
-                }
+                type: 'asset/resource'
             },
             {
                 test: /\.(woff|woff2|eot|ttf|otf)$/i,
