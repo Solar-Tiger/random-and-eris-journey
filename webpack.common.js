@@ -36,7 +36,7 @@ export default {
             patterns: [
                 {
                     from: './src/assets/images/rengia_and_mira',
-                    to: './assets/images'
+                    to: './src/assets/images'
                 }
             ]
         })
