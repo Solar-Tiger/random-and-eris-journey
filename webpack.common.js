@@ -1,6 +1,5 @@
 import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
-import CopyPlugin from 'copy-webpack-plugin';
 
 export default {
     entry: {
@@ -31,14 +30,6 @@ export default {
             template: './src/pages//Watchlist/watchlist.html',
             filename: 'pages//Watchlist/watchlist.html',
             chunks: ['shared', 'watchlist', 'runtime']
-        }),
-        new CopyPlugin({
-            patterns: [
-                {
-                    from: './src/assets/images',
-                    to: 'assets/images/[path][name][ext]'
-                }
-            ]
         })
     ],
     output: {
@@ -58,7 +49,10 @@ export default {
             },
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
-                type: 'asset/resource'
+                type: 'asset/resource',
+                generator: {
+                    filename: 'assets/images/[path][name][ext]'
+                }
             },
             {
                 test: /\.(woff|woff2|eot|ttf|otf)$/i,
