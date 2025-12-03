@@ -17,7 +17,7 @@ function createRandomAndErisHeroSection() {
 
     // Add hero image
     randomAndErisHeroImg.src =
-        '../../assets/images/hero_images/random-and-eris-hugging-in-ffxiv.png';
+        'assets/images/hero_images/random-and-eris-hugging-in-ffxiv.png';
 
     const randomAndErisHeroTextSection = document.createElement('section');
     const randomAndErisHeroTitle = document.createElement('h1');
