@@ -44,7 +44,8 @@ export default {
     output: {
         filename: '[name].[contenthash].js',
         path: path.resolve('dist'),
-        clean: true
+        clean: true,
+        publicPath: '/'
     },
     module: {
         rules: [
