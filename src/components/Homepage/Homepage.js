@@ -1,5 +1,6 @@
 import { createOurSharedAdventuresListContent } from './OurSharedAdventuresSection.js';
 import { ourFFXIVTalesContent } from './FFXIVTalesSection.js';
+import randomAndErisHeroimage from '../../assets/images/hero_images/random-and-eris-hugging-in-ffxiv.png';
 import ourFatefulEncounterMobile from '../../assets/images/banner/banner-random-and-eris-our-fateful-encounter-mobile.png';
 import ourFatefulEncounterTablet from '../../assets/images/banner/banner-random-and-eris-our-fateful-encounter-tablet.png';
 import ourFatefulEncounterDesktop from '../../assets/images/banner/banner-random-and-eris-our-fateful-encounter.png';
@@ -16,10 +17,7 @@ function createRandomAndErisHeroSection() {
     randomAndErisHeroSection.classList.add('random-and-eris-hero');
 
     // Add hero image
-    randomAndErisHeroImg.src = new URL(
-        '../../assets/images/hero_images/random-and-eris-hugging-in-ffxiv.png',
-        import.meta.url
-    ).href;
+    randomAndErisHeroImg.src = randomAndErisHeroimage;
 
     const randomAndErisHeroTextSection = document.createElement('section');
     const randomAndErisHeroTitle = document.createElement('h1');
