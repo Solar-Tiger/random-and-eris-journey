@@ -6,11 +6,22 @@ fs.readdir('src/pages', (err, data) => {
         console.error(err);
         return;
     }
-    for (const d in data) {
-        console.log(data[d]);
-    }
+    console.log(data);
+
+    // for (const d in data) {
+    //     console.log(data[0]);
+    // }
 
     // data.forEach((d) => {
     //     console.log(d);
     // });
 });
+
+// const fruitArr = ['apples', 'oranges', 'bananas'];
+// const numbers = [1, 2, 3, 4, 5];
+
+// const fruit = 'fruit';
+
+// numbers.map((fruit) => {
+//     console.log(fruit * 2);
+// });
