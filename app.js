@@ -1,3 +1,4 @@
+import { count } from 'console';
 import fs from 'fs';
 import path from 'path';
 
@@ -25,3 +26,13 @@ fs.readdir('src/pages', (err, data) => {
 // numbers.map((fruit) => {
 //     console.log(fruit * 2);
 // });
+
+function countToFive(number) {
+    if (number === 1) {
+        return number;
+    }
+
+    return number + countToFive(number - 1);
+}
+
+console.log(countToFive(5));
