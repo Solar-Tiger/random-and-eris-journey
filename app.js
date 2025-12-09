@@ -39,34 +39,3 @@ fs.readdir('src/pages', (err, data) => {
     //     console.log(d);
     // });
 });
-
-const obj = {
-    2023: {
-        casual: ['random-and-eris-1', 'random-and-eris-2', 'random-and-eris-3'],
-        seasonalEvents: {
-            valentioneDay: [
-                'random-and-eris-valentione-day-1',
-                'random-and-eris-valentione-day-2',
-                'random-and-eris-valentione-day-3'
-            ]
-        },
-        msq: {
-            aRealmReborn: [],
-            postARealmReborn: []
-        }
-    },
-
-    2024: {
-        casual: ['random-and-eris-1', 'random-and-eris-2', 'random-and-eris-3'],
-        seasonalEvents: {
-            valentioneDay: [
-                'random-and-eris-valentione-day-1',
-                'random-and-eris-valentione-day-2',
-                'random-and-eris-valentione-day-3'
-            ],
-            starlightCelebration: []
-        },
-        msq: [],
-        mounts: []
-    }
-};
