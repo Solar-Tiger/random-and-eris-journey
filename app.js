@@ -1,41 +1,85 @@
 import fs from 'fs';
 import path from 'path';
 
-fs.readdir('src/pages', (err, data) => {
-    if (err) {
-        console.error(err);
-        return;
+function logEachFile(myPath) {
+    fs.readdir(myPath, (err, items) => {
+        if (err) {
+            console.error(err);
+            return;
+        }
+
+        for (const item of items) {
+            fs.stat(path.resolve(myPath, item), (err, moreItems) => {
+                if (err) {
+                    console.error(err);
+                    return;
+                } else if (moreItems.isDirectory()) {
+                    const currentPath = path.resolve(myPath, item);
+
+                    console.log(currentPath);
+
+                    logEachFile(currentPath);
+                }
+            });
+        }
+    });
+}
+
+logEachFile(path.resolve());
+
+const myObj = {
+    2023: {
+        casual: ['random-and-eris-1', 'random-and-eris-2', 'random-and-eris-3'],
+        seasonalEvents: {
+            valentioneDay: [
+                'random-and-eris-valentione-day-1',
+                'random-and-eris-valentione-day-2',
+                'random-and-eris-valentione-day-3'
+            ]
+        },
+        msq: {
+            aRealmReborn: [],
+            postARealmReborn: []
+        }
+    },
+
+    2024: {
+        casual: ['random-and-eris-1', 'random-and-eris-2', 'random-and-eris-3'],
+        seasonalEvents: {
+            valentioneDay: [
+                'random-and-eris-valentione-day-1',
+                'random-and-eris-valentione-day-2',
+                'random-and-eris-valentione-day-3'
+            ],
+            starlightCelebration: []
+        },
+        msq: [],
+        mounts: []
     }
+};
 
-    for (const d of data) {
-        console.log(d);
+function listAllItems(objs) {
+    // Check if the argument is an object
+    if (objs === Object(objs) && !Array.isArray(objs)) {
+        // Log all keys and values of an object
+        const keyItem = Object.keys(objs);
+        const valueItem = Object.values(objs);
 
-        fs.stat(`src/pages/${d}`, (err, stats) => {
-            if (err) {
-                console.error(err);
-            }
+        // Check if each key is an object and if so, repeat
+        for (const item in valueItem) {
+            // console.log(valueItem[item]);
+            console.log(keyItem[item]);
 
-            if (stats.isDirectory()) {
-                fs.readdir(`src/pages/${d}`, (err, files) => {
-                    if (err) {
-                        console.error(err);
-                    }
-
-                    for (const file of files) {
-                        console.log(file);
-                    }
-                });
-            }
-        });
+            listAllItems(valueItem[item]);
+        }
+    } else if (Array.isArray(objs)) {
+        // If we reach an array, just log the items
+        for (const obj of objs) {
+            console.log(obj);
+        }
+    } else {
+        console.error('Not an object');
     }
+}
 
-    // console.log(data);
-
-    // for (const d in data) {
-    //     console.log(data[0]);
-    // }
-
-    // data.forEach((d) => {
-    //     console.log(d);
-    // });
-});
+// listAllItems(myObj);
