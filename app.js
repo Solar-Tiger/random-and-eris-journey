@@ -1,36 +1,42 @@
 import fs from 'fs';
 import path from 'path';
 
+const myOtherOtherObj = [];
+const myArr = [];
+
 function logEachFile(myPath) {
-    fs.readdirSync(myPath, (err, items) => {
-        if (err) {
-            console.error(err);
-            return;
+    const files = fs.readdirSync(myPath);
+
+    for (const file in files) {
+        const myFile = fs
+            .statSync(path.resolve(myPath, files[file]))
+            .isDirectory();
+
+        if (myFile) {
+            console.log(files[file]);
+
+            // myOtherOtherObj.push(files[file]);
+
+            logEachFile(path.resolve(myPath, files[file]));
+        } else {
+            // myArr.push(files[file]);
+
+            console.log(files[file]);
         }
+    }
 
-        console.log(items);
-
-        // array method for listing each item
-        // for (const item of items) {
-        //     fs.lstat(path.resolve(myPath, item), (err, stats) => {
-        //         if (err) {
-        //             console.error(err);
-        //             return;
-        //         }
-
-        //         if (stats.isDirectory()) {
-        //             console.log(item);
-
-        //             logEachFile(path.resolve(myPath, item));
-        //         } else {
-        //             console.log(item);
-        //         }
-        //     });
-        // }
-    });
+    // myOtherOtherObj.push(myArr);
 }
 
-logEachFile(path.resolve());
+logEachFile(path.resolve('./src/pages'));
+
+const myOtherObj = {
+    pages: {
+        FFXIV_Tales: ['ffxivtales.html', 'index.js'],
+        Our_Story: ['OurStory.js', 'index.js', 'ourstory.html'],
+        WatchList: ['index.js', 'watchlist.html']
+    }
+};
 
 const myObj = {
     2023: {
