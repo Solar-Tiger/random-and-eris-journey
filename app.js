@@ -1,13 +1,17 @@
 import fs from 'fs';
 import path from 'path';
 
-const myOtherOtherObj = [];
+const myOtherOtherObj = {};
 const myArr = [];
 
 function logEachFile(myPath) {
     const files = fs.readdirSync(myPath);
 
+    let tempValue = 'temp';
+
     for (const file in files) {
+        tempValue = files;
+
         const myFile = fs
             .statSync(path.resolve(myPath, files[file]))
             .isDirectory();
@@ -15,17 +19,17 @@ function logEachFile(myPath) {
         if (myFile) {
             console.log(files[file]);
 
-            // myOtherOtherObj.push(files[file]);
+            myOtherOtherObj[files[file]] = tempValue;
 
             logEachFile(path.resolve(myPath, files[file]));
         } else {
-            // myArr.push(files[file]);
+            myOtherOtherObj[files[file]] = tempValue;
 
             console.log(files[file]);
         }
     }
 
-    // myOtherOtherObj.push(myArr);
+    console.log(myOtherOtherObj);
 }
 
 logEachFile(path.resolve('./src/pages'));
