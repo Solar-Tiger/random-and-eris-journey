@@ -2,26 +2,31 @@ import fs from 'fs';
 import path from 'path';
 
 function logEachFile(myPath) {
-    fs.readdir(myPath, (err, items) => {
+    fs.readdirSync(myPath, (err, items) => {
         if (err) {
             console.error(err);
             return;
         }
 
-        for (const item of items) {
-            fs.stat(path.resolve(myPath, item), (err, moreItems) => {
-                if (err) {
-                    console.error(err);
-                    return;
-                } else if (moreItems.isDirectory()) {
-                    const currentPath = path.resolve(myPath, item);
+        console.log(items);
 
-                    console.log(currentPath);
+        // array method for listing each item
+        // for (const item of items) {
+        //     fs.lstat(path.resolve(myPath, item), (err, stats) => {
+        //         if (err) {
+        //             console.error(err);
+        //             return;
+        //         }
 
-                    logEachFile(currentPath);
-                }
-            });
-        }
+        //         if (stats.isDirectory()) {
+        //             console.log(item);
+
+        //             logEachFile(path.resolve(myPath, item));
+        //         } else {
+        //             console.log(item);
+        //         }
+        //     });
+        // }
     });
 }
 
