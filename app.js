@@ -6,27 +6,25 @@ function logEachFile(myPath) {
 
     const sortedFiles = files.sort((a, b) => {
         if (fs.statSync(path.resolve(myPath, a)).isDirectory()) {
-            console.log(fs.statSync(path.resolve(myPath, a)).isDirectory());
+            return -1 - 1;
         } else {
-            console.log(fs.statSync(path.resolve(myPath, b)).isFile());
+            return 1 - 1;
         }
     });
 
-    // console.log(sortedFiles);
+    for (const file in sortedFiles) {
+        const myFile = fs
+            .statSync(path.resolve(myPath, sortedFiles[file]))
+            .isDirectory();
 
-    // for (const file in files) {
-    //     const myFile = fs
-    //         .statSync(path.resolve(myPath, files[file]))
-    //         .isDirectory();
+        if (myFile) {
+            console.log(sortedFiles[file]);
 
-    //     if (myFile) {
-    //         console.log(files[file]);
-
-    //         logEachFile(path.resolve(myPath, files[file]));
-    //     } else {
-    //         console.log(files[file]);
-    //     }
-    // }
+            logEachFile(path.resolve(myPath, sortedFiles[file]));
+        } else {
+            console.log(sortedFiles[file]);
+        }
+    }
 }
 
 logEachFile(path.resolve('./src/components'));
