@@ -23,13 +23,20 @@ function logEachFile(myPath) {
 
             logEachFile(path.resolve(myPath, files[file]));
         } else {
+            for (const myFile of files) {
+                console.log(myFile, files);
+
+                myArr.push(files[myFile]);
+            }
+
             myOtherOtherObj[files[file]] = tempValue;
 
             console.log(files[file]);
         }
     }
 
-    console.log(myOtherOtherObj);
+    // console.log(myOtherOtherObj);
+    // console.log(myArr);
 }
 
 logEachFile(path.resolve('./src/pages'));
