@@ -1,45 +1,35 @@
 import fs from 'fs';
 import path from 'path';
 
-const myOtherOtherObj = {};
-const myArr = [];
-
 function logEachFile(myPath) {
     const files = fs.readdirSync(myPath);
 
-    let tempValue = 'temp';
-
-    for (const file in files) {
-        tempValue = files;
-
-        const myFile = fs
-            .statSync(path.resolve(myPath, files[file]))
-            .isDirectory();
-
-        if (myFile) {
-            console.log(files[file]);
-
-            myOtherOtherObj[files[file]] = tempValue;
-
-            logEachFile(path.resolve(myPath, files[file]));
+    const sortedFiles = files.sort((a, b) => {
+        if (fs.statSync(path.resolve(myPath, a)).isDirectory()) {
+            console.log(fs.statSync(path.resolve(myPath, a)).isDirectory());
         } else {
-            for (const myFile of files) {
-                console.log(myFile, files);
-
-                myArr.push(files[myFile]);
-            }
-
-            myOtherOtherObj[files[file]] = tempValue;
-
-            console.log(files[file]);
+            console.log(fs.statSync(path.resolve(myPath, b)).isFile());
         }
-    }
+    });
 
-    // console.log(myOtherOtherObj);
-    // console.log(myArr);
+    // console.log(sortedFiles);
+
+    // for (const file in files) {
+    //     const myFile = fs
+    //         .statSync(path.resolve(myPath, files[file]))
+    //         .isDirectory();
+
+    //     if (myFile) {
+    //         console.log(files[file]);
+
+    //         logEachFile(path.resolve(myPath, files[file]));
+    //     } else {
+    //         console.log(files[file]);
+    //     }
+    // }
 }
 
-logEachFile(path.resolve('./src/pages'));
+logEachFile(path.resolve('./src/components'));
 
 const myOtherObj = {
     pages: {
