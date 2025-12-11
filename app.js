@@ -1,8 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 
-let directoryTree;
-let myJson = {};
+let directoryTree = {};
 const objKey = 'spyro_the_dragon_series';
 
 // Sort file array so directories and subdirectories get logged before files
@@ -49,71 +48,23 @@ function logEachFile(myPath) {
     // True if file, false if no files exist
     const fileExist = findFile(sortedFiles, myPath);
 
-    if (!fileExist) {
-        // If file doesn't exist, create an Object
-        directoryTree = {};
+    if (fileExist) {
+        let fileArr = [];
 
         for (const eachDirectory of sortedFiles) {
-            const file = fs.readdirSync(path.resolve(myPath, eachDirectory));
-
-            directoryTree[eachDirectory] = file;
-        }
-
-        console.log(directoryTree);
-    } else if (fileExist) {
-        // Make directoryTree an Array of Objects
-        directoryTree = [];
-
-        // Store files in Array
-        let fileArray = [];
-
-        // Push each file into Array
-        for (const eachFile of sortedFiles) {
-            const file = fs.statSync(path.resolve(myPath, eachFile)).isFile();
+            const file = fs
+                .statSync(path.resolve(myPath, eachDirectory))
+                .isFile();
 
             if (file) {
-                fileArray.push(eachFile);
+                fileArr.push(eachDirectory);
             }
         }
 
-        // Create Objects for the Array
-        for (const eachDirectory of sortedFiles) {
-            const directoy = fs
-                .statSync(path.resolve(myPath, eachDirectory))
-                .isDirectory();
+        directoryTree[objKey] = fileArr;
 
-            if (directoy) {
-                //Store directories and file arrays in Objects
-                let directoryObject = {};
-
-                directoryObject[eachDirectory] = 'My directory';
-                directoryTree.push(directoryObject);
-            }
-        }
-
-        // Push file Array as last directoryTree item
-        directoryTree.push(fileArray);
-
-        // Create Object to contain Array
-        myJson[objKey] = directoryTree;
-
-        console.log(myJson);
+        console.log(directoryTree);
     }
-
-    // Log each directory then its subdirectories till it reaches the end and repeat for the next diretory
-    // for (const file in sortedFiles) {
-    //     const myFile = fs
-    //         .statSync(path.resolve(myPath, sortedFiles[file]))
-    //         .isDirectory();
-
-    //     if (myFile) {
-    //         console.log(sortedFiles[file]);
-
-    //         logEachFile(path.resolve(myPath, sortedFiles[file]));
-    //     } else {
-    //         console.log(sortedFiles[file]);
-    //     }
-    // }
 }
 
 logEachFile(path.resolve('./src/spyro_the_dragon_series'));
