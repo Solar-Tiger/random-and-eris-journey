@@ -1,14 +1,13 @@
 import fs from 'fs';
 import path from 'path';
 
-const directoryTree = {};
+let directoryTree;
 
-function logEachFile(myPath) {
-    const files = fs.readdirSync(myPath);
-
-    const sortedFiles = files.sort((a, b) => {
-        const fileOne = fs.statSync(path.resolve(myPath, a)).isDirectory();
-        const fileTwo = fs.statSync(path.resolve(myPath, b)).isDirectory();
+// Sort file array so directories and subdirectories get logged before files
+function sortDirectoryFirst(fileArr, currentPath) {
+    const sortedFiles = fileArr.sort((a, b) => {
+        const fileOne = fs.statSync(path.resolve(currentPath, a)).isDirectory();
+        const fileTwo = fs.statSync(path.resolve(currentPath, b)).isDirectory();
 
         if (fileOne) {
             if (fileOne === fileTwo) {
@@ -21,6 +20,32 @@ function logEachFile(myPath) {
         }
     });
 
+    return sortedFiles;
+}
+
+// Returns true if it finds a file in an array, returns false otherwise
+function findFile(arr, currentPath) {
+    for (const file in arr) {
+        const myFile = fs
+            .statSync(path.resolve(currentPath, arr[file]))
+            .isFile();
+
+        if (myFile) {
+            return myFile;
+        }
+    }
+
+    return false;
+}
+
+function logEachFile(myPath) {
+    const files = fs.readdirSync(myPath);
+
+    let sortedFiles = sortDirectoryFirst(files, myPath);
+
+    // console.log(findFile(sortedFiles, myPath));
+
+    // Log each directory then its subdirectories till it reaches the end and repeat for the next diretory
     for (const file in sortedFiles) {
         const myFile = fs
             .statSync(path.resolve(myPath, sortedFiles[file]))
@@ -29,25 +54,28 @@ function logEachFile(myPath) {
         if (myFile) {
             console.log(sortedFiles[file]);
 
-            directoryTree[sortedFiles[file]] = {};
-
             logEachFile(path.resolve(myPath, sortedFiles[file]));
         } else {
             console.log(sortedFiles[file]);
         }
     }
-
-    console.log(directoryTree);
 }
 
-logEachFile(path.resolve('./src/pages'));
+logEachFile(path.resolve('./src/components'));
 
 const myOtherObj = {
     pages: {
         FFXIV_Tales: ['ffxivtales.html', 'index.js'],
         Our_Story: ['OurStory.js', 'index.js', 'ourstory.html'],
         WatchList: ['index.js', 'watchlist.html']
-    }
+    },
+
+    secondPages: [
+        { FFXIV_Tales: ['ffxivtales.html', 'index.js'] },
+        { Our_Story: ['OurStory.js', 'index.js', 'ourstory.html'] },
+        { WatchList: ['index.js', 'watchlist.html'] },
+        ['Button.js', 'Form.js', 'Input.js']
+    ]
 };
 
 const myObj = {
