@@ -1,11 +1,20 @@
 import fs from 'fs';
 import path from 'path';
 
+const directoryTree = {};
+
 function logEachFile(myPath) {
     const files = fs.readdirSync(myPath);
 
     const sortedFiles = files.sort((a, b) => {
-        if (fs.statSync(path.resolve(myPath, a)).isDirectory()) {
+        const fileOne = fs.statSync(path.resolve(myPath, a)).isDirectory();
+        const fileTwo = fs.statSync(path.resolve(myPath, b)).isDirectory();
+
+        if (fileOne) {
+            if (fileOne === fileTwo) {
+                return 1 - 1;
+            }
+
             return -1 - 1;
         } else {
             return 1 - 1;
@@ -20,14 +29,18 @@ function logEachFile(myPath) {
         if (myFile) {
             console.log(sortedFiles[file]);
 
+            directoryTree[sortedFiles[file]] = {};
+
             logEachFile(path.resolve(myPath, sortedFiles[file]));
         } else {
             console.log(sortedFiles[file]);
         }
     }
+
+    console.log(directoryTree);
 }
 
-logEachFile(path.resolve('./src/components'));
+logEachFile(path.resolve('./src/pages'));
 
 const myOtherObj = {
     pages: {
