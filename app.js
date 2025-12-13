@@ -1,8 +1,8 @@
 import fs from 'fs';
 import path from 'path';
+import dirTree from 'directory-tree';
 
-let directoryTree = {};
-const objKey = 'spyro_the_dragon_series';
+let myDirectoryTree = {};
 
 // Sort file array so directories and subdirectories get logged before files
 function sortDirectoryFirst(fileArr, currentPath) {
@@ -48,26 +48,28 @@ function logEachFile(myPath) {
     // True if file, false if no files exist
     const fileExist = findFile(sortedFiles, myPath);
 
-    if (fileExist) {
-        let fileArr = [];
+    for (const files of sortedFiles) {
+        if (fs.statSync(path.resolve(myPath, files)).isDirectory()) {
+            console.log(files);
 
-        for (const eachDirectory of sortedFiles) {
-            const file = fs
-                .statSync(path.resolve(myPath, eachDirectory))
-                .isFile();
-
-            if (file) {
-                fileArr.push(eachDirectory);
-            }
+            logEachFile(path.resolve(myPath, files));
+        } else {
+            console.log(files);
         }
-
-        directoryTree[objKey] = fileArr;
-
-        console.log(directoryTree);
     }
 }
 
-logEachFile(path.resolve('./src/spyro_the_dragon_series'));
+logEachFile(path.resolve('./src/03_ape_escape_series'));
+
+export default function logDirectoryTree() {
+    let aTree = dirTree('./src/03_ape_escape_series');
+
+    return aTree;
+}
+
+// const myTree = logDirectoryTree();
+
+// console.log(JSON.stringify(myTree, null, 2));
 
 const myOtherObj = {
     // If directory doesn't contain files, create Object
