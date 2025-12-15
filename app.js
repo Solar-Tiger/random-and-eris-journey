@@ -65,13 +65,13 @@ function logEachFile(myPath) {
     return myArr;
 }
 
-console.log(
-    JSON.stringify(
-        logEachFile(path.resolve('./src/02_crash_bandicoot_series')),
-        null,
-        2
-    )
-);
+// console.log(
+//     JSON.stringify(
+//         logEachFile(path.resolve('./src/02_crash_bandicoot_series')),
+//         null,
+//         2
+//     )
+// );
 
 const myOtherObj = {
     // If directory doesn't contain files, create Object
@@ -146,3 +146,21 @@ function listAllItems(objs) {
 }
 
 // listAllItems(myObj);
+
+function factorial(num) {
+    let numContainer = [];
+
+    if (num === 1) {
+        return num;
+    } else {
+        let multipliedNumber = num * factorial(num - 1);
+
+        console.log(multipliedNumber);
+
+        numContainer.push(multipliedNumber);
+    }
+
+    return numContainer;
+}
+
+console.log(factorial(4));
