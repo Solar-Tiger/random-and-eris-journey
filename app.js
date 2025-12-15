@@ -147,8 +147,9 @@ function listAllItems(objs) {
 
 // listAllItems(myObj);
 
-function factorial(num) {
-    let numContainer = [];
+function factorial(num, numContainer = []) {
+    // Why is this being reset
+    // let numContainer = [];
 
     if (num === 1) {
         return num;
