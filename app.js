@@ -1,6 +1,5 @@
 import fs from 'fs';
 import path from 'path';
-import dirTree from 'directory-tree';
 
 let myDirectoryTree = {};
 
@@ -42,34 +41,39 @@ function findFile(arr, currentPath) {
 function logEachFile(myPath) {
     const files = fs.readdirSync(myPath);
 
+    // Create base file name
+    let baseFileName = path.basename(myPath);
+
+    // Create an array
+    let myArr = [];
+
     // Sorts array directory first
     let sortedFiles = sortDirectoryFirst(files, myPath);
 
-    // True if file, false if no files exist
-    const fileExist = findFile(sortedFiles, myPath);
+    for (const items of sortedFiles) {
+        if (fs.statSync(path.resolve(myPath, items)).isDirectory()) {
+            console.log(`Directory name: ${items}`);
 
-    for (const files of sortedFiles) {
-        if (fs.statSync(path.resolve(myPath, files)).isDirectory()) {
-            console.log(files);
+            const subBox = logEachFile(path.resolve(myPath, items));
 
-            logEachFile(path.resolve(myPath, files));
+            myArr.push(items, subBox);
         } else {
-            console.log(files);
+            console.log(`File name: ${items}`);
+
+            myArr.push(items);
         }
     }
+
+    return myArr;
 }
 
-logEachFile(path.resolve('./src/03_ape_escape_series'));
-
-export default function logDirectoryTree() {
-    let aTree = dirTree('./src/03_ape_escape_series');
-
-    return aTree;
-}
-
-// const myTree = logDirectoryTree();
-
-// console.log(JSON.stringify(myTree, null, 2));
+console.log(
+    JSON.stringify(
+        logEachFile(path.resolve('./src/02_crash_bandicoot_series')),
+        null,
+        2
+    )
+);
 
 const myOtherObj = {
     // If directory doesn't contain files, create Object
