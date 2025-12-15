@@ -1,8 +1,6 @@
 import fs from 'fs';
 import path from 'path';
 
-let myDirectoryTree = {};
-
 // Sort file array so directories and subdirectories get logged before files
 function sortDirectoryFirst(fileArr, currentPath) {
     const sortedFiles = fileArr.sort((a, b) => {
@@ -44,7 +42,7 @@ function logEachFile(myPath) {
     // Create base file name
     let baseFileName = path.basename(myPath);
 
-    // Create an array
+    // Create an array to store final result
     let myArr = [];
 
     // Sorts array directory first
@@ -52,13 +50,13 @@ function logEachFile(myPath) {
 
     for (const items of sortedFiles) {
         if (fs.statSync(path.resolve(myPath, items)).isDirectory()) {
-            console.log(`Directory name: ${items}`);
+            // console.log(`Directory name: ${items}`);
 
             const subBox = logEachFile(path.resolve(myPath, items));
 
             myArr.push(items, subBox);
         } else {
-            console.log(`File name: ${items}`);
+            // console.log(`File name: ${items}`);
 
             myArr.push(items);
         }
