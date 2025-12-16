@@ -164,4 +164,30 @@ function factorial(num, numContainer = []) {
     return numContainer;
 }
 
-console.log(factorial(4));
+// console.log(factorial(4));
+
+function hasDuplicateValue(array) {
+    var existingNumbers = [];
+
+    for (var i = 0; i < array.length; i++) {
+        // 1.) Check if the item at the "Index" position of existingNumbers exist at existingNumbers[array[i]]
+
+        // 2.) At this point, it's accessing existingNumbers Index, which is the first element in "array" that would be accessed at array[i]
+
+        // 3.) array[i] evaluates to array[0] and the element there currently is "1"
+
+        // 4.) This means we now access existingNumbers[1], which is undefined, so we place a "1" there
+
+        // 5.) If we access existingNumbers[1] again, that means we've found a duplicate
+
+        if (existingNumbers[array[i]] === undefined) {
+            existingNumbers[array[i]] = 1;
+        } else {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+console.log(hasDuplicateValue([1, 2, 3, 10]));
