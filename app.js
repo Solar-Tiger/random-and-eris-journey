@@ -154,7 +154,7 @@ function factorial(num, numContainer = []) {
     if (num === 1) {
         return num;
     } else {
-        let multipliedNumber = num * factorial(num - 1);
+        let multipliedNumber = num * factorial(num - 1, numContainer);
 
         console.log(multipliedNumber);
 
@@ -164,7 +164,7 @@ function factorial(num, numContainer = []) {
     return numContainer;
 }
 
-// console.log(factorial(4));
+console.log(factorial(4));
 
 function hasDuplicateValue(array) {
     var existingNumbers = [];
@@ -234,4 +234,37 @@ function hasDuplicateValueAny(array) {
 
 let numAndStringArr = [1, 2, 'cat', 3, 4, 'dog', 5, 1];
 
-console.log(hasDuplicateValueAny(numAndStringArr));
+// console.log(hasDuplicateValueAny(numAndStringArr));
+
+function blah(num) {
+    console.log(num++);
+
+    if (num <= 9001) {
+        blah(num);
+    } else {
+        return;
+    }
+}
+
+// blah(1);
+
+function countdown(num) {
+    if (typeof num !== 'number' || isNaN(num)) return;
+
+    while (num !== 0) {
+        console.log(num);
+
+        num--;
+    }
+
+    console.log(num);
+}
+
+// countdownTwo(10);
+
+function countdownTwo(number) {
+    console.log(number);
+    countdownTwo(number - 1);
+}
+
+// countdownTwo(10);
