@@ -148,23 +148,20 @@ function listAllItems(objs) {
 // listAllItems(myObj);
 
 function factorial(num, numContainer = []) {
-    // Why is this being reset
-    // let numContainer = [];
-
     if (num === 1) {
         return num;
     } else {
         let multipliedNumber = num * factorial(num - 1, numContainer);
 
-        console.log(multipliedNumber);
-
         numContainer.push(multipliedNumber);
-    }
 
-    return numContainer;
+        console.log(numContainer);
+
+        return multipliedNumber;
+    }
 }
 
-console.log(factorial(4));
+console.log(factorial(5));
 
 function hasDuplicateValue(array) {
     var existingNumbers = [];
