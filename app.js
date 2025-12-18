@@ -190,4 +190,48 @@ function hasDuplicateValue(array) {
     return false;
 }
 
-console.log(hasDuplicateValue([1, 2, 3, 10]));
+// console.log(hasDuplicateValue([1, 2, 3, 10]));
+
+function twoNums() {
+    let numOne = 7;
+    let numTwo = 10;
+
+    let multiplier = 5000;
+
+    console.log(7 * multiplier);
+    console.log(10 * multiplier);
+}
+
+// twoNums();
+
+var set = {};
+
+// Let’s add a few values to the set:
+set['apple'] = 1;
+set['banana'] = 1;
+set['cucumber'] = 1;
+
+// console.log(set);
+
+set['banana'] = 1;
+
+// console.log(set);
+
+// Same as above function, hasDuplicateValue, but works with strings as well thanks to the Object {} in place of an Array []
+function hasDuplicateValueAny(array) {
+    var existingValues = {};
+    for (var i = 0; i < array.length; i++) {
+        if (existingValues[array[i]] === undefined) {
+            console.log(existingValues);
+
+            existingValues[array[i]] = 1;
+        } else {
+            return true;
+        }
+    }
+    return false;
+}
+
+let numAndStringArr = [1, 2, 'cat', 3, 4, 'dog', 5, 1];
+
+console.log(hasDuplicateValueAny(numAndStringArr));
