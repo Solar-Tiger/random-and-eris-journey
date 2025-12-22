@@ -66,11 +66,7 @@ function logEachFile(myPath) {
 }
 
 // console.log(
-//     JSON.stringify(
-//         logEachFile(path.resolve('./src/02_crash_bandicoot_series')),
-//         null,
-//         2
-//     )
+//     JSON.stringify(logEachFile(path.resolve('./src/04_jak_&_daxter')), null, 2)
 // );
 
 const myOtherObj = {
@@ -147,21 +143,65 @@ function listAllItems(objs) {
 
 // listAllItems(myObj);
 
-function factorial(num, numContainer = []) {
+// INEFFICIENT FACTORIAL STORING OF multipliedNumber!
+function factorial(num, numContainer = [], originalNum = num) {
     if (num === 1) {
         return num;
     } else {
-        let multipliedNumber = num * factorial(num - 1, numContainer);
+        let multipliedNumber =
+            num * factorial(num - 1, numContainer, originalNum);
 
         numContainer.push(multipliedNumber);
 
-        console.log(numContainer);
-
-        return multipliedNumber;
+        if (num === originalNum) {
+            return numContainer;
+        } else {
+            return multipliedNumber;
+        }
     }
 }
 
-console.log(factorial(5));
+// console.log(factorial(5));
+
+function factorialTwo(num) {
+    let myArr = [];
+
+    if (num === 1) {
+        return num;
+    }
+
+    let multipliedNumber = num * factorialTwo(num - 1);
+
+    myArr.push(multipliedNumber);
+
+    return multipliedNumber;
+}
+
+// console.log(factorialTwo(4));
+
+function fact(num) {
+    let myArr = [];
+
+    function doTheFact(num) {
+        if (num === 1) {
+            myArr.push(num);
+
+            return num;
+        }
+
+        let multipliedNumber = num * doTheFact(num - 1);
+
+        myArr.push(multipliedNumber);
+
+        return multipliedNumber;
+    }
+
+    doTheFact(num);
+
+    return myArr;
+}
+
+// console.log(fact(4));
 
 function hasDuplicateValue(array) {
     var existingNumbers = [];
