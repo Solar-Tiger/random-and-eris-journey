@@ -163,21 +163,21 @@ function factorial(num, numContainer = [], originalNum = num) {
 
 // console.log(factorial(5));
 
-function factorialTwo(num) {
-    let myArr = [];
+function factorialTwo(num, myArr = []) {
+    if (num === 0 || num === 1) {
+        myArr.push(num);
 
-    if (num === 1) {
-        return num;
+        return myArr;
     }
 
-    let multipliedNumber = num * factorialTwo(num - 1);
+    let multipliedNumber = num * factorialTwo(num - 1, myArr);
 
     myArr.push(multipliedNumber);
 
-    return multipliedNumber;
+    return myArr;
 }
 
-// console.log(factorialTwo(4));
+console.log(factorialTwo(4));
 
 function fact(num) {
     let myArr = [];
