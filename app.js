@@ -170,9 +170,9 @@ function factorialTwo(num, myArr = []) {
         return myArr;
     }
 
-    let multipliedNumber = num * factorialTwo(num - 1, myArr);
+    factorialTwo(num - 1, myArr);
 
-    myArr.push(multipliedNumber);
+    myArr.push(num * myArr[myArr.length - 1]);
 
     return myArr;
 }
