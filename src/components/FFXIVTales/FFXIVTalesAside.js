@@ -18,23 +18,29 @@ const myObj = {
     ]
 };
 
-function getAllFilesInDirectory(objs, directoryName) {
-    // Check if the directory name equals the directory you're looking for AND it's an Object
-    if (directoryName !== objs.directory && objs === Object(objs)) {
-        for (let i = 0; i < objs.children.length; i++) {
-            getAllFilesInDirectory(objs.children[i], directoryName);
-        }
-    }
+function listAllItems(objs) {
+    // Check if the argument is an object
+    if (objs === Object(objs) && !Array.isArray(objs)) {
+        // Log all keys and values of an object
+        const keyItem = Object.keys(objs);
+        const valueItem = Object.values(objs);
 
-    // Make sure it's an Object else do nothing with it
-    else if (objs === Object(objs)) {
-        for (let i = 0; i < objs.children.length; i++) {
-            console.log(objs.children[i]);
+        // Check if each key is an object and if so, repeat
+        for (const item in valueItem) {
+            // console.log(valueItem[item]);
+            console.log(keyItem[item]);
+
+            listAllItems(valueItem[item]);
         }
+    } else if (Array.isArray(objs)) {
+        // If we reach an array, just log the items
+        for (const obj of objs) {
+            console.log(obj);
+        }
+    } else {
+        console.error('Not an object');
     }
 }
-
-getAllFilesInDirectory(myObj, '04_jak_and_daxter');
 
 function createFFXIVTalesSidebar() {
     // create aside to contain list of relevant FFXIV Tales
