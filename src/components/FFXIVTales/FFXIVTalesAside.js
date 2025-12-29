@@ -32,12 +32,15 @@ function listAllItems(objs) {
 
         // Check if Object.children is object or array
         if (objs.children[0] === Object(objs.children[0])) {
-            listAllItems(objs.children[0]);
-        } else if (Array.isArray(objs.children)) {
-            for (const file of objs.children) {
-                console.log(file);
+            for (let i = 0; i < objs.children.length; i++) {
+                listAllItems(objs.children[i]);
             }
         }
+        // else if (Array.isArray(objs.children)) {
+        //     for (const file of objs.children) {
+        //         console.log(file);
+        //     }
+        // }
     }
 }
 
