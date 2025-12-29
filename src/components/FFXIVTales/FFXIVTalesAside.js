@@ -18,29 +18,30 @@ const myObj = {
     ]
 };
 
+// 1.) Make sure you're passing an Object and NOT an array. Should ALWAYS be an Object
+
+// 2.) Log directory name: "console.log(directory_name)" using Object.directory
+
+// 3.) check if Object.children[0] is an Object or Array
+
 function listAllItems(objs) {
     // Check if the argument is an object
     if (objs === Object(objs) && !Array.isArray(objs)) {
-        // Log all keys and values of an object
-        const keyItem = Object.keys(objs);
-        const valueItem = Object.values(objs);
+        // Log directory name
+        console.log(objs.directory);
 
-        // Check if each key is an object and if so, repeat
-        for (const item in valueItem) {
-            // console.log(valueItem[item]);
-            console.log(keyItem[item]);
-
-            listAllItems(valueItem[item]);
+        // Check if Object.children is object or array
+        if (objs.children[0] === Object(objs.children[0])) {
+            listAllItems(objs.children[0]);
+        } else if (Array.isArray(objs.children)) {
+            for (const file of objs.children) {
+                console.log(file);
+            }
         }
-    } else if (Array.isArray(objs)) {
-        // If we reach an array, just log the items
-        for (const obj of objs) {
-            console.log(obj);
-        }
-    } else {
-        console.error('Not an object');
     }
 }
+
+listAllItems(myObj);
 
 function createFFXIVTalesSidebar() {
     // create aside to contain list of relevant FFXIV Tales
