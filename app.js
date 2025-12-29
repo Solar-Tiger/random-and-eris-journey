@@ -36,37 +36,88 @@ function findFile(arr, currentPath) {
     return false;
 }
 
-function logEachFile(myPath) {
-    const files = fs.readdirSync(myPath);
+// function logEachFile(myPath) {
+//     const files = fs.readdirSync(myPath);
+
+//     // Create base file name
+//     let baseFileName = path.basename(myPath);
+
+//     // Create an array to store final result
+//     let myArr = [];
+
+//     // Sorts array directory first
+//     let sortedFiles = sortDirectoryFirst(files, myPath);
+
+//     for (const items of sortedFiles) {
+//         if (fs.statSync(path.resolve(myPath, items)).isDirectory()) {
+//             // console.log(`Directory name: ${items}`);
+
+//             const subBox = logEachFile(path.resolve(myPath, items));
+
+//             myArr.push(items, subBox);
+//         } else {
+//             // console.log(`File name: ${items}`);
+
+//             myArr.push(items);
+//         }
+//     }
+
+//     return myArr;
+// }
+
+// console.log(
+//     JSON.stringify(
+//         logEachFile(path.resolve('./src/04_jak_and_daxter')),
+//         null,
+//         2
+//     )
+// );
+
+function createJSONObject(myPath) {
+    // Sorts array directory first
+    let sortedFiles = sortDirectoryFirst(fs.readdirSync(myPath), myPath);
 
     // Create base file name
     let baseFileName = path.basename(myPath);
 
-    // Create an array to store final result
-    let myArr = [];
-
-    // Sorts array directory first
-    let sortedFiles = sortDirectoryFirst(files, myPath);
+    // Create an array and object to store final results
+    let myDirectory = {};
+    let myFiles = [];
 
     for (const items of sortedFiles) {
-        if (fs.statSync(path.resolve(myPath, items)).isDirectory()) {
-            // console.log(`Directory name: ${items}`);
+        if (fs.statSync(path.join(myPath, items)).isDirectory()) {
+            const subBox = createJSONObject(path.join(myPath, items));
 
-            const subBox = logEachFile(path.resolve(myPath, items));
-
-            myArr.push(items, subBox);
+            myFiles.push(subBox);
         } else {
-            // console.log(`File name: ${items}`);
-
-            myArr.push(items);
+            myFiles.push(items);
         }
     }
 
-    return myArr;
+    if (sortedFiles.length >= 0) {
+        myDirectory['directory'] = baseFileName;
+
+        myDirectory['children'] = myFiles;
+    }
+
+    return myDirectory;
 }
 
 // console.log(
-//     JSON.stringify(logEachFile(path.resolve('./src/04_jak_&_daxter')), null, 2)
+//     JSON.stringify(
+//         createJSONObject(path.resolve('./src/04_jak_and_daxter')),
+//         null,
+//         2
+//     )
+// );
+
+// fs.writeFileSync(
+//     './src/05_temp/test.json',
+//     JSON.stringify(
+//         createJSONObject(path.resolve('./src/04_jak_and_daxter')),
+//         null,
+//         2
+//     )
 // );
 
 const myOtherObj = {
@@ -87,35 +138,42 @@ const myOtherObj = {
 };
 
 const myObj = {
-    2023: {
-        casual: ['random-and-eris-1', 'random-and-eris-2', 'random-and-eris-3'],
-        seasonalEvents: {
-            valentioneDay: [
-                'random-and-eris-valentione-day-1',
-                'random-and-eris-valentione-day-2',
-                'random-and-eris-valentione-day-3'
+    directory: '04_jak_and_daxter',
+    children: [
+        {
+            directory: 'characters',
+            children: [
+                {
+                    directory: 'bad-guys',
+                    children: ['kor.txt', 'krew.txt']
+                },
+                {
+                    directory: 'good-guys',
+                    children: ['jak.txt', 'keira.txt', 'torn.txt']
+                }
             ]
         },
-        msq: {
-            aRealmReborn: [],
-            postARealmReborn: []
-        }
-    },
-
-    2024: {
-        casual: ['random-and-eris-1', 'random-and-eris-2', 'random-and-eris-3'],
-        seasonalEvents: {
-            valentioneDay: [
-                'random-and-eris-valentione-day-1',
-                'random-and-eris-valentione-day-2',
-                'random-and-eris-valentione-day-3'
-            ],
-            starlightCelebration: []
-        },
-        msq: [],
-        mounts: []
-    }
+        'jak-and-daxter-notes.txt'
+    ]
 };
+
+function getAllFilesInDirectory(objs, directoryName) {
+    // Check if the directory name equals the directory you're looking for AND it's an Object
+    if (directoryName !== objs.directory && objs === Object(objs)) {
+        for (let i = 0; i < objs.children.length; i++) {
+            getAllFilesInDirectory(objs.children[i], directoryName);
+        }
+    }
+
+    // Make sure it's an Object else do nothing with it
+    else if (objs === Object(objs)) {
+        for (let i = 0; i < objs.children.length; i++) {
+            console.log(objs.children[i]);
+        }
+    }
+}
+
+// getAllFilesInDirectory(myObj, 'characters');
 
 function listAllItems(objs) {
     // Check if the argument is an object
@@ -305,3 +363,16 @@ function countdownTwo(number) {
 }
 
 // countdownTwo(10);
+
+function fetchCloudinaryImage(publicId) {
+    const cloudName = 'duaozkbsv';
+
+    const url = `https://res.cloudinary.com/${cloudName}/image/upload/v1764957634/${publicId}.png`;
+
+    return url;
+}
+
+console.log(fetchCloudinaryImage('random-and-eris-casual-1'));
+console.log(fetchCloudinaryImage('random-and-eris-casual-4'));
+
+// random-and-eris-casual-4.png
