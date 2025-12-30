@@ -1,3 +1,5 @@
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+
 const myObj = {
     directory: '04_jak_and_daxter',
     children: [
@@ -32,8 +34,12 @@ function listAllItems(objs) {
 
         // Check if Object.children is object or array
         if (objs.children[0] === Object(objs.children[0])) {
-            for (let i = 0; i < objs.children.length; i++) {
-                listAllItems(objs.children[i]);
+            // for (let i = 0; i < objs.children.length; i++) {
+            //     listAllItems(objs.children[i]);
+            // }
+
+            for (const item of objs.children) {
+                listAllItems(item);
             }
         }
         // else if (Array.isArray(objs.children)) {
