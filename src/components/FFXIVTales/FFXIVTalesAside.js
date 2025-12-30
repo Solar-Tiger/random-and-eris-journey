@@ -13,8 +13,7 @@ const myObj = {
                     children: ['jak.txt', 'keira.txt', 'torn.txt']
                 }
             ]
-        },
-        'jak-and-daxter-notes.txt'
+        }
     ]
 };
 
@@ -50,42 +49,40 @@ function listAllItems(objs) {
 
 // listAllItems(myObj);
 
-function createSidebarList(objs) {
-    // Check if the argument is an object
-    if (objs === Object(objs) && !Array.isArray(objs)) {
-        // Log directory name
-        console.log(objs.directory);
-
-        // Create elements to contain list information
-        const ul = document.createElement('ul');
-        const li = document.createElement('li');
-        const details = document.createElement('details');
-        const summary = document.createElement('summary');
-
-        ul.appendChild(li);
-        li.appendChild(details);
-        details.appendChild(summary);
-
-        summary.textContent = objs.directory;
-
-        // Check if Object.children is object or array
-        if (objs.children[0] === Object(objs.children[0])) {
-            // for (let i = 0; i < objs.children.length; i++) {
-            //     listAllItems(objs.children[i]);
-            // }
-
-            for (const item of objs.children) {
-                createSidebarList(item);
-            }
+const testObj = {
+    directory: '04_jak_and_daxter',
+    children: [
+        {
+            directory: 'characters',
+            children: ['keira.txt']
         }
-        // else if (Array.isArray(objs.children)) {
-        //     for (const file of objs.children) {
-        //         console.log(file);
-        //     }
-        // }
+    ]
+};
 
-        return ul;
+function createSidebarList(objs) {
+    // Create ul and li to contain everything
+    const ul = document.createElement('ul');
+    const li = document.createElement('li');
+
+    ul.appendChild(li);
+
+    // Check if the argument is an object and NOT an Array. Simple error handling
+    if (objs.children[0] === Object(objs.children[0])) {
+        for (const item in objs) {
+            // Create elements to contain list information
+
+            const details = document.createElement('details');
+            const summary = document.createElement('summary');
+
+            li.appendChild(details);
+            details.appendChild(summary);
+
+            summary.textContent = objs[item];
+
+            createFFXIVTalesSidebar(value);
+        }
     }
+    return ul;
 }
 
 // console.log(createSidebarList(myObj));
@@ -96,7 +93,7 @@ function createFFXIVTalesSidebar() {
 
     // Create: ul, li, details, summary (directory name), repeat
 
-    aside.appendChild(createSidebarList(myObj));
+    aside.appendChild(createSidebarList(testObj));
 
     return aside;
 }
