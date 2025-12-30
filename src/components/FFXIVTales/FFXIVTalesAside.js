@@ -1,5 +1,3 @@
-import HtmlWebpackPlugin from 'html-webpack-plugin';
-
 const myObj = {
     directory: '04_jak_and_daxter',
     children: [
