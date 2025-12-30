@@ -1,8 +1,12 @@
 import { updateImageGallery } from '../../components/FFXIVTales/UpdateImageGallery.js';
 import { createFFXIVTalesSidebar } from '../../components/FFXIVTales/FFXIVTalesAside.js';
 
-updateImageGallery();
+// updateImageGallery();
 
 const ffxivTalesSection = document.querySelector('.our-shared-adventures');
 
-ffxivTalesSection.appendChild(createFFXIVTalesSidebar());
+// ffxivTalesSection.appendChild(createFFXIVTalesSidebar());
+
+let testDiv = document.querySelector('div .test');
+
+testDiv.appendChild(createFFXIVTalesSidebar());
