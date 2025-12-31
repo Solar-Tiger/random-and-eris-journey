@@ -53,12 +53,13 @@ function listAllItems(objs) {
 
 // listAllItems(myObj);
 
-const ul = document.createElement('ul');
-
 function createSidebarList(objs) {
-    // Create ul and li to contain everything
+    // Create ul to contain everything
+    const ul = document.createElement('ul');
 
     if (objs.children[0] === Object(objs.children[0])) {
+        const innerUl = document.createElement('ul');
+
         const li = document.createElement('li');
         const details = document.createElement('details');
         const summary = document.createElement('summary');
@@ -66,33 +67,19 @@ function createSidebarList(objs) {
         ul.appendChild(li);
         li.appendChild(details);
         details.appendChild(summary);
+        details.appendChild(innerUl);
 
         summary.textContent = objs.directory;
-
-        const innerUl = document.createElement('ul');
 
         for (const items of objs.children) {
             const innerLi = document.createElement('li');
 
-            innerLi.textContent = items.directory;
+            innerLi.appendChild(createSidebarList(items));
 
             innerUl.appendChild(innerLi);
-            details.appendChild(createSidebarList(items));
         }
     } else {
-        const innerMostUl = document.createElement('ul');
-
-        for (const innerItems of objs.children) {
-            console.log(objs.directory);
-
-            const innerMostLi = document.createElement('li');
-
-            innerMostLi.textContent = objs.directory;
-
-            innerMostUl.appendChild(innerMostLi);
-        }
-
-        ul.appendChild(innerMostUl);
+        // test
     }
 
     return ul;
