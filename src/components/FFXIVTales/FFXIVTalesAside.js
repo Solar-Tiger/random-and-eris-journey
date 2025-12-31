@@ -50,11 +50,29 @@ function listAllItems(objs) {
 // listAllItems(myObj);
 
 const testObj = {
-    directory: '04_jak_and_daxter',
+    directory: 'files',
     children: [
         {
-            directory: 'characters',
-            children: ['keira.txt']
+            directory: '04_jak_and_daxter',
+            children: [
+                {
+                    directory: 'characters',
+                    children: ['keira.txt']
+                }
+            ]
+        },
+        {
+            directory: '05_ape_escape',
+            children: [
+                {
+                    directory: 'characters',
+                    children: ['spike.txt']
+                },
+                {
+                    directory: 'worlds',
+                    children: ['specter-land.txt']
+                }
+            ]
         }
     ]
 };
@@ -62,41 +80,29 @@ const testObj = {
 function createSidebarList(objs) {
     // Create ul and li to contain everything
     const ul = document.createElement('ul');
-    const li = document.createElement('li');
 
-    ul.appendChild(li);
-
-    // Check if the argument is an object and NOT an Array. Simple error handling
     if (objs.children[0] === Object(objs.children[0])) {
-        for (const item in objs) {
-            // Create elements to contain list information
+        for (const items of objs.children) {
+            console.log(items);
 
+            const li = document.createElement('li');
             const details = document.createElement('details');
             const summary = document.createElement('summary');
 
+            ul.appendChild(li);
             li.appendChild(details);
             details.appendChild(summary);
 
-            summary.textContent = objs[item];
-
-            createFFXIVTalesSidebar(value);
+            if (objs.children[0] === Object(objs.children[0])) {
+                summary.textContent = objs.directory;
+            }
         }
     }
+
     return ul;
 }
 
-// console.log(createSidebarList(myObj));
-
-function createFFXIVTalesSidebar() {
-    // create aside to contain list of relevant FFXIV Tales
-    const aside = document.createElement('aside');
-
-    // Create: ul, li, details, summary (directory name), repeat
-
-    aside.appendChild(createSidebarList(testObj));
-
-    return aside;
-}
+// if (objs.children[0] === typeof 'string')
 
 // {
 //     <ul>
@@ -118,5 +124,18 @@ function createFFXIVTalesSidebar() {
 //         </li>
 //     </ul>;
 // }
+
+// console.log(createSidebarList(myObj));
+
+function createFFXIVTalesSidebar() {
+    // create aside to contain list of relevant FFXIV Tales
+    const aside = document.createElement('aside');
+
+    // Create: ul, li, details, summary (directory name), repeat
+
+    aside.appendChild(createSidebarList(testObj));
+
+    return aside;
+}
 
 export { createFFXIVTalesSidebar };
