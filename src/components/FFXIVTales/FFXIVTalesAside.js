@@ -49,81 +49,49 @@ function listAllItems(objs) {
 
 // listAllItems(myObj);
 
-const testObj = {
-    directory: 'files',
-    children: [
-        {
-            directory: '04_jak_and_daxter',
-            children: [
-                {
-                    directory: 'characters',
-                    children: ['keira.txt']
-                }
-            ]
-        },
-        {
-            directory: '05_ape_escape',
-            children: [
-                {
-                    directory: 'characters',
-                    children: ['spike.txt']
-                },
-                {
-                    directory: 'worlds',
-                    children: ['specter-land.txt']
-                }
-            ]
-        }
-    ]
-};
-
 function createSidebarList(objs) {
     // Create ul and li to contain everything
     const ul = document.createElement('ul');
 
     if (objs.children[0] === Object(objs.children[0])) {
+        const li = document.createElement('li');
+        const details = document.createElement('details');
+        const summary = document.createElement('summary');
+
+        ul.appendChild(li);
+        li.appendChild(details);
+        details.appendChild(summary);
+
+        summary.textContent = objs.directory;
+
+        const innerUl = document.createElement('ul');
+
         for (const items of objs.children) {
-            console.log(items);
+            const innerLi = document.createElement('li');
 
-            const li = document.createElement('li');
-            const details = document.createElement('details');
-            const summary = document.createElement('summary');
+            innerLi.textContent = items.directory;
 
-            ul.appendChild(li);
-            li.appendChild(details);
-            details.appendChild(summary);
-
-            if (objs.children[0] === Object(objs.children[0])) {
-                summary.textContent = objs.directory;
-            }
+            innerUl.appendChild(innerLi);
+            details.appendChild(createSidebarList(items));
         }
+    } else {
+        const innerMostUl = document.createElement('ul');
+
+        for (const innerItems of objs.children) {
+            console.log(objs.directory);
+
+            const innerMostLi = document.createElement('li');
+
+            innerMostLi.textContent = objs.directory;
+
+            innerMostUl.appendChild(innerMostLi);
+        }
+
+        ul.appendChild(innerMostUl);
     }
 
     return ul;
 }
-
-// if (objs.children[0] === typeof 'string')
-
-// {
-//     <ul>
-//         <li>
-//             <details>
-//                 <summary>04_jak_and_daxter</summary>
-//                 <ul>
-//                     <li>
-//                         <details>
-//                             <summary>characters</summary>
-//                             <ul>
-//                                 <li>bad-guys</li>
-//                                 <li>good-guys</li>
-//                             </ul>
-//                         </details>
-//                     </li>
-//                 </ul>
-//             </details>
-//         </li>
-//     </ul>;
-// }
 
 // console.log(createSidebarList(myObj));
 
@@ -133,7 +101,7 @@ function createFFXIVTalesSidebar() {
 
     // Create: ul, li, details, summary (directory name), repeat
 
-    aside.appendChild(createSidebarList(testObj));
+    aside.appendChild(createSidebarList(myObj));
 
     return aside;
 }
