@@ -13,6 +13,10 @@ const myObj = {
                     children: ['jak.txt', 'keira.txt', 'torn.txt']
                 }
             ]
+        },
+        {
+            directory: 'worlds',
+            children: [{ directory: 'areas', children: ['haven-city.txt'] }]
         }
     ]
 };
@@ -49,9 +53,10 @@ function listAllItems(objs) {
 
 // listAllItems(myObj);
 
+const ul = document.createElement('ul');
+
 function createSidebarList(objs) {
     // Create ul and li to contain everything
-    const ul = document.createElement('ul');
 
     if (objs.children[0] === Object(objs.children[0])) {
         const li = document.createElement('li');
@@ -75,13 +80,19 @@ function createSidebarList(objs) {
             details.appendChild(createSidebarList(items));
         }
     } else {
-        console.log(objs.directory);
+        const innerMostUl = document.createElement('ul');
 
-        const innerMostLi = document.createElement('li');
+        for (const innerItems of objs.children) {
+            console.log(objs.directory);
 
-        innerMostLi.textContent = objs.directory;
+            const innerMostLi = document.createElement('li');
 
-        ul.appendChild(innerMostLi);
+            innerMostLi.textContent = objs.directory;
+
+            innerMostUl.appendChild(innerMostLi);
+        }
+
+        ul.appendChild(innerMostUl);
     }
 
     return ul;
