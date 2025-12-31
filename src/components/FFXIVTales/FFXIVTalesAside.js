@@ -75,19 +75,13 @@ function createSidebarList(objs) {
             details.appendChild(createSidebarList(items));
         }
     } else {
-        const innerMostUl = document.createElement('ul');
+        console.log(objs.directory);
 
-        for (const innerItems of objs.children) {
-            console.log(objs.directory);
+        const innerMostLi = document.createElement('li');
 
-            const innerMostLi = document.createElement('li');
+        innerMostLi.textContent = objs.directory;
 
-            innerMostLi.textContent = objs.directory;
-
-            innerMostUl.appendChild(innerMostLi);
-        }
-
-        ul.appendChild(innerMostUl);
+        ul.appendChild(innerMostLi);
     }
 
     return ul;
