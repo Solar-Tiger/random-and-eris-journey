@@ -14,42 +14,24 @@ const myObj = {
                 }
             ]
         },
-        {
-            directory: 'worlds',
-            children: [{ directory: 'areas', children: ['haven-city.txt'] }]
-        }
+        'jak-and-daxter-notes.txt'
     ]
 };
 
-function createImageGallery(objs) {
-    // Create ul to contain everything
-    const details = document.createElement('details');
-
-    if (objs.children[0] === Object(objs.children[0])) {
-        const innerUl = document.createElement('ul');
-        const summary = document.createElement('summary');
-
-        details.appendChild(summary);
-        details.appendChild(innerUl);
-
-        summary.textContent = objs.directory;
-
-        for (const items of objs.children) {
-            if (typeof items.children[0] === 'string') {
-                const lowestLi = document.createElement('li');
-
-                lowestLi.textContent = items.directory;
-
-                innerUl.appendChild(lowestLi);
-            } else {
-                const innerLi = document.createElement('li');
-
-                innerLi.appendChild(createSidebarList(items));
-
-                innerUl.appendChild(innerLi);
-            }
+function getAllFilesInDirectory(objs, directoryName) {
+    // Check if the directory name equals the directory you're looking for AND it's an Object
+    if (directoryName !== objs.directory && objs === Object(objs)) {
+        for (let i = 0; i < objs.children.length; i++) {
+            getAllFilesInDirectory(objs.children[i], directoryName);
         }
     }
 
-    return details;
+    // Make sure it's an Object else do nothing with it
+    else if (objs === Object(objs)) {
+        for (let i = 0; i < objs.children.length; i++) {
+            console.log(objs.children[i]);
+        }
+    }
 }
+
+// getAllFilesInDirectory(myObj, 'characters');
