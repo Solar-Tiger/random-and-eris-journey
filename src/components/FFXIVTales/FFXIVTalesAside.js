@@ -25,7 +25,7 @@ const myObj = {
 
 // 2.) Log directory name: "console.log(directory_name)" using Object.directory
 
-// 3.) check if Object.children[0] is an Object or Array
+// 3.) check if Object.children[0] is an Object or String
 
 function listAllItems(objs) {
     // Check if the argument is an object
@@ -92,7 +92,7 @@ function createFFXIVTalesSidebar() {
     // create aside to contain list of relevant FFXIV Tales
     const aside = document.createElement('aside');
 
-    // Create: ul, li, details, summary (directory name), repeat
+    // Create: details, summary (directory name), ul, li and repeat
 
     aside.appendChild(createSidebarList(myObj));
 
