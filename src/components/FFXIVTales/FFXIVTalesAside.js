@@ -1,3 +1,5 @@
+import { getAllFilesInDirectory } from './CreateImageGallery.js';
+
 const myObj = {
     directory: '04_jak_and_daxter',
     children: [
@@ -6,7 +8,10 @@ const myObj = {
             children: [
                 {
                     directory: 'bad-guys',
-                    children: ['kor.txt', 'krew.txt']
+                    children: [
+                        'random-and-eris-casual-1',
+                        'random-and-eris-casual-4'
+                    ]
                 },
                 {
                     directory: 'good-guys',
@@ -71,6 +76,9 @@ function createSidebarList(objs) {
                 const lowestLi = document.createElement('li');
 
                 lowestLi.textContent = items.directory;
+                // lowestLi.addEventListener('click', () =>
+                //     getAllFilesInDirectory(items.directory, objs)
+                // );
 
                 innerUl.appendChild(lowestLi);
             } else {
