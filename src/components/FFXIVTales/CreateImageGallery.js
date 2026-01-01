@@ -34,4 +34,4 @@ function getAllFilesInDirectory(objs, directoryName) {
     }
 }
 
-// getAllFilesInDirectory(myObj, 'characters');
+getAllFilesInDirectory(myObj, 'bad-guys');
