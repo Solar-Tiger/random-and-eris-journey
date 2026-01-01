@@ -55,34 +55,35 @@ function listAllItems(objs) {
 
 function createSidebarList(objs) {
     // Create ul to contain everything
-    const ul = document.createElement('ul');
+    const details = document.createElement('details');
 
     if (objs.children[0] === Object(objs.children[0])) {
         const innerUl = document.createElement('ul');
-
-        const li = document.createElement('li');
-        const details = document.createElement('details');
         const summary = document.createElement('summary');
 
-        ul.appendChild(li);
-        li.appendChild(details);
         details.appendChild(summary);
         details.appendChild(innerUl);
 
         summary.textContent = objs.directory;
 
         for (const items of objs.children) {
-            const innerLi = document.createElement('li');
+            if (typeof items.children[0] === 'string') {
+                const lowestLi = document.createElement('li');
 
-            innerLi.appendChild(createSidebarList(items));
+                lowestLi.textContent = items.directory;
 
-            innerUl.appendChild(innerLi);
+                innerUl.appendChild(lowestLi);
+            } else {
+                const innerLi = document.createElement('li');
+
+                innerLi.appendChild(createSidebarList(items));
+
+                innerUl.appendChild(innerLi);
+            }
         }
-    } else {
-        // test
     }
 
-    return ul;
+    return details;
 }
 
 // console.log(createSidebarList(myObj));
