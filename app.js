@@ -120,23 +120,6 @@ function createJSONObject(myPath) {
 //     )
 // );
 
-const myOtherObj = {
-    // If directory doesn't contain files, create Object
-    pages: {
-        FFXIV_Tales: ['ffxivtales.html', 'index.js'],
-        Our_Story: ['OurStory.js', 'index.js', 'ourstory.html'],
-        WatchList: ['index.js', 'watchlist.html']
-    },
-
-    // If directory contains files, create Array
-    secondPages: [
-        { FFXIV_Tales: ['ffxivtales.html', 'index.js'] },
-        { Our_Story: ['OurStory.js', 'index.js', 'ourstory.html'] },
-        { WatchList: ['index.js', 'watchlist.html'] },
-        ['Button.js', 'Form.js', 'Input.js']
-    ]
-};
-
 const myObj = {
     directory: '04_jak_and_daxter',
     children: [
@@ -363,16 +346,3 @@ function countdownTwo(number) {
 }
 
 // countdownTwo(10);
-
-function fetchCloudinaryImage(publicId) {
-    const cloudName = 'duaozkbsv';
-
-    const url = `https://res.cloudinary.com/${cloudName}/image/upload/v1764957634/${publicId}.png`;
-
-    return url;
-}
-
-console.log(fetchCloudinaryImage('random-and-eris-casual-1'));
-console.log(fetchCloudinaryImage('random-and-eris-casual-4'));
-
-// random-and-eris-casual-4.png
