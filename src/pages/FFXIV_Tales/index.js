@@ -9,6 +9,4 @@ const ffxivTalesSection = document.querySelector('.our-shared-adventures');
 
 let testDiv = document.querySelector('div .test');
 
-testDiv.style.paddingLeft = '200px';
-
 testDiv.appendChild(createFFXIVTalesSidebar());
