@@ -6,19 +6,31 @@ const myObj = {
             children: [
                 {
                     directory: 'bad-guys',
-                    children: ['kor.txt', 'krew.txt']
+                    children: [
+                        'random-and-eris-casual-1',
+                        'random-and-eris-casual-4'
+                    ]
                 },
                 {
                     directory: 'good-guys',
                     children: ['jak.txt', 'keira.txt', 'torn.txt']
                 }
             ]
-        },
-        'jak-and-daxter-notes.txt'
+        }
     ]
 };
 
-function getAllFilesInDirectory(objs, directoryName) {
+function fetchCloudinaryImage(publicId) {
+    const cloudName = 'duaozkbsv';
+
+    const url = `https://res.cloudinary.com/${cloudName}/image/upload/v1764957634/${publicId}.png`;
+
+    return url;
+}
+
+// random-and-eris-casual-4.png
+
+function getAllFilesInDirectory(directoryName, objs) {
     // Check if the directory name equals the directory you're looking for AND it's an Object
     if (directoryName !== objs.directory && objs === Object(objs)) {
         for (let i = 0; i < objs.children.length; i++) {
@@ -30,8 +42,16 @@ function getAllFilesInDirectory(objs, directoryName) {
     else if (objs === Object(objs)) {
         for (let i = 0; i < objs.children.length; i++) {
             console.log(objs.children[i]);
+
+            const img = document.createElement('img');
+
+            img.src = fetchCloudinaryImage(objs.children[i]);
+
+            console.log(img);
         }
     }
 }
 
-getAllFilesInDirectory(myObj, 'bad-guys');
+// getAllFilesInDirectory(myObj, 'bad-guys');
+
+export { getAllFilesInDirectory };
