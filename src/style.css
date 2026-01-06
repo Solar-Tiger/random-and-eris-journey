@@ -272,6 +272,7 @@ body {
 
 main {
     max-width: 75em;
+    height: 100dvh;
     margin: 0 auto;
 }
 
@@ -919,11 +920,6 @@ main {
 /* ======== SIDEBAR ======== */
 
 /* ======== IMAGE GALLERY ======== */
-
-div.test {
-    display: flex;
-    justify-content: center;
-}
 
 /*  
 ======================================
