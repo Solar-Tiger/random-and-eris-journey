@@ -7,6 +7,6 @@ const ffxivTalesSection = document.querySelector('.our-shared-adventures');
 
 // ffxivTalesSection.appendChild(createFFXIVTalesSidebar());
 
-let testDiv = document.querySelector('div .test');
+let main = document.querySelector('main');
 
-testDiv.appendChild(createFFXIVTalesSidebar());
+main.appendChild(createFFXIVTalesSidebar());
