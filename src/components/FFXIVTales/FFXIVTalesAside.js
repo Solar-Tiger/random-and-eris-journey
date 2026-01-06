@@ -1,30 +1,1163 @@
 import { getAllFilesInDirectory } from './CreateImageGallery.js';
 
-const myObj = {
-    directory: '04_jak_and_daxter',
-    children: [
-        {
-            directory: 'characters',
-            children: [
-                {
-                    directory: 'bad-guys',
-                    children: [
-                        'random-and-eris-casual-1',
-                        'random-and-eris-casual-4'
-                    ]
-                },
-                {
-                    directory: 'good-guys',
-                    children: ['jak.txt', 'keira.txt', 'torn.txt']
-                }
-            ]
-        },
-        {
-            directory: 'worlds',
-            children: [{ directory: 'areas', children: ['haven-city.txt'] }]
-        }
-    ]
-};
+const myObj = [
+    {
+        directory: 'random_and_eris_ffxiv_tales',
+        children: [
+            {
+                directory: 'random_and_eris_2023',
+                children: [
+                    {
+                        directory: 'random_and_eris_casual_xx23',
+                        children: [
+                            'random-and-eris-casual-01-xx23.PNG',
+                            'random-and-eris-casual-02-xx23.PNG',
+                            'random-and-eris-casual-03-xx23.PNG',
+                            'random-and-eris-casual-04-xx23.PNG',
+                            'random-and-eris-casual-05-xx23.PNG'
+                        ]
+                    },
+                    {
+                        directory: 'random_and_eris_starlight_celebration_xx23',
+                        children: [
+                            'random-and-eris-starlight-celebration-01-xx23.PNG',
+                            'random-and-eris-starlight-celebration-02-xx23.PNG',
+                            'random-and-eris-starlight-celebration-03-xx23.PNG',
+                            'random-and-eris-starlight-celebration-04-xx23.PNG'
+                        ]
+                    }
+                ]
+            },
+            {
+                directory: 'random_and_eris_2024',
+                children: [
+                    {
+                        directory: 'random_and_eris_casual_xx24',
+                        children: [
+                            'random-and-eris-casual-01-xx24.PNG',
+                            'random-and-eris-casual-02-xx24.PNG',
+                            'random-and-eris-casual-03-xx24.PNG',
+                            'random-and-eris-casual-04-xx24.PNG',
+                            'random-and-eris-casual-05-xx24.PNG',
+                            'random-and-eris-casual-06-xx24.PNG',
+                            'random-and-eris-casual-07-xx24.png',
+                            'random-and-eris-casual-08-xx24.PNG',
+                            'random-and-eris-casual-09-xx24.PNG',
+                            'random-and-eris-casual-10-xx24.PNG',
+                            'random-and-eris-casual-100-xx24.png',
+                            'random-and-eris-casual-101-xx24.png',
+                            'random-and-eris-casual-102-xx24.png',
+                            'random-and-eris-casual-103-xx24.png',
+                            'random-and-eris-casual-104-xx24.png',
+                            'random-and-eris-casual-105-xx24.png',
+                            'random-and-eris-casual-106-xx24.png',
+                            'random-and-eris-casual-11-xx24.PNG',
+                            'random-and-eris-casual-12-xx24.PNG',
+                            'random-and-eris-casual-13-xx24.PNG',
+                            'random-and-eris-casual-14-xx24.PNG',
+                            'random-and-eris-casual-15-xx24.PNG',
+                            'random-and-eris-casual-16-xx24.PNG',
+                            'random-and-eris-casual-17-xx24.PNG',
+                            'random-and-eris-casual-18-xx24.PNG',
+                            'random-and-eris-casual-19-xx24.PNG',
+                            'random-and-eris-casual-20-xx24.PNG',
+                            'random-and-eris-casual-21-xx24.PNG',
+                            'random-and-eris-casual-22-xx24.PNG',
+                            'random-and-eris-casual-23-xx24.PNG',
+                            'random-and-eris-casual-24-xx24.PNG',
+                            'random-and-eris-casual-25-xx24.PNG',
+                            'random-and-eris-casual-26-xx24.PNG',
+                            'random-and-eris-casual-27-xx24.PNG',
+                            'random-and-eris-casual-28-xx24.PNG',
+                            'random-and-eris-casual-29-xx24.PNG',
+                            'random-and-eris-casual-30-xx24.PNG',
+                            'random-and-eris-casual-31-xx24.PNG',
+                            'random-and-eris-casual-32-xx24.PNG',
+                            'random-and-eris-casual-33-xx24.PNG',
+                            'random-and-eris-casual-34-xx24.PNG',
+                            'random-and-eris-casual-35-xx24.PNG',
+                            'random-and-eris-casual-36-xx24.PNG',
+                            'random-and-eris-casual-37-xx24.PNG',
+                            'random-and-eris-casual-38-xx24.PNG',
+                            'random-and-eris-casual-39-xx24.PNG',
+                            'random-and-eris-casual-40-xx24.PNG',
+                            'random-and-eris-casual-41-xx24.PNG',
+                            'random-and-eris-casual-42-xx24.PNG',
+                            'random-and-eris-casual-43-xx24.PNG',
+                            'random-and-eris-casual-44-xx24.PNG',
+                            'random-and-eris-casual-45-xx24.PNG',
+                            'random-and-eris-casual-46-xx24.PNG',
+                            'random-and-eris-casual-47-xx24.PNG',
+                            'random-and-eris-casual-48-xx24.PNG',
+                            'random-and-eris-casual-49-xx24.PNG',
+                            'random-and-eris-casual-50-xx24.PNG',
+                            'random-and-eris-casual-51-xx24.PNG',
+                            'random-and-eris-casual-52-xx24.PNG',
+                            'random-and-eris-casual-53-xx24.png',
+                            'random-and-eris-casual-54-xx24.png',
+                            'random-and-eris-casual-55-xx24.png',
+                            'random-and-eris-casual-56-xx24.png',
+                            'random-and-eris-casual-57-xx24.png',
+                            'random-and-eris-casual-58-xx24.png',
+                            'random-and-eris-casual-59-xx24.PNG',
+                            'random-and-eris-casual-60-xx24.PNG',
+                            'random-and-eris-casual-61-xx24.PNG',
+                            'random-and-eris-casual-62-xx24.PNG',
+                            'random-and-eris-casual-63-xx24.PNG',
+                            'random-and-eris-casual-64-xx24.PNG',
+                            'random-and-eris-casual-65-xx24.PNG',
+                            'random-and-eris-casual-66-xx24.PNG',
+                            'random-and-eris-casual-67-xx24.PNG',
+                            'random-and-eris-casual-68-xx24.PNG',
+                            'random-and-eris-casual-69-xx24.PNG',
+                            'random-and-eris-casual-70-xx24.PNG',
+                            'random-and-eris-casual-71-xx24.PNG',
+                            'random-and-eris-casual-72-xx24.PNG',
+                            'random-and-eris-casual-73-xx24.PNG',
+                            'random-and-eris-casual-74-xx24.PNG',
+                            'random-and-eris-casual-75-xx24.PNG',
+                            'random-and-eris-casual-76-xx24.PNG',
+                            'random-and-eris-casual-77-xx24.PNG',
+                            'random-and-eris-casual-78-xx24.PNG',
+                            'random-and-eris-casual-79-xx24.PNG',
+                            'random-and-eris-casual-80-xx24.PNG',
+                            'random-and-eris-casual-81-xx24.PNG',
+                            'random-and-eris-casual-82-xx24.PNG',
+                            'random-and-eris-casual-83-xx24.png',
+                            'random-and-eris-casual-84-xx24.png',
+                            'random-and-eris-casual-85-xx24.png',
+                            'random-and-eris-casual-86-xx24.png',
+                            'random-and-eris-casual-87-xx24.png',
+                            'random-and-eris-casual-88-xx24.png',
+                            'random-and-eris-casual-89-xx24.png',
+                            'random-and-eris-casual-90-xx24.png',
+                            'random-and-eris-casual-91-xx24.png',
+                            'random-and-eris-casual-92-xx24.png',
+                            'random-and-eris-casual-93-xx24.png',
+                            'random-and-eris-casual-94-xx24.png',
+                            'random-and-eris-casual-95-xx24.png',
+                            'random-and-eris-casual-96-xx24.png',
+                            'random-and-eris-casual-97-xx24.png',
+                            'random-and-eris-casual-98-xx24.png',
+                            'random-and-eris-casual-99-xx24.png'
+                        ]
+                    },
+                    {
+                        directory: 'random_and_eris_mounts_xx24',
+                        children: [
+                            'desktop.ini',
+                            'random-and-eris-mounts-01-xx24.PNG',
+                            'random-and-eris-mounts-02-xx24.PNG',
+                            'random-and-eris-mounts-03-xx24.PNG',
+                            'random-and-eris-mounts-04-xx24.PNG',
+                            'random-and-eris-mounts-05-xx24.PNG',
+                            'random-and-eris-mounts-06-xx24.PNG',
+                            'random-and-eris-mounts-07-xx24.PNG',
+                            'random-and-eris-mounts-08-xx24.PNG',
+                            'random-and-eris-mounts-09-xx24.PNG',
+                            'random-and-eris-mounts-10-xx24.PNG',
+                            'random-and-eris-mounts-11-xx24.PNG',
+                            'random-and-eris-mounts-12-xx24.PNG',
+                            'random-and-eris-mounts-13-xx24.PNG',
+                            'random-and-eris-mounts-14-xx24.PNG',
+                            'random-and-eris-mounts-15-xx24.PNG',
+                            'random-and-eris-mounts-16-xx24.PNG',
+                            'random-and-eris-mounts-17-xx24.PNG',
+                            'random-and-eris-mounts-18-xx24.PNG',
+                            'random-and-eris-mounts-19-xx24.PNG',
+                            'random-and-eris-mounts-20-xx24.PNG',
+                            'random-and-eris-mounts-21-xx24.PNG',
+                            'random-and-eris-mounts-22-xx24.PNG',
+                            'random-and-eris-mounts-23-xx24.PNG',
+                            'random-and-eris-mounts-24-xx24.PNG',
+                            'random-and-eris-mounts-25-xx24.PNG',
+                            'random-and-eris-mounts-26-xx24.PNG',
+                            'random-and-eris-mounts-27-xx24.PNG',
+                            'random-and-eris-mounts-28-xx24.PNG',
+                            'random-and-eris-mounts-29-xx24.PNG'
+                        ]
+                    },
+                    {
+                        directory: 'random_and_eris_msq_xx24',
+                        children: [
+                            {
+                                directory: 'random_and_eris_dawntrail_xx24',
+                                children: [
+                                    'random-and-eris-dawntrail-01-xx24.PNG',
+                                    'random-and-eris-dawntrail-02-xx24.PNG',
+                                    'random-and-eris-dawntrail-03-xx24.PNG',
+                                    'random-and-eris-dawntrail-04-xx24.PNG',
+                                    'random-and-eris-dawntrail-05-xx24.PNG',
+                                    'random-and-eris-dawntrail-06-xx24.png',
+                                    'random-and-eris-dawntrail-07-xx24.png',
+                                    'random-and-eris-dawntrail-08-xx24.png',
+                                    'random-and-eris-dawntrail-09-xx24.PNG',
+                                    'random-and-eris-dawntrail-10-xx24.PNG',
+                                    'random-and-eris-dawntrail-11-xx24.PNG',
+                                    'random-and-eris-dawntrail-12-xx24.PNG',
+                                    'random-and-eris-dawntrail-13-xx24.PNG',
+                                    'random-and-eris-dawntrail-14-xx24.PNG',
+                                    'random-and-eris-dawntrail-15-xx24.PNG',
+                                    'random-and-eris-dawntrail-16-xx24.PNG',
+                                    'random-and-eris-dawntrail-17-xx24.PNG',
+                                    'random-and-eris-dawntrail-18-xx24.PNG',
+                                    'random-and-eris-dawntrail-19-xx24.PNG',
+                                    'random-and-eris-dawntrail-20-xx24.PNG',
+                                    'random-and-eris-dawntrail-21-xx24.PNG',
+                                    'random-and-eris-dawntrail-22-xx24.PNG',
+                                    'random-and-eris-dawntrail-23-xx24.PNG',
+                                    'random-and-eris-dawntrail-24-xx24.PNG',
+                                    'random-and-eris-dawntrail-25-xx24.PNG',
+                                    'random-and-eris-dawntrail-26-xx24.PNG',
+                                    'random-and-eris-dawntrail-27-xx24.PNG',
+                                    'random-and-eris-dawntrail-28-xx24.PNG',
+                                    'random-and-eris-dawntrail-29-xx24.PNG',
+                                    'random-and-eris-dawntrail-30-xx24.PNG',
+                                    'random-and-eris-dawntrail-31-xx24.PNG',
+                                    'random-and-eris-dawntrail-32-xx24.PNG',
+                                    'random-and-eris-dawntrail-33-xx24.PNG',
+                                    'random-and-eris-dawntrail-34-xx24.PNG',
+                                    'random-and-eris-dawntrail-35-xx24.PNG',
+                                    'random-and-eris-dawntrail-36-xx24.PNG',
+                                    'random-and-eris-dawntrail-37-xx24.PNG',
+                                    'random-and-eris-dawntrail-38-xx24.PNG',
+                                    'random-and-eris-dawntrail-39-xx24.PNG',
+                                    'random-and-eris-dawntrail-40-xx24.PNG',
+                                    'random-and-eris-dawntrail-41-xx24.PNG',
+                                    'random-and-eris-dawntrail-42-xx24.PNG',
+                                    'random-and-eris-dawntrail-43-xx24.PNG',
+                                    'random-and-eris-dawntrail-44-xx24.PNG',
+                                    'random-and-eris-dawntrail-45-xx24.PNG',
+                                    'random-and-eris-dawntrail-46-xx24.PNG',
+                                    'random-and-eris-dawntrail-47-xx24.PNG',
+                                    'random-and-eris-dawntrail-48-xx24.PNG',
+                                    'random-and-eris-dawntrail-49-xx24.PNG',
+                                    'random-and-eris-dawntrail-50-xx24.PNG',
+                                    'random-and-eris-dawntrail-51-xx24.PNG',
+                                    'random-and-eris-dawntrail-52-xx24.PNG',
+                                    'random-and-eris-dawntrail-53-xx24.PNG',
+                                    'random-and-eris-dawntrail-54-xx24.PNG',
+                                    'random-and-eris-dawntrail-55-xx24.PNG',
+                                    'random-and-eris-dawntrail-56-xx24.PNG',
+                                    'random-and-eris-dawntrail-57-xx24.PNG',
+                                    'random-and-eris-dawntrail-58-xx24.PNG',
+                                    'random-and-eris-dawntrail-59-xx24.PNG',
+                                    'random-and-eris-dawntrail-60-xx24.PNG',
+                                    'random-and-eris-dawntrail-61-xx24.PNG',
+                                    'random-and-eris-dawntrail-62-xx24.PNG',
+                                    'random-and-eris-dawntrail-63-xx24.PNG',
+                                    'random-and-eris-dawntrail-64-xx24.PNG',
+                                    'random-and-eris-dawntrail-65-xx24.PNG',
+                                    'random-and-eris-dawntrail-66-xx24.PNG',
+                                    'random-and-eris-dawntrail-67-xx24.PNG',
+                                    'random-and-eris-dawntrail-68-xx24.PNG',
+                                    'random-and-eris-dawntrail-69-xx24.PNG',
+                                    'random-and-eris-dawntrail-70-xx24.PNG',
+                                    'random-and-eris-dawntrail-71-xx24.PNG'
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        directory: 'random_and_eris_role_quest_xx24',
+                        children: [
+                            'desktop.ini',
+                            'random-and-eris-role-quest-01-xx24.PNG',
+                            'random-and-eris-role-quest-02-xx24.PNG',
+                            'random-and-eris-role-quest-03-xx24.PNG',
+                            'random-and-eris-role-quest-04-xx24.PNG',
+                            'random-and-eris-role-quest-05-xx24.PNG',
+                            'random-and-eris-role-quest-06-xx24.PNG',
+                            'random-and-eris-role-quest-07-xx24.PNG',
+                            'random-and-eris-role-quest-08-xx24.PNG',
+                            'random-and-eris-role-quest-09-xx24.PNG'
+                        ]
+                    },
+                    {
+                        directory: 'random_and_eris_seasonal_events_xx24',
+                        children: [
+                            {
+                                directory:
+                                    'random_and_eris_all_saints_wake_xx24',
+                                children: [
+                                    'desktop.ini',
+                                    'random-and-eris-all-saints-wake-01-xx24.PNG',
+                                    'random-and-eris-all-saints-wake-02-xx24.PNG',
+                                    'random-and-eris-all-saints-wake-03-xx24.PNG',
+                                    'random-and-eris-all-saints-wake-04-xx24.PNG',
+                                    'random-and-eris-all-saints-wake-05-xx24.PNG',
+                                    'random-and-eris-all-saints-wake-06-xx24.PNG',
+                                    'random-and-eris-all-saints-wake-07-xx24.PNG',
+                                    'random-and-eris-all-saints-wake-08-xx24.PNG',
+                                    'random-and-eris-all-saints-wake-09-xx24.PNG',
+                                    'random-and-eris-all-saints-wake-10-xx24.PNG',
+                                    'random-and-eris-all-saints-wake-11-xx24.PNG',
+                                    'random-and-eris-all-saints-wake-12-xx24.PNG',
+                                    'random-and-eris-all-saints-wake-13-xx24.PNG',
+                                    'random-and-eris-all-saints-wake-14-xx24.PNG',
+                                    'random-and-eris-all-saints-wake-15-xx24.PNG',
+                                    'random-and-eris-all-saints-wake-16-xx24.PNG',
+                                    'random-and-eris-all-saints-wake-17-xx24.PNG',
+                                    'random-and-eris-all-saints-wake-18-xx24.PNG',
+                                    'random-and-eris-all-saints-wake-19-xx24.PNG'
+                                ]
+                            },
+                            {
+                                directory:
+                                    'random_and_eris_moonfire_faire_xx24',
+                                children: [
+                                    'random-and-eris-moonfire-faire-01-xx24.PNG',
+                                    'random-and-eris-moonfire-faire-02-xx24.PNG'
+                                ]
+                            },
+                            {
+                                directory:
+                                    'random_and_eris_starlight_celebration_xx24',
+                                children: [
+                                    'desktop.ini',
+                                    'random-and-eris-starlight-celebration-01-xx24.PNG',
+                                    'random-and-eris-starlight-celebration-02-xx24.PNG',
+                                    'random-and-eris-starlight-celebration-03-xx24.PNG',
+                                    'random-and-eris-starlight-celebration-04-xx24.PNG',
+                                    'random-and-eris-starlight-celebration-05-xx24.PNG',
+                                    'random-and-eris-starlight-celebration-06-xx24.PNG',
+                                    'random-and-eris-starlight-celebration-07-xx24.PNG',
+                                    'random-and-eris-starlight-celebration-08-xx24.PNG',
+                                    'random-and-eris-starlight-celebration-09-xx24.PNG',
+                                    'random-and-eris-starlight-celebration-10-xx24.PNG',
+                                    'random-and-eris-starlight-celebration-11-xx24.PNG',
+                                    'random-and-eris-starlight-celebration-12-xx24.PNG',
+                                    'random-and-eris-starlight-celebration-13-xx24.PNG',
+                                    'random-and-eris-starlight-celebration-14-xx24.PNG',
+                                    'random-and-eris-starlight-celebration-15-xx24.PNG',
+                                    'random-and-eris-starlight-celebration-16-xx24.PNG',
+                                    'random-and-eris-starlight-celebration-17-xx24.PNG',
+                                    'random-and-eris-starlight-celebration-18-xx24.PNG',
+                                    'random-and-eris-starlight-celebration-19-xx24.PNG',
+                                    'random-and-eris-starlight-celebration-20-xx24.PNG'
+                                ]
+                            },
+                            {
+                                directory:
+                                    'random_and_eris_valentione_day_xx24',
+                                children: [
+                                    'random-and-eris-valentione-day-01-xx24.PNG',
+                                    'random-and-eris-valentione-day-02-xx24.PNG',
+                                    'random-and-eris-valentione-day-03-xx24.PNG',
+                                    'random-and-eris-valentione-day-04-xx24.PNG',
+                                    'random-and-eris-valentione-day-05-xx24.PNG',
+                                    'random-and-eris-valentione-day-06-xx24.PNG',
+                                    'random-and-eris-valentione-day-07-xx24.PNG',
+                                    'random-and-eris-valentione-day-08-xx24.PNG',
+                                    'random-and-eris-valentione-day-09-xx24.PNG',
+                                    'random-and-eris-valentione-day-10-xx24.PNG'
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        directory: 'random_and_eris_society_quest_xx24',
+                        children: [
+                            'desktop.ini',
+                            'random-and-eris-society-quest-01-xx24.PNG',
+                            'random-and-eris-society-quest-02-xx24.PNG',
+                            'random-and-eris-society-quest-03-xx24.PNG',
+                            'random-and-eris-society-quest-04-xx24.PNG',
+                            'random-and-eris-society-quest-05-xx24.PNG',
+                            'random-and-eris-society-quest-06-xx24.PNG',
+                            'random-and-eris-society-quest-07-xx24.PNG',
+                            'random-and-eris-society-quest-08-xx24.PNG',
+                            'random-and-eris-society-quest-09-xx24.PNG',
+                            'random-and-eris-society-quest-10-xx24.PNG',
+                            'random-and-eris-society-quest-11-xx24.PNG'
+                        ]
+                    },
+                    {
+                        directory: 'random_and_eris_variant_dungeon_xx24',
+                        children: [
+                            'desktop.ini',
+                            'random-and-eris-variant-dungeon-01-xx24.PNG',
+                            'random-and-eris-variant-dungeon-02-xx24.PNG',
+                            'random-and-eris-variant-dungeon-03-xx24.PNG',
+                            'random-and-eris-variant-dungeon-04-xx24.PNG',
+                            'random-and-eris-variant-dungeon-05-xx24.PNG',
+                            'random-and-eris-variant-dungeon-06-xx24.PNG',
+                            'random-and-eris-variant-dungeon-07-xx24.PNG',
+                            'random-and-eris-variant-dungeon-08-xx24.PNG',
+                            'random-and-eris-variant-dungeon-09-xx24.PNG',
+                            'random-and-eris-variant-dungeon-10-xx24.PNG',
+                            'random-and-eris-variant-dungeon-11-xx24.PNG'
+                        ]
+                    },
+                    {
+                        directory: 'random_and_eris_wedding_xx24',
+                        children: [
+                            'random-and-eris-wedding-01-xx24.PNG',
+                            'random-and-eris-wedding-02-xx24.PNG',
+                            'random-and-eris-wedding-03-xx24.PNG',
+                            'random-and-eris-wedding-04-xx24.PNG',
+                            'random-and-eris-wedding-05-xx24.png',
+                            'random-and-eris-wedding-06-xx24.png',
+                            'random-and-eris-wedding-07-xx24.png',
+                            'random-and-eris-wedding-08-xx24.png',
+                            'random-and-eris-wedding-09-xx24.png',
+                            'random-and-eris-wedding-10-xx24.png',
+                            'random-and-eris-wedding-11-xx24.png',
+                            'random-and-eris-wedding-12-xx24.png',
+                            'random-and-eris-wedding-13-xx24.png',
+                            'random-and-eris-wedding-14-xx24.png',
+                            'random-and-eris-wedding-15-xx24.png',
+                            'random-and-eris-wedding-16-xx24.jpg',
+                            'random-and-eris-wedding-17-xx24.png',
+                            'random-and-eris-wedding-18-xx24.png',
+                            'random-and-eris-wedding-19-xx24.PNG',
+                            'random-and-eris-wedding-20-xx24.PNG'
+                        ]
+                    }
+                ]
+            },
+            {
+                directory: 'random_and_eris_2025',
+                children: [
+                    {
+                        directory: 'random_and_eris_casual_xx25',
+                        children: [
+                            'random-and-eris-casual-01-xx25.PNG',
+                            'random-and-eris-casual-02-xx25.PNG',
+                            'random-and-eris-casual-03-xx25.PNG',
+                            'random-and-eris-casual-04-xx25.PNG',
+                            'random-and-eris-casual-05-xx25.PNG'
+                        ]
+                    },
+                    {
+                        directory: 'random_and_eris_mounts_xx25',
+                        children: [
+                            'random-and-eris-mounts-01-xx25.PNG',
+                            'random-and-eris-mounts-02-xx25.PNG',
+                            'random-and-eris-mounts-03-xx25.PNG',
+                            'random-and-eris-mounts-04-xx25.PNG',
+                            'random-and-eris-mounts-05-xx25.PNG',
+                            'random-and-eris-mounts-06-xx25.PNG',
+                            'random-and-eris-mounts-07-xx25.PNG',
+                            'random-and-eris-mounts-08-xx25.PNG'
+                        ]
+                    },
+                    {
+                        directory: 'random_and_eris_msq_xx25',
+                        children: [
+                            {
+                                directory:
+                                    'random_and_eris_post-dawntrail_xx25',
+                                children: [
+                                    'random-and-eris-post-dawntrail-01-xx25.PNG',
+                                    'random-and-eris-post-dawntrail-02-xx25.PNG',
+                                    'random-and-eris-post-dawntrail-03-xx25.PNG',
+                                    'random-and-eris-post-dawntrail-04-xx25.PNG',
+                                    'random-and-eris-post-dawntrail-05-xx25.PNG',
+                                    'random-and-eris-post-dawntrail-06-xx25.PNG',
+                                    'random-and-eris-post-dawntrail-07-xx25.PNG',
+                                    'random-and-eris-post-dawntrail-08-xx25.PNG',
+                                    'random-and-eris-post-dawntrail-09-xx25.PNG'
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        directory: 'random_and_eris_role_quest_xx25',
+                        children: [
+                            'random-and-eris-role-quest-01-xx25.PNG',
+                            'random-and-eris-role-quest-02-xx25.PNG',
+                            'random-and-eris-role-quest-03-xx25.PNG',
+                            'random-and-eris-role-quest-04-xx25.PNG',
+                            'random-and-eris-role-quest-05-xx25.PNG',
+                            'random-and-eris-role-quest-06-xx25.PNG',
+                            'random-and-eris-role-quest-07-xx25.PNG',
+                            'random-and-eris-role-quest-08-xx25.PNG',
+                            'random-and-eris-role-quest-09-xx25.PNG',
+                            'random-and-eris-role-quest-10-xx25.PNG'
+                        ]
+                    },
+                    {
+                        directory: 'random_and_eris_seasonal_events_xx25',
+                        children: [
+                            {
+                                directory:
+                                    'random_and_eris_all_saints_wake_xx25',
+                                children: [
+                                    'random-and-eris-all-saints-wake-01-xx25.PNG',
+                                    'random-and-eris-all-saints-wake-02-xx25.PNG',
+                                    'random-and-eris-all-saints-wake-03-xx25.PNG',
+                                    'random-and-eris-all-saints-wake-04-xx25.PNG',
+                                    'random-and-eris-all-saints-wake-05-xx25.PNG',
+                                    'random-and-eris-all-saints-wake-06-xx25.PNG',
+                                    'random-and-eris-all-saints-wake-07-xx25.PNG',
+                                    'random-and-eris-all-saints-wake-08-xx25.PNG',
+                                    'random-and-eris-all-saints-wake-09-xx25.PNG',
+                                    'random-and-eris-all-saints-wake-10-xx25.PNG',
+                                    'random-and-eris-all-saints-wake-11-xx25.PNG',
+                                    'random-and-eris-all-saints-wake-12-xx25.PNG'
+                                ]
+                            },
+                            {
+                                directory:
+                                    "random_and_eris_little_ladies'_day_xx25",
+                                children: [
+                                    "random-and-eris-little-ladies'-day-01-xx25.PNG",
+                                    "random-and-eris-little-ladies'-day-02-xx25.PNG",
+                                    "random-and-eris-little-ladies'-day-03-xx25.PNG",
+                                    "random-and-eris-little-ladies'-day-04-xx25.PNG",
+                                    "random-and-eris-little-ladies'-day-05-xx25.PNG"
+                                ]
+                            },
+                            {
+                                directory:
+                                    'random_and_eris_moonfire_faire_xx25',
+                                children: [
+                                    'random-and-eris-moonfire-faire-01-xx25.PNG',
+                                    'random-and-eris-moonfire-faire-02-xx25.PNG',
+                                    'random-and-eris-moonfire-faire-03-xx25.PNG',
+                                    'random-and-eris-moonfire-faire-04-xx25.PNG',
+                                    'random-and-eris-moonfire-faire-05-xx25.PNG',
+                                    'random-and-eris-moonfire-faire-06-xx25.PNG',
+                                    'random-and-eris-moonfire-faire-07-xx25.PNG',
+                                    'random-and-eris-moonfire-faire-08-xx25.PNG',
+                                    'random-and-eris-moonfire-faire-09-xx25.PNG',
+                                    'random-and-eris-moonfire-faire-10-xx25.PNG',
+                                    'random-and-eris-moonfire-faire-11-xx25.PNG',
+                                    'random-and-eris-moonfire-faire-12-xx25.PNG',
+                                    'random-and-eris-moonfire-faire-13-xx25.PNG',
+                                    'random-and-eris-moonfire-faire-14-xx25.PNG',
+                                    'random-and-eris-moonfire-faire-15-xx25.PNG',
+                                    'random-and-eris-moonfire-faire-16-xx25.PNG',
+                                    'random-and-eris-moonfire-faire-17-xx25.PNG'
+                                ]
+                            },
+                            {
+                                directory:
+                                    'random_and_eris_starlight_celebration_xx25',
+                                children: [
+                                    'desktop.ini',
+                                    'random-and-eris-starlight-celebration-01-xx25.PNG',
+                                    'random-and-eris-starlight-celebration-02-xx25.PNG',
+                                    'random-and-eris-starlight-celebration-03-xx25.PNG',
+                                    'random-and-eris-starlight-celebration-04-xx25.PNG'
+                                ]
+                            },
+                            {
+                                directory:
+                                    'random_and_eris_valentione-day_xx25',
+                                children: [
+                                    'random-and-eris-valentione-day-01-xx25.PNG',
+                                    'random-and-eris-valentione-day-02-xx25.PNG',
+                                    'random-and-eris-valentione-day-03-xx25.PNG',
+                                    'random-and-eris-valentione-day-04-xx25.PNG'
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        directory: 'rengia_and_mira_ffxiv_tales',
+        children: [
+            {
+                directory: 'rengia_and_mira_2024',
+                children: [
+                    {
+                        directory: 'rengia_and_mira_casual_xx24',
+                        children: [
+                            'mira-and-rengia-01-casual-xx24.PNG',
+                            'mira-and-rengia-02-casual-xx24.PNG',
+                            'mira-and-rengia-03-casual-xx24.PNG',
+                            'mira-and-rengia-04-casual-xx24.PNG',
+                            'mira-and-rengia-05-casual-xx24.PNG',
+                            'mira-and-rengia-06-casual-xx24.PNG',
+                            'mira-and-rengia-07-casual-xx24.PNG',
+                            'mira-and-rengia-08-casual-xx24.PNG',
+                            'mira-and-rengia-09-casual-xx24.PNG',
+                            'mira-and-rengia-10-casual-xx24.PNG'
+                        ]
+                    },
+                    {
+                        directory: 'rengia_and_mira_msq_xx24',
+                        children: [
+                            {
+                                directory:
+                                    'rengia_and_mira_a_realm_reborn_xx24',
+                                children: [
+                                    'desktop.ini',
+                                    'rengia-and-mira-a-realm-reborn-01-xx24.PNG',
+                                    'rengia-and-mira-a-realm-reborn-02-xx24.PNG',
+                                    'rengia-and-mira-a-realm-reborn-03-xx24.PNG',
+                                    'rengia-and-mira-a-realm-reborn-04-xx24.PNG',
+                                    'rengia-and-mira-a-realm-reborn-05-xx24.PNG',
+                                    'rengia-and-mira-a-realm-reborn-06-xx24.PNG',
+                                    'rengia-and-mira-a-realm-reborn-07-xx24.PNG',
+                                    'rengia-and-mira-a-realm-reborn-08-xx24.PNG',
+                                    'rengia-and-mira-a-realm-reborn-09-xx24.PNG',
+                                    'rengia-and-mira-a-realm-reborn-10-xx24.PNG',
+                                    'rengia-and-mira-a-realm-reborn-11-xx24.PNG',
+                                    'rengia-and-mira-a-realm-reborn-12-xx24.PNG',
+                                    'rengia-and-mira-a-realm-reborn-13-xx24.PNG',
+                                    'rengia-and-mira-a-realm-reborn-14-xx24.PNG',
+                                    'rengia-and-mira-a-realm-reborn-15-xx24.PNG',
+                                    'rengia-and-mira-a-realm-reborn-16-xx24.PNG',
+                                    'rengia-and-mira-a-realm-reborn-17-xx24.PNG',
+                                    'rengia-and-mira-a-realm-reborn-18-xx24.PNG',
+                                    'rengia-and-mira-a-realm-reborn-19-xx24.PNG',
+                                    'rengia-and-mira-a-realm-reborn-20-xx24.PNG',
+                                    'rengia-and-mira-a-realm-reborn-21-xx24.PNG',
+                                    'rengia-and-mira-a-realm-reborn-22-xx24.PNG',
+                                    'rengia-and-mira-a-realm-reborn-23-xx24.PNG',
+                                    'rengia-and-mira-a-realm-reborn-24-xx24.PNG',
+                                    'rengia-and-mira-a-realm-reborn-25-xx24.PNG',
+                                    'rengia-and-mira-a-realm-reborn-26-xx24.PNG',
+                                    'rengia-and-mira-a-realm-reborn-27-xx24.PNG',
+                                    'rengia-and-mira-a-realm-reborn-28-xx24.PNG',
+                                    'rengia-and-mira-a-realm-reborn-29-xx24.PNG',
+                                    'rengia-and-mira-a-realm-reborn-30-xx24.PNG',
+                                    'rengia-and-mira-a-realm-reborn-31-xx24.PNG',
+                                    'rengia-and-mira-a-realm-reborn-32-xx24.PNG',
+                                    'rengia-and-mira-a-realm-reborn-33-xx24.PNG',
+                                    'rengia-and-mira-a-realm-reborn-34-xx24.PNG',
+                                    'rengia-and-mira-a-realm-reborn-35-xx24.PNG',
+                                    'rengia-and-mira-a-realm-reborn-36-xx24.PNG',
+                                    'rengia-and-mira-a-realm-reborn-37-xx24.PNG',
+                                    'rengia-and-mira-a-realm-reborn-38-xx24.PNG',
+                                    'rengia-and-mira-a-realm-reborn-39-xx24.PNG'
+                                ]
+                            },
+                            {
+                                directory:
+                                    'rengia_and_mira_post_a_realm_reborn_xx24',
+                                children: [
+                                    'desktop.ini',
+                                    'rengia-and-mira-post-a-realm-reborn-01-xx24.PNG',
+                                    'rengia-and-mira-post-a-realm-reborn-02-xx24.PNG',
+                                    'rengia-and-mira-post-a-realm-reborn-03-xx24.PNG',
+                                    'rengia-and-mira-post-a-realm-reborn-04-xx24.PNG',
+                                    'rengia-and-mira-post-a-realm-reborn-05-xx24.PNG',
+                                    'rengia-and-mira-post-a-realm-reborn-06-xx24.PNG',
+                                    'rengia-and-mira-post-a-realm-reborn-07-xx24.PNG',
+                                    'rengia-and-mira-post-a-realm-reborn-08-xx24.PNG',
+                                    'rengia-and-mira-post-a-realm-reborn-09-xx24.PNG',
+                                    'rengia-and-mira-post-a-realm-reborn-10-xx24.PNG',
+                                    'rengia-and-mira-post-a-realm-reborn-11-xx24.PNG',
+                                    'rengia-and-mira-post-a-realm-reborn-12-xx24.PNG',
+                                    'rengia-and-mira-post-a-realm-reborn-13-xx24.PNG',
+                                    'rengia-and-mira-post-a-realm-reborn-14-xx24.PNG',
+                                    'rengia-and-mira-post-a-realm-reborn-15-xx24.PNG',
+                                    'rengia-and-mira-post-a-realm-reborn-16-xx24.PNG',
+                                    'rengia-and-mira-post-a-realm-reborn-17-xx24.PNG',
+                                    'rengia-and-mira-post-a-realm-reborn-18-xx24.PNG',
+                                    'rengia-and-mira-post-a-realm-reborn-19-xx24.PNG',
+                                    'rengia-and-mira-post-a-realm-reborn-20-xx24.PNG',
+                                    'rengia-and-mira-post-a-realm-reborn-21-xx24.PNG',
+                                    'rengia-and-mira-post-a-realm-reborn-22-xx24.PNG',
+                                    'rengia-and-mira-post-a-realm-reborn-23-xx24.PNG',
+                                    'rengia-and-mira-post-a-realm-reborn-24-xx24.PNG',
+                                    'rengia-and-mira-post-a-realm-reborn-25-xx24.PNG',
+                                    'rengia-and-mira-post-a-realm-reborn-26-xx24.PNG',
+                                    'rengia-and-mira-post-a-realm-reborn-27-xx24.PNG',
+                                    'rengia-and-mira-post-a-realm-reborn-28-xx24.PNG',
+                                    'rengia-and-mira-post-a-realm-reborn-29-xx24.PNG',
+                                    'rengia-and-mira-post-a-realm-reborn-30-xx24.PNG',
+                                    'rengia-and-mira-post-a-realm-reborn-31-xx24.PNG',
+                                    'rengia-and-mira-post-a-realm-reborn-32-xx24.PNG',
+                                    'rengia-and-mira-post-a-realm-reborn-33-xx24.PNG',
+                                    'rengia-and-mira-post-a-realm-reborn-34-xx24.PNG',
+                                    'rengia-and-mira-post-a-realm-reborn-35-xx24.PNG',
+                                    'rengia-and-mira-post-a-realm-reborn-36-xx24.PNG',
+                                    'rengia-and-mira-post-a-realm-reborn-37-xx24.PNG'
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        directory: 'rengia_and_mira_seasonal_events_xx24',
+                        children: [
+                            {
+                                directory:
+                                    'rengia_and_mira_all_saints_wake_xx24',
+                                children: [
+                                    'rengia-and-mira-all-saints-wake-01-xx24.PNG',
+                                    'rengia-and-mira-all-saints-wake-02-xx24.PNG'
+                                ]
+                            },
+                            {
+                                directory:
+                                    'rengia_and_mira_starlight_celebration_xx24',
+                                children: [
+                                    'rengia-and-mira-post-starlight-celebration-01-xx24.PNG',
+                                    'rengia-and-mira-post-starlight-celebration-02-xx24.PNG',
+                                    'rengia-and-mira-post-starlight-celebration-03-xx24.PNG',
+                                    'rengia-and-mira-post-starlight-celebration-04-xx24.PNG',
+                                    'rengia-and-mira-post-starlight-celebration-05-xx24.PNG',
+                                    'rengia-and-mira-post-starlight-celebration-06-xx24.PNG',
+                                    'rengia-and-mira-post-starlight-celebration-07-xx24.PNG',
+                                    'rengia-and-mira-post-starlight-celebration-08-xx24.PNG',
+                                    'rengia-and-mira-post-starlight-celebration-09-xx24.PNG',
+                                    'rengia-and-mira-post-starlight-celebration-10-xx24.PNG',
+                                    'rengia-and-mira-post-starlight-celebration-11-xx24.PNG',
+                                    'rengia-and-mira-post-starlight-celebration-12-xx24.PNG',
+                                    'rengia-and-mira-post-starlight-celebration-13-xx24.PNG'
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                directory: 'rengia_and_mira_2025',
+                children: [
+                    {
+                        directory: 'rengia_and_mira_casual_xx25',
+                        children: [
+                            'rengia-and-mira-casual-01-xx25.png',
+                            'rengia-and-mira-casual-02-xx25.png'
+                        ]
+                    },
+                    {
+                        directory: 'rengia_and_mira_dungeons_and_trials_xx25',
+                        children: [
+                            'rengia-and-mira-dungeons-and-trials-01-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-02-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-03-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-04-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-05-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-06-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-07-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-08-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-09-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-10-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-100-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-101-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-102-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-103-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-104-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-105-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-106-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-107-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-108-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-109-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-11-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-110-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-111-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-112-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-113-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-114-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-115-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-116-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-117-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-118-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-119-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-12-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-120-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-121-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-122-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-123-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-13-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-14-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-15-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-16-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-17-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-18-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-19-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-20-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-21-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-22-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-23-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-24-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-25-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-26-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-27-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-28-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-29-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-30-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-31-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-32-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-33-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-34-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-35-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-36-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-37-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-38-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-39-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-40-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-41-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-42-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-43-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-44-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-45-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-46-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-47-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-48-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-49-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-50-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-51-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-52-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-53-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-54-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-55-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-56-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-57-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-58-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-59-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-60-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-61-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-62-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-63-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-64-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-65-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-66-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-67-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-68-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-69-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-70-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-71-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-72-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-73-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-74-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-75-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-76-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-77-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-78-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-79-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-80-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-81-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-82-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-83-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-84-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-85-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-86-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-87-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-88-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-89-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-90-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-91-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-92-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-93-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-94-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-95-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-96-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-97-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-98-xx25.png',
+                            'rengia-and-mira-dungeons-and-trials-99-xx25.png'
+                        ]
+                    },
+                    {
+                        directory: 'rengia_and_mira_msq_xx25',
+                        children: [
+                            {
+                                directory: 'rengia_and_mira_heavensward_xx25',
+                                children: [
+                                    'rengia-and-mira-heavensward-01-xx25.PNG',
+                                    'rengia-and-mira-heavensward-02-xx25.PNG',
+                                    'rengia-and-mira-heavensward-03-xx25.PNG',
+                                    'rengia-and-mira-heavensward-04-xx25.PNG',
+                                    'rengia-and-mira-heavensward-05-xx25.PNG',
+                                    'rengia-and-mira-heavensward-06-xx25.PNG',
+                                    'rengia-and-mira-heavensward-07-xx25.PNG',
+                                    'rengia-and-mira-heavensward-08-xx25.PNG',
+                                    'rengia-and-mira-heavensward-09-xx25.PNG',
+                                    'rengia-and-mira-heavensward-10-xx25.PNG',
+                                    'rengia-and-mira-heavensward-11-xx25.PNG',
+                                    'rengia-and-mira-heavensward-12-xx25.PNG',
+                                    'rengia-and-mira-heavensward-13-xx25.PNG',
+                                    'rengia-and-mira-heavensward-14-xx25.PNG',
+                                    'rengia-and-mira-heavensward-15-xx25.PNG',
+                                    'rengia-and-mira-heavensward-16-xx25.PNG',
+                                    'rengia-and-mira-heavensward-17-xx25.PNG',
+                                    'rengia-and-mira-heavensward-18-xx25.PNG',
+                                    'rengia-and-mira-heavensward-19-xx25.PNG',
+                                    'rengia-and-mira-heavensward-20-xx25.PNG',
+                                    'rengia-and-mira-heavensward-21-xx25.PNG',
+                                    'rengia-and-mira-heavensward-22-xx25.PNG',
+                                    'rengia-and-mira-heavensward-23-xx25.PNG',
+                                    'rengia-and-mira-heavensward-24-xx25.PNG',
+                                    'rengia-and-mira-heavensward-25-xx25.PNG',
+                                    'rengia-and-mira-heavensward-26-xx25.PNG'
+                                ]
+                            },
+                            {
+                                directory:
+                                    'rengia_and_mira_post-heavensward_xx25',
+                                children: [
+                                    'rengia-and-mira-post-heavensward-01-xx25.PNG',
+                                    'rengia-and-mira-post-heavensward-02-xx25.PNG',
+                                    'rengia-and-mira-post-heavensward-03-xx25.PNG',
+                                    'rengia-and-mira-post-heavensward-04-xx25.PNG',
+                                    'rengia-and-mira-post-heavensward-05-xx25.PNG',
+                                    'rengia-and-mira-post-heavensward-06-xx25.PNG',
+                                    'rengia-and-mira-post-heavensward-07-xx25.PNG',
+                                    'rengia-and-mira-post-heavensward-08-xx25.PNG',
+                                    'rengia-and-mira-post-heavensward-09-xx25.PNG',
+                                    'rengia-and-mira-post-heavensward-10-xx25.PNG',
+                                    'rengia-and-mira-post-heavensward-11-xx25.PNG',
+                                    'rengia-and-mira-post-heavensward-12-xx25.PNG',
+                                    'rengia-and-mira-post-heavensward-13-xx25.PNG',
+                                    'rengia-and-mira-post-heavensward-14-xx25.PNG',
+                                    'rengia-and-mira-post-heavensward-15-xx25.PNG',
+                                    'rengia-and-mira-post-heavensward-16-xx25.PNG',
+                                    'rengia-and-mira-post-heavensward-17-xx25.PNG',
+                                    'rengia-and-mira-post-heavensward-18-xx25.PNG',
+                                    'rengia-and-mira-post-heavensward-19-xx25.PNG',
+                                    'rengia-and-mira-post-heavensward-20-xx25.PNG',
+                                    'rengia-and-mira-post-heavensward-21-xx25.PNG'
+                                ]
+                            },
+                            {
+                                directory:
+                                    'rengia_and_mira_post_a_realm_reborn_xx25',
+                                children: [
+                                    'rengia-and-mira-post-a-realm-reborn-01-xx25.PNG',
+                                    'rengia-and-mira-post-a-realm-reborn-02-xx25.PNG',
+                                    'rengia-and-mira-post-a-realm-reborn-03-xx25.PNG',
+                                    'rengia-and-mira-post-a-realm-reborn-04-xx25.PNG',
+                                    'rengia-and-mira-post-a-realm-reborn-05-xx25.PNG',
+                                    'rengia-and-mira-post-a-realm-reborn-06-xx25.PNG',
+                                    'rengia-and-mira-post-a-realm-reborn-07-xx25.PNG',
+                                    'rengia-and-mira-post-a-realm-reborn-08-xx25.PNG',
+                                    'rengia-and-mira-post-a-realm-reborn-09-xx25.PNG',
+                                    'rengia-and-mira-post-a-realm-reborn-10-xx25.PNG',
+                                    'rengia-and-mira-post-a-realm-reborn-11-xx25.PNG',
+                                    'rengia-and-mira-post-a-realm-reborn-12-xx25.PNG',
+                                    'rengia-and-mira-post-a-realm-reborn-13-xx25.PNG'
+                                ]
+                            },
+                            {
+                                directory:
+                                    'rengia_and_mira_post_stormblood_xx25',
+                                children: [
+                                    'rengia-and-mira-post-stormblood-1-xx25.PNG',
+                                    'rengia-and-mira-post-stormblood-2-xx25.PNG',
+                                    'rengia-and-mira-post-stormblood-3-xx25.PNG',
+                                    'rengia-and-mira-post-stormblood-4-xx25.PNG',
+                                    'rengia-and-mira-post-stormblood-5-xx25.PNG',
+                                    'rengia-and-mira-post-stormblood-6-xx25.PNG',
+                                    'rengia-and-mira-post-stormblood-7-xx25.PNG'
+                                ]
+                            },
+                            {
+                                directory:
+                                    'rengia_and_mira_shadowbringers_xx25',
+                                children: [
+                                    'rengia-and-mira-shadowbringers-01-xx25.PNG',
+                                    'rengia-and-mira-shadowbringers-02-xx25.PNG',
+                                    'rengia-and-mira-shadowbringers-03-xx25.PNG',
+                                    'rengia-and-mira-shadowbringers-04-xx25.PNG',
+                                    'rengia-and-mira-shadowbringers-05-xx25.PNG',
+                                    'rengia-and-mira-shadowbringers-06-xx25.PNG',
+                                    'rengia-and-mira-shadowbringers-07-xx25.PNG',
+                                    'rengia-and-mira-shadowbringers-08-xx25.PNG',
+                                    'rengia-and-mira-shadowbringers-09-xx25.PNG',
+                                    'rengia-and-mira-shadowbringers-10-xx25.PNG',
+                                    'rengia-and-mira-shadowbringers-11-xx25.PNG',
+                                    'rengia-and-mira-shadowbringers-12-xx25.PNG',
+                                    'rengia-and-mira-shadowbringers-13-xx25.PNG',
+                                    'rengia-and-mira-shadowbringers-14-xx25.PNG',
+                                    'rengia-and-mira-shadowbringers-15-xx25.PNG',
+                                    'rengia-and-mira-shadowbringers-16-xx25.PNG',
+                                    'rengia-and-mira-shadowbringers-17-xx25.PNG',
+                                    'rengia-and-mira-shadowbringers-18-xx25.PNG',
+                                    'rengia-and-mira-shadowbringers-19-xx25.PNG',
+                                    'rengia-and-mira-shadowbringers-20-xx25.PNG',
+                                    'rengia-and-mira-shadowbringers-21-xx25.PNG',
+                                    'rengia-and-mira-shadowbringers-22-xx25.PNG',
+                                    'rengia-and-mira-shadowbringers-23-xx25.PNG',
+                                    'rengia-and-mira-shadowbringers-24-xx25.PNG',
+                                    'rengia-and-mira-shadowbringers-25-xx25.PNG',
+                                    'rengia-and-mira-shadowbringers-26-xx25.PNG'
+                                ]
+                            },
+                            {
+                                directory: 'rengia_and_mira_stormblood_xx25',
+                                children: [
+                                    'desktop.ini',
+                                    'rengia-and-mira-stormblood-01-xx25.PNG',
+                                    'rengia-and-mira-stormblood-02-xx25.PNG',
+                                    'rengia-and-mira-stormblood-03-xx25.PNG',
+                                    'rengia-and-mira-stormblood-04-xx25.PNG',
+                                    'rengia-and-mira-stormblood-05-xx25.PNG',
+                                    'rengia-and-mira-stormblood-06-xx25.PNG',
+                                    'rengia-and-mira-stormblood-07-xx25.PNG',
+                                    'rengia-and-mira-stormblood-08-xx25.PNG',
+                                    'rengia-and-mira-stormblood-09-xx25.PNG',
+                                    'rengia-and-mira-stormblood-10-xx25.PNG',
+                                    'rengia-and-mira-stormblood-11-xx25.PNG',
+                                    'rengia-and-mira-stormblood-12-xx25.PNG',
+                                    'rengia-and-mira-stormblood-13-xx25.PNG',
+                                    'rengia-and-mira-stormblood-14-xx25.PNG',
+                                    'rengia-and-mira-stormblood-15-xx25.PNG',
+                                    'rengia-and-mira-stormblood-16-xx25.PNG',
+                                    'rengia-and-mira-stormblood-17-xx25.PNG',
+                                    'rengia-and-mira-stormblood-18-xx25.PNG',
+                                    'rengia-and-mira-stormblood-19-xx25.PNG',
+                                    'rengia-and-mira-stormblood-20-xx25.PNG',
+                                    'rengia-and-mira-stormblood-21-xx25.PNG',
+                                    'rengia-and-mira-stormblood-22-xx25.PNG',
+                                    'rengia-and-mira-stormblood-23-xx25.PNG',
+                                    'rengia-and-mira-stormblood-24-xx25.PNG',
+                                    'rengia-and-mira-stormblood-25-xx25.PNG',
+                                    'rengia-and-mira-stormblood-26-xx25.PNG',
+                                    'rengia-and-mira-stormblood-27-xx25.PNG',
+                                    'rengia-and-mira-stormblood-28-xx25.PNG',
+                                    'rengia-and-mira-stormblood-29-xx25.PNG',
+                                    'rengia-and-mira-stormblood-30-xx25.PNG',
+                                    'rengia-and-mira-stormblood-31-xx25.PNG',
+                                    'rengia-and-mira-stormblood-32-xx25.PNG',
+                                    'rengia-and-mira-stormblood-33-xx25.PNG',
+                                    'rengia-and-mira-stormblood-34-xx25.PNG',
+                                    'rengia-and-mira-stormblood-35-xx25.PNG',
+                                    'rengia-and-mira-stormblood-36-xx25.PNG',
+                                    'rengia-and-mira-stormblood-37-xx25.PNG',
+                                    'rengia-and-mira-stormblood-38-xx25.PNG',
+                                    'rengia-and-mira-stormblood-39-xx25.PNG',
+                                    'rengia-and-mira-stormblood-40-xx25.PNG',
+                                    'rengia-and-mira-stormblood-41-xx25.PNG',
+                                    'rengia-and-mira-stormblood-42-xx25.png'
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        directory: 'rengia_and_mira_normal_raids_xx25',
+                        children: [
+                            {
+                                directory: 'rengia_and_mira_alexander_xx25',
+                                children: [
+                                    'rengia-and-mira-normal-raid-alexander-01-xx25.PNG',
+                                    'rengia-and-mira-normal-raid-alexander-02-xx25.PNG',
+                                    'rengia-and-mira-normal-raid-alexander-03-xx25.PNG',
+                                    'rengia-and-mira-normal-raid-alexander-04-xx25.PNG',
+                                    'rengia-and-mira-normal-raid-alexander-05-xx25.PNG',
+                                    'rengia-and-mira-normal-raid-alexander-06-xx25.PNG',
+                                    'rengia-and-mira-normal-raid-alexander-07-xx25.PNG',
+                                    'rengia-and-mira-normal-raid-alexander-08-xx25.PNG',
+                                    'rengia-and-mira-normal-raid-alexander-09-xx25.PNG',
+                                    'rengia-and-mira-normal-raid-alexander-10-xx25.PNG',
+                                    'rengia-and-mira-normal-raid-alexander-11-xx25.PNG',
+                                    'rengia-and-mira-normal-raid-alexander-12-xx25.PNG',
+                                    'rengia-and-mira-normal-raid-alexander-13-xx25.PNG',
+                                    'rengia-and-mira-normal-raid-alexander-14-xx25.PNG',
+                                    'rengia-and-mira-normal-raid-alexander-15-xx25.PNG',
+                                    'rengia-and-mira-normal-raid-alexander-16-xx25.PNG',
+                                    'rengia-and-mira-normal-raid-alexander-17-xx25.PNG',
+                                    'rengia-and-mira-normal-raid-alexander-18-xx25.PNG',
+                                    'rengia-and-mira-normal-raid-alexander-19-xx25.PNG',
+                                    'rengia-and-mira-normal-raid-alexander-20-xx25.PNG',
+                                    'rengia-and-mira-normal-raid-alexander-21-xx25.PNG',
+                                    'rengia-and-mira-normal-raid-alexander-22-xx25.PNG',
+                                    'rengia-and-mira-normal-raid-alexander-23-xx25.PNG',
+                                    'rengia-and-mira-normal-raid-alexander-24-xx25.PNG',
+                                    'rengia-and-mira-normal-raid-alexander-25-xx25.PNG'
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        directory: 'rengia_and_mira_seasonal_events_xx25',
+                        children: [
+                            {
+                                directory:
+                                    'rengia_and_mira_all_saints_wake_xx25',
+                                children: [
+                                    'rengia-and-mira-all-saints-wake-01-xx25.PNG',
+                                    'rengia-and-mira-all-saints-wake-02-xx25.PNG',
+                                    'rengia-and-mira-all-saints-wake-03-xx25.PNG',
+                                    'rengia-and-mira-all-saints-wake-04-xx25.PNG',
+                                    'rengia-and-mira-all-saints-wake-05-xx25.PNG',
+                                    'rengia-and-mira-all-saints-wake-06-xx25.PNG',
+                                    'rengia-and-mira-all-saints-wake-07-xx25.PNG',
+                                    'rengia-and-mira-all-saints-wake-08-xx25.PNG',
+                                    'rengia-and-mira-all-saints-wake-09-xx25.PNG',
+                                    'rengia-and-mira-all-saints-wake-10-xx25.PNG',
+                                    'rengia-and-mira-all-saints-wake-11-xx25.PNG'
+                                ]
+                            },
+                            {
+                                directory:
+                                    'rengia_and_mira_moonfire_faire_xx25',
+                                children: [
+                                    'rengia-and-mira-moonfire-faire-01-xx25.PNG',
+                                    'rengia-and-mira-moonfire-faire-02-xx25.PNG',
+                                    'rengia-and-mira-moonfire-faire-03-xx25.PNG',
+                                    'rengia-and-mira-moonfire-faire-04-xx25.PNG',
+                                    'rengia-and-mira-moonfire-faire-05-xx25.PNG',
+                                    'rengia-and-mira-moonfire-faire-06-xx25.PNG',
+                                    'rengia-and-mira-moonfire-faire-07-xx25.PNG'
+                                ]
+                            },
+                            {
+                                directory:
+                                    'rengia_and_mira_starlight_celebration_xx25',
+                                children: [
+                                    'rengia-and-mira-starlight-celebration-01-xx25.png',
+                                    'rengia-and-mira-starlight-celebration-02-xx25.png',
+                                    'rengia-and-mira-starlight-celebration-03-xx25.png',
+                                    'rengia-and-mira-starlight-celebration-04-xx25.png',
+                                    'rengia-and-mira-starlight-celebration-05-xx25.png',
+                                    'rengia-and-mira-starlight-celebration-06-xx25.png',
+                                    'rengia-and-mira-starlight-celebration-07-xx25.png',
+                                    'rengia-and-mira-starlight-celebration-08-xx25.png',
+                                    'rengia-and-mira-starlight-celebration-09-xx25.png',
+                                    'rengia-and-mira-starlight-celebration-10-xx25.png',
+                                    'rengia-and-mira-starlight-celebration-11-xx25.png',
+                                    'rengia-and-mira-starlight-celebration-12-xx25.png'
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        directory: 'rengia_and_mira_trials_xx25',
+                        children: [
+                            {
+                                directory:
+                                    'rengia_and_mira_the_four_lords_xx25',
+                                children: [
+                                    'rengia-and-mira-the-four-lords-01-xx25.PNG',
+                                    'rengia-and-mira-the-four-lords-02-xx25.PNG',
+                                    'rengia-and-mira-the-four-lords-03-xx25.PNG',
+                                    'rengia-and-mira-the-four-lords-04-xx25.PNG',
+                                    'rengia-and-mira-the-four-lords-05-xx25.png'
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                directory: 'rengia_and_mira_2026',
+                children: [
+                    {
+                        directory: 'rengia_and_mira_dungeons_and_trials_xx26',
+                        children: [
+                            'rengia-and-mira-dungeons-and-trials-01-xx26.png',
+                            'rengia-and-mira-dungeons-and-trials-02-xx26.png'
+                        ]
+                    },
+                    {
+                        directory: 'rengia_and_mira_msq_xx26',
+                        children: [
+                            {
+                                directory:
+                                    'rengia_and_mira_shadowbringers_xx26',
+                                children: [
+                                    'rengia-and-mira-shadowbringers-01-xx26.PNG',
+                                    'rengia-and-mira-shadowbringers-02-xx26.PNG',
+                                    'rengia-and-mira-shadowbringers-03-xx26.PNG',
+                                    'rengia-and-mira-shadowbringers-04-xx26.PNG'
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+];
 
 // 1.) Make sure you're passing an Object and NOT an array. Should ALWAYS be an Object
 
@@ -58,6 +1191,36 @@ function listAllItems(objs) {
 
 // listAllItems(myObj);
 
+function capitalizeFirstLetterOfEachWord(word) {
+    let myCharacters = word.split('');
+
+    let myNewCharacters = myCharacters.map((x) =>
+        x === '_' || x === '-' ? ' ' : x
+    );
+
+    let notCapitalizedWords = myNewCharacters.join('');
+
+    let stillNotCapitalizedWords = notCapitalizedWords.split(' ');
+
+    for (let i = 0; i < stillNotCapitalizedWords.length; i++) {
+        if (
+            stillNotCapitalizedWords[i].toLowerCase() === 'ffxiv' ||
+            stillNotCapitalizedWords[i].toLowerCase() === 'msq'
+        ) {
+            stillNotCapitalizedWords[i] =
+                stillNotCapitalizedWords[i].toUpperCase();
+        } else if (stillNotCapitalizedWords[i] !== 'and') {
+            stillNotCapitalizedWords[i] =
+                stillNotCapitalizedWords[i][0].toUpperCase() +
+                stillNotCapitalizedWords[i].substring(1);
+        } else {
+            stillNotCapitalizedWords[i] === stillNotCapitalizedWords[i];
+        }
+    }
+
+    return stillNotCapitalizedWords.join(' ');
+}
+
 function createSidebarList(objs) {
     // Create ul to contain everything
     const details = document.createElement('details');
@@ -69,16 +1232,41 @@ function createSidebarList(objs) {
         details.appendChild(summary);
         details.appendChild(innerUl);
 
-        summary.textContent = objs.directory;
+        let capitalizeDirectoryNames = capitalizeFirstLetterOfEachWord(
+            objs.directory
+        );
+
+        if (
+            capitalizeDirectoryNames.toLowerCase().includes('xx23') ||
+            capitalizeDirectoryNames.toLowerCase().includes('xx24') ||
+            capitalizeDirectoryNames.toLowerCase().includes('xx25') ||
+            capitalizeDirectoryNames.toLowerCase().includes('xx26')
+        ) {
+            summary.textContent = capitalizeDirectoryNames.substring(
+                0,
+                capitalizeDirectoryNames.length - 4
+            );
+        } else {
+            summary.textContent = capitalizeDirectoryNames;
+        }
 
         for (const items of objs.children) {
             if (typeof items.children[0] === 'string') {
                 const lowestLi = document.createElement('li');
 
-                lowestLi.textContent = items.directory;
-                // lowestLi.addEventListener('click', () =>
-                //     getAllFilesInDirectory(items.directory, objs)
-                // );
+                let capitalizeFileNames = capitalizeFirstLetterOfEachWord(
+                    items.directory
+                );
+
+                lowestLi.textContent = capitalizeFileNames.substring(
+                    0,
+                    capitalizeFileNames.length - 4
+                );
+
+                lowestLi.addEventListener('click', () => {
+                    // getAllFilesInDirectory(items.directory, objs);
+                    console.log(items.directory);
+                });
 
                 innerUl.appendChild(lowestLi);
             } else {
@@ -102,7 +1290,9 @@ function createFFXIVTalesSidebar() {
 
     // Create: details, summary (directory name), ul, li and repeat
 
-    aside.appendChild(createSidebarList(myObj));
+    for (const sidebarItems in myObj) {
+        aside.appendChild(createSidebarList(myObj[sidebarItems]));
+    }
 
     return aside;
 }
