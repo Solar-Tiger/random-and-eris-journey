@@ -1,7 +1,7 @@
 function fetchCloudinaryImage(publicId) {
     const cloudName = 'duaozkbsv';
 
-    const url = `https://res.cloudinary.com/${cloudName}/image/upload/${publicId}.png`;
+    const url = `https://res.cloudinary.com/${cloudName}/image/upload/f_auto/q_auto/${publicId}`;
 
     return url;
 }
