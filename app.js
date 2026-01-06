@@ -111,14 +111,26 @@ function createJSONObject(myPath) {
 //     )
 // );
 
-// fs.writeFileSync(
-//     './src/05_temp/test.json',
-//     JSON.stringify(
-//         createJSONObject(path.resolve('./src/04_jak_and_daxter')),
-//         null,
-//         2
-//     )
-// );
+const myFiles = fs.readdirSync('src/temp_files');
+
+function createJSONFileFromMultipleDirectories(arr) {
+    const completeObject = [];
+
+    arr.forEach((file) => {
+        const finishedObject = createJSONObject(
+            path.resolve(`./src/temp_files/${file}`)
+        );
+
+        completeObject.push(finishedObject);
+    });
+
+    fs.writeFileSync(
+        './src/temp_files/ffxiv_tales.json',
+        JSON.stringify(completeObject, null, 2)
+    );
+}
+
+createJSONFileFromMultipleDirectories(myFiles);
 
 const myObj = {
     directory: '04_jak_and_daxter',
@@ -218,7 +230,7 @@ function factorialTwo(num, myArr = []) {
     return myArr;
 }
 
-console.log(factorialTwo(4));
+// console.log(factorialTwo(4));
 
 function fact(num) {
     let myArr = [];
