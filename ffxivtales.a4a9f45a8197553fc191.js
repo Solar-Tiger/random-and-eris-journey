@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwebpack_template=self.webpackChunkwebpack_template||[]).push([[107],{226:()=>{!async function(){try{const e=await fetch("../../data/gallery.json"),a=await e.json();console.log(a);const t=document.createElement("img");t.src=a.image1,document.querySelector("main").appendChild(t)}catch(e){console.error(e.message)}}()}},e=>{e(e.s=226)}]);
