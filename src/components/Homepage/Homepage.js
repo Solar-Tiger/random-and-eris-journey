@@ -237,7 +237,7 @@ function createOurBingeWatchingEscapeSection() {
     ourBingeWatchingEscapeDescription.textContent =
         "Outside of FFXIV, we've taken to watching things together from anime to movies as a way to escape from reality.";
     ourBingeWatchingEscapeBtnLink.textContent = 'Come Escape With Us';
-    ourBingeWatchingEscapeBtnLink.href = 'pages/watchlist.html';
+    ourBingeWatchingEscapeBtnLink.href = 'pages/Watchlist/watchlist.html';
 
     ourBingeWatchingEscapeCard.append(
         ourBingeWatchingEscapeTitle,
