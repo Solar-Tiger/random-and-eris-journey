@@ -919,6 +919,26 @@ main {
 /* ======== SIDEBAR ======== */
 
 /* ======== IMAGE GALLERY ======== */
+.image-gallery {
+    column-count: 1;
+    column-gap: 20px;
+
+    & div {
+        padding: 10px 0;
+    }
+}
+
+@media screen and (min-width: 30em) {
+    .image-gallery {
+        column-count: 2;
+    }
+}
+
+@media screen and (min-width: 48em) {
+    .image-gallery {
+        column-count: 3;
+    }
+}
 
 /*  
 ======================================
