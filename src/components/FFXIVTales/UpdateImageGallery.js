@@ -1,22 +1,36 @@
-async function updateImageGallery() {
-    const imageData = '../../data/gallery.json';
+function fetchCloudinaryImage(publicId) {
+    const cloudName = 'duaozkbsv';
 
-    try {
-        const response = await fetch(imageData);
+    const url = `https://res.cloudinary.com/${cloudName}/image/upload/f_auto/q_auto/${publicId}`;
 
-        const result = await response.json();
+    return url;
+}
 
-        console.log(result);
+function updateImageGallery(directoryName, objs) {
+    // Check if the directory name equals the directory you're looking for AND it's an Object
+    if (directoryName !== objs.directory && objs === Object(objs)) {
+        for (let i = 0; i < objs.children.length; i++) {
+            updateImageGallery(directoryName, objs.children[i]);
+        }
+    }
 
-        const testImg = document.createElement('img');
+    // Make sure it's an Object else do nothing with it
+    else if (objs === Object(objs)) {
+        let ffxivTalesImageGalery = document.querySelector(
+            '.ffxiv-tales-image-gallery'
+        );
 
-        testImg.src = result.image1;
+        ffxivTalesImageGalery.textContent = '';
 
-        const main = document.querySelector('main');
+        for (let i = 0; i < objs.children.length; i++) {
+            // console.log(objs.children[i]);
 
-        main.appendChild(testImg);
-    } catch (error) {
-        console.error(error.message);
+            const img = document.createElement('img');
+
+            img.src = fetchCloudinaryImage(objs.children[i]);
+
+            ffxivTalesImageGalery.appendChild(img);
+        }
     }
 }
 
