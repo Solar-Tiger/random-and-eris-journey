@@ -30,6 +30,6 @@ function getAllFilesInDirectory(directoryName, objs) {
     }
 }
 
-// getAllFilesInDirectory(myObj, 'bad-guys');
+// getAllFilesInDirectory('bad-guys', myObj);
 
 export { getAllFilesInDirectory };
