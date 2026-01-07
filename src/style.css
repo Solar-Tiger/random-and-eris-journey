@@ -919,6 +919,12 @@ main {
 /* ======== SIDEBAR ======== */
 
 /* ======== IMAGE GALLERY ======== */
+/* Add 0 margin on ul elements */
+
+.ffxiv-tales-sidebar ul {
+    margin: 0;
+}
+
 .image-gallery {
     column-count: 1;
     column-gap: 10px;
