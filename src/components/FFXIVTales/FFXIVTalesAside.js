@@ -1189,6 +1189,8 @@ function createFFXIVTalesSidebar() {
     // create aside to contain list of relevant FFXIV Tales
     const aside = document.createElement('aside');
 
+    aside.classList.add('ffxiv-tales-sidebar');
+
     // Create: details, summary (directory name), ul, li and repeat
 
     for (const sidebarItems in myObj) {
