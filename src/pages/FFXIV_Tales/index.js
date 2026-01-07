@@ -1,3 +1,4 @@
+import { createFFXIVTalesImageGallery } from '../../components/FFXIVTales/CreateImageGallery.js';
 import { updateImageGallery } from '../../components/FFXIVTales/UpdateImageGallery.js';
 import { createFFXIVTalesSidebar } from '../../components/FFXIVTales/FFXIVTalesAside.js';
 
@@ -7,6 +8,11 @@ const ffxivTalesSection = document.querySelector('.our-shared-adventures');
 
 // ffxivTalesSection.appendChild(createFFXIVTalesSidebar());
 
-let main = document.querySelector('main');
+let ffxivTalesImageGalleryContainer = document.querySelector(
+    '.ffxiv-tales-image-gallery-container'
+);
 
-main.appendChild(createFFXIVTalesSidebar());
+ffxivTalesImageGalleryContainer.append(
+    createFFXIVTalesSidebar(),
+    createFFXIVTalesImageGallery()
+);
