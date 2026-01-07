@@ -923,7 +923,7 @@ main {
     column-count: 1;
     column-gap: 10px;
 
-    & div {
+    & img {
         padding: 5px 0;
     }
 }
