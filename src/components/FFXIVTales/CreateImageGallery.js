@@ -33,17 +33,21 @@ function getAllFilesInDirectory(directoryName, objs) {
 }
 
 function createFFXIVTalesImageGallery() {
-    // Create test image
-    const testImg = document.createElement('img');
-
-    testImg.src = randomAndErisTestImage;
-
-    // create aside to contain list of relevant FFXIV Tales
     const section = document.createElement('section');
 
-    section.classList.add('ffxiv-tales-image-gallery');
+    for (let i = 1; i <= 5; i++) {
+        const testImg = document.createElement('img');
 
-    section.appendChild(testImg);
+        let myLink = fetchCloudinaryImage(
+            `random-and-eris-casual-0${i}-xx23.PNG`
+        );
+
+        testImg.src = myLink;
+
+        section.appendChild(testImg);
+    }
+
+    section.classList.add('ffxiv-tales-image-gallery');
 
     return section;
 }
