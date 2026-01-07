@@ -1,5 +1,3 @@
-import randomAndErisTestImage from '../../assets/images/random_and_eris_casual_xx23/random-and-eris-casual-01-xx23.PNG';
-
 function fetchCloudinaryImage(publicId) {
     const cloudName = 'duaozkbsv';
 
