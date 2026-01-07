@@ -1,3 +1,5 @@
+import randomAndErisTestImage from '../../assets/images/random_and_eris_casual_xx23/random-and-eris-casual-01-xx23.PNG';
+
 function fetchCloudinaryImage(publicId) {
     const cloudName = 'duaozkbsv';
 
@@ -30,6 +32,22 @@ function getAllFilesInDirectory(directoryName, objs) {
     }
 }
 
+function createFFXIVTalesImageGallery() {
+    // Create test image
+    const testImg = document.createElement('img');
+
+    testImg.src = randomAndErisTestImage;
+
+    // create aside to contain list of relevant FFXIV Tales
+    const section = document.createElement('section');
+
+    section.classList.add('ffxiv-tales-image-gallery');
+
+    section.appendChild(testImg);
+
+    return section;
+}
+
 // getAllFilesInDirectory('bad-guys', myObj);
 
-export { getAllFilesInDirectory };
+export { getAllFilesInDirectory, createFFXIVTalesImageGallery };
