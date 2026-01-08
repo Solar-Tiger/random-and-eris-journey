@@ -1,0 +1,250 @@
+[
+    {
+        "category": "Anime",
+        "currentlyWatching": [
+            {
+                "animeName": "Fairy Tail",
+                "numberOfEpisodes": "328",
+                "currentEpisode": "176"
+            },
+            {
+                "animeName": "Justice League",
+                "numberOfEpisodes": "52",
+                "currentEpisode": "1"
+            }
+        ],
+        "upNext": [
+            { "animeName": "Trigun (Original)", "numberOfEpisodes": "26" },
+            { "animeName": "Trigun Stampede", "numberOfEpisodes": "12" },
+            { "animeName": "NieR:Automata Ver1.1a", "numberOfEpisodes": "24" }
+        ],
+        "upcomming": [
+            { "animeName": "Madoka Magica", "numberOfEpisodes": "12" },
+            { "animeName": "Demon Slayer", "numberOfEpisodes": "63" },
+            {
+                "animeName": "Godzilla Singular Point",
+                "numberOfEpisodes": "13"
+            },
+            { "animeName": "Steins;Gate (incl. 0)", "numberOfEpisodes": "49" },
+            { "animeName": "Asura Cryin'", "numberOfEpisodes": "26" },
+            {
+                "animeName": "A Certain Scientific Railgun",
+                "numberOfEpisodes": "73"
+            },
+            { "animeName": "Tiger and Bunny", "numberOfEpisodes": "50" },
+            {
+                "animeName": "She-Ra and the Princesses of Power",
+                "numberOfEpisodes": "52"
+            },
+            {
+                "animeName": "Bleach (Original + TYBW)",
+                "numberOfEpisodes": "406"
+            },
+            {
+                "animeName": "The Wrong Way to Use Healing Magic",
+                "numberOfEpisodes": "13"
+            },
+            { "animeName": "Gamera: Rebirth", "numberOfEpisodes": "6" },
+            { "animeName": "High Card", "numberOfEpisodes": "24" },
+            {
+                "animeName": "Gushing over Magical Girls",
+                "numberOfEpisodes": "13"
+            },
+            { "animeName": "One Piece (Live Action)", "numberOfEpisodes": "8" },
+            { "animeName": "Digimon Adventure 01", "numberOfEpisodes": "54" },
+            { "animeName": "Digimon Adventure 02", "numberOfEpisodes": "50" },
+            { "animeName": "Digimon Tamers", "numberOfEpisodes": "51" },
+            { "animeName": "Digimon Frontier", "numberOfEpisodes": "50" },
+            { "animeName": "Bungo Stray Dogs", "numberOfEpisodes": "61" },
+            { "animeName": "Mario Bros Z", "numberOfEpisodes": "8" },
+            {
+                "animeName": "A Certain Scientific Accelerator",
+                "numberOfEpisodes": "12"
+            },
+            { "animeName": "Akame Ga Kill", "numberOfEpisodes": "24" },
+            { "animeName": "Interspecies Reviewers", "numberOfEpisodes": "12" },
+            {
+                "animeName": "Star Wars: The Clone Wars",
+                "numberOfEpisodes": "133"
+            },
+            {
+                "animeName": "My Adventures with Superman",
+                "numberOfEpisodes": "20"
+            },
+            { "animeName": "Ys 1 & 2", "numberOfEpisodes": "11" },
+            { "animeName": "Creature Commandos", "numberOfEpisodes": "7" },
+            {
+                "animeName": "Avatar: TLA (Live Action)",
+                "numberOfEpisodes": "8"
+            },
+            { "animeName": "Shangri-La Frontier", "numberOfEpisodes": "50" },
+            {
+                "animeName": "Steven Universe + Movie + Future",
+                "numberOfEpisodes": "180"
+            },
+            { "animeName": "Starfire TV Series", "numberOfEpisodes": "TBD" },
+            { "animeName": "Dandadan", "numberOfEpisodes": "12" },
+            {
+                "animeName": "Kirakira Pretty Cure A La Mode",
+                "numberOfEpisodes": "49"
+            },
+            { "animeName": "To Be Hero", "numberOfEpisodes": "12" },
+            { "animeName": "To Be Heroine", "numberOfEpisodes": "7" },
+            { "animeName": "To Be Hero X", "numberOfEpisodes": "TBD" },
+            { "animeName": "Gargoyles", "numberOfEpisodes": "78" },
+            { "animeName": "The Dragon Prince", "numberOfEpisodes": "63" },
+            { "animeName": "Metallic Rouge", "numberOfEpisodes": "13" }
+        ],
+        "alreadyWatched": [
+            { "animeName": "Scott Pilgrim Takes Off" },
+            { "animeName": "Assassination Classroom" },
+            { "animeName": "JoJo Part 1/2" },
+            { "animeName": "JoJo Part 3" },
+            { "animeName": "Fallout TV Series" },
+            { "animeName": "The Owl House" },
+            { "animeName": "The Apothecary Diaries" },
+            { "animeName": "Gurren Lagann" },
+            { "animeName": "Spy X Family" },
+            { "animeName": "Brand New Animal" },
+            { "animeName": "Harley Quinn (Season 1 & 2)" },
+            { "animeName": "Zoids Chaotic Century" },
+            { "animeName": "JoJo Part 4" },
+            { "animeName": "Delicious in Dungeon (Season 1)" },
+            { "animeName": "Harley Quinn (Season 3 & 4)" },
+            { "animeName": "Suicide Squad: ISEKAI" },
+            { "animeName": "Restaurant to Another World" },
+            { "animeName": "Secret Level" },
+            { "animeName": "Vox Machina" },
+            { "animeName": "Arcane" },
+            { "animeName": "JoJo Part 5" },
+            { "animeName": "Mecha-Ude: Mechanical Arms" },
+            { "animeName": "JoJo Part 6" },
+            { "animeName": "Frieren: Beyond Journey's End" },
+            { "animeName": "X-Men '97 (Season 1)" },
+            { "animeName": "X-Men Evolution" },
+            { "animeName": "Flip Flappers" },
+            { "animeName": "Overlord" },
+            { "animeName": "BanG! Dream Ave Mujica" },
+            { "animeName": "Girls Band Cry" },
+            { "animeName": "The Apothecary Diaries Season 2" },
+            { "animeName": "DCAU (Batman TAS Part 1)" },
+            { "animeName": "Persona 4" },
+            { "animeName": "DCAU (Superman TAS Part 1)" },
+            { "animeName": "Persona 5" },
+            { "animeName": "DCAU (Batman TAS Part 2)" },
+            { "animeName": "DCAU (Superman TAS Part 2)" },
+            { "animeName": "The Harley Quinn Show" },
+            { "animeName": "Kite Man: Hell Yeah!" },
+            { "animeName": "BanG Dream! It's MyGO!!!!!" },
+            { "animeName": "DCAU (Batman Beyond)" },
+            { "animeName": "Tales of the Abyss" },
+            { "animeName": "Little Witch Academia" },
+            { "animeName": "The Mighty Nein (Season 1)" }
+        ],
+        "backBurner": [
+            { "animeName": "Beastars" },
+            { "animeName": "Nature Documentaries" },
+            { "animeName": "Godzilla (Season 2)" },
+            { "animeName": "Twin Star Exorcists" },
+            { "animeName": "Re:Zero" },
+            { "animeName": "Yu Yu Hakusho" },
+            { "animeName": "So I'm a Spider, So What?" },
+            { "animeName": "Durarara!!" },
+            { "animeName": "That Time I Got Reincarnated as a Slime" },
+            { "animeName": "The Queen's Gambit" },
+            { "animeName": "Chainsaw Man" },
+            { "animeName": "My Hero Academia" },
+            { "animeName": "One Punch Man" },
+            { "animeName": "Danny Phantom" },
+            { "animeName": "Mashle: Magic and Muscles" },
+            { "animeName": "Katanagatari" },
+            { "animeName": "Wednesday" },
+            { "animeName": "Cyberpunk: Edgerunners" },
+            { "animeName": "Star Wars: Visions" },
+            { "animeName": "Zoids: Fuzors" },
+            { "animeName": "Zoids: Genesis" },
+            { "animeName": "Dragon Ball" }
+        ]
+    },
+    {
+        "category": "Movies",
+        "upNext": [
+            { "movieName": "The Parent Trap" },
+            { "movieName": "Transformers: Bumblebee (2018)" },
+            { "movieName": "Soul" }
+        ],
+        "upcomming": [
+            { "movieName": "Godzilla Movies" },
+            { "movieName": "The Great Yokai War" },
+            { "movieName": "Great Wall" },
+            { "movieName": "What We Do in the Shadows" },
+            { "movieName": "Galaxy Quest" },
+            { "movieName": "Lucca" },
+            { "movieName": "Shazam" },
+            { "movieName": "Kung Fu Panda 3" },
+            { "movieName": "Sinbad: Legend of the Seven Seas" },
+            { "movieName": "ParaNorman" },
+            { "movieName": "Transformers: Rise of the Beasts" },
+            { "movieName": "All You Need is Kill" },
+            { "movieName": "The Lord of the Rings: The War of the Rohirrim" },
+            { "movieName": "Weathering with You" },
+            { "movieName": "The Boy and the Heron" },
+            { "movieName": "The Colors Within" },
+            { "movieName": "Suzume" },
+            { "movieName": "Dragon Quest: Your Story" },
+            { "movieName": "5 Centimeters per Second" },
+            { "movieName": "Satellite Girl and Milk Cow" },
+            { "movieName": "The Mummy" },
+            { "movieName": "Mad Max: Fury Road" },
+            { "movieName": "Werewolf by Night" },
+            { "movieName": "Ever After" },
+            { "movieName": "Peter Pan" },
+            { "movieName": "Pan's Labyrinth" },
+            { "movieName": "Hellboy" },
+            { "movieName": "Pacific Rim" },
+            { "movieName": "Onward" },
+            { "movieName": "The Matrix" },
+            { "movieName": "Wicked" },
+            { "movieName": "Wicked: For Good" }
+        ],
+        "alreadyWatched": [
+            { "movieName": "Godzilla (2014)" },
+            { "movieName": "Kong: Skull Island" },
+            { "movieName": "Wolf Children" },
+            { "movieName": "Puss in Boots: The Last Wish" },
+            { "movieName": "Promare" },
+            { "movieName": "Coco" },
+            { "movieName": "Godzilla Minus One" },
+            { "movieName": "The Bad Guys" },
+            { "movieName": "One Piece Film: Red" },
+            { "movieName": "The Suicide Squad" },
+            { "movieName": "Godzilla (1954)" },
+            { "movieName": "Birds of Prey" },
+            { "movieName": "Spy X Family Code: White" },
+            { "movieName": "Godzilla Mothra Introduction" },
+            { "movieName": "Inside Out" },
+            { "movieName": "The Transformers: The Movie (1986)" },
+            { "movieName": "The Boy and the Beast" },
+            { "movieName": "Flow" },
+            { "movieName": "Speed Racer (Live Action)" },
+            { "movieName": "Justice League vs. the Fatal Five" },
+            { "movieName": "Kung Fu Panda 2" },
+            { "movieName": "You Are Umasou" },
+            { "movieName": "Inside Out 2" },
+            { "movieName": "The Lego Batman Movie" },
+            { "movieName": "Overlord Movie 3" },
+            { "movieName": "Elemental" },
+            { "movieName": "K-pop Demon Slayers" },
+            { "movieName": "Persona 3 Movies 1-4" },
+            { "movieName": "Wonder Woman" },
+            { "movieName": "The Bad Guys 2" },
+            { "movieName": "Pride and Prejudice and Zombies" },
+            { "movieName": "Ride Your Wave" },
+            { "movieName": "Dungeons & Dragons: Honor Among Thieves" }
+        ],
+        "backBurner": [
+            { "movieName": "Alien Movies" },
+            { "movieName": "Predator Movies" }
+        ]
+    }
+]
