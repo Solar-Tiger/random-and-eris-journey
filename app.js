@@ -13,9 +13,8 @@ function sortDirectoryFirst(fileArr, currentPath) {
             }
 
             return -1 - 1;
-        } else {
-            return 1 - 1;
         }
+        return 1 - 1;
     });
 
     return sortedFiles;
@@ -75,14 +74,14 @@ function findFile(arr, currentPath) {
 
 function createJSONObject(myPath) {
     // Sorts array directory first
-    let sortedFiles = sortDirectoryFirst(fs.readdirSync(myPath), myPath);
+    const sortedFiles = sortDirectoryFirst(fs.readdirSync(myPath), myPath);
 
     // Create base file name
-    let baseFileName = path.basename(myPath);
+    const baseFileName = path.basename(myPath);
 
     // Create an array and object to store final results
-    let myDirectory = {};
-    let myFiles = [];
+    const myDirectory = {};
+    const myFiles = [];
 
     for (const items of sortedFiles) {
         if (fs.statSync(path.join(myPath, items)).isDirectory()) {
@@ -95,9 +94,9 @@ function createJSONObject(myPath) {
     }
 
     if (sortedFiles.length >= 0) {
-        myDirectory['directory'] = baseFileName;
+        myDirectory.directory = baseFileName;
 
-        myDirectory['children'] = myFiles;
+        myDirectory.children = myFiles;
     }
 
     return myDirectory;
@@ -200,18 +199,16 @@ function listAllItems(objs) {
 function factorial(num, numContainer = [], originalNum = num) {
     if (num === 1) {
         return num;
-    } else {
-        let multipliedNumber =
-            num * factorial(num - 1, numContainer, originalNum);
-
-        numContainer.push(multipliedNumber);
-
-        if (num === originalNum) {
-            return numContainer;
-        } else {
-            return multipliedNumber;
-        }
     }
+    const multipliedNumber =
+        num * factorial(num - 1, numContainer, originalNum);
+
+    numContainer.push(multipliedNumber);
+
+    if (num === originalNum) {
+        return numContainer;
+    }
+    return multipliedNumber;
 }
 
 // console.log(factorial(5));
@@ -233,7 +230,7 @@ function factorialTwo(num, myArr = []) {
 // console.log(factorialTwo(4));
 
 function fact(num) {
-    let myArr = [];
+    const myArr = [];
 
     function doTheFact(num) {
         if (num === 1) {
@@ -242,7 +239,7 @@ function fact(num) {
             return num;
         }
 
-        let multipliedNumber = num * doTheFact(num - 1);
+        const multipliedNumber = num * doTheFact(num - 1);
 
         myArr.push(multipliedNumber);
 
@@ -257,9 +254,9 @@ function fact(num) {
 // console.log(fact(4));
 
 function hasDuplicateValue(array) {
-    var existingNumbers = [];
+    const existingNumbers = [];
 
-    for (var i = 0; i < array.length; i++) {
+    for (let i = 0; i < array.length; i++) {
         // 1.) Check if the item at the "Index" position of existingNumbers exist at existingNumbers[array[i]]
 
         // 2.) At this point, it's accessing existingNumbers Index, which is the first element in "array" that would be accessed at array[i]
@@ -283,10 +280,10 @@ function hasDuplicateValue(array) {
 // console.log(hasDuplicateValue([1, 2, 3, 10]));
 
 function twoNums() {
-    let numOne = 7;
-    let numTwo = 10;
+    const numOne = 7;
+    const numTwo = 10;
 
-    let multiplier = 5000;
+    const multiplier = 5000;
 
     console.log(7 * multiplier);
     console.log(10 * multiplier);
@@ -294,23 +291,23 @@ function twoNums() {
 
 // twoNums();
 
-var set = {};
+const set = {};
 
 // Let’s add a few values to the set:
-set['apple'] = 1;
-set['banana'] = 1;
-set['cucumber'] = 1;
+set.apple = 1;
+set.banana = 1;
+set.cucumber = 1;
 
 // console.log(set);
 
-set['banana'] = 1;
+set.banana = 1;
 
 // console.log(set);
 
 // Same as above function, hasDuplicateValue, but works with strings as well thanks to the Object {} in place of an Array []
 function hasDuplicateValueAny(array) {
-    var existingValues = {};
-    for (var i = 0; i < array.length; i++) {
+    const existingValues = {};
+    for (let i = 0; i < array.length; i++) {
         if (existingValues[array[i]] === undefined) {
             console.log(existingValues);
 
@@ -322,7 +319,7 @@ function hasDuplicateValueAny(array) {
     return false;
 }
 
-let numAndStringArr = [1, 2, 'cat', 3, 4, 'dog', 5, 1];
+const numAndStringArr = [1, 2, 'cat', 3, 4, 'dog', 5, 1];
 
 // console.log(hasDuplicateValueAny(numAndStringArr));
 
@@ -332,7 +329,6 @@ function blah(num) {
     if (num <= 9001) {
         blah(num);
     } else {
-        return;
     }
 }
 

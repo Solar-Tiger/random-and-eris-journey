@@ -1,0 +1,866 @@
+[
+    {
+        "category": "Anime/TV Shows",
+        "currentlyWatching": [
+            {
+                "animeName": "Fairy Tail",
+                "animeImage": "https://cdn.myanimelist.net/images/anime/3/60551.jpg",
+                "animeGenre": "Action, Adventure, Fantasy",
+                "numberOfEpisodes": "328",
+                "animeLink": "https://myanimelist.net/anime/22043/Fairy_Tail_2014"
+            },
+            {
+                "animeName": "Justice League",
+                "animeImage": "https://static.wikia.nocookie.net/marvel_dc/images/9/95/Justice_League_TV_Series.jpg",
+                "animeGenre": "Action, Adventure, Sci-Fi",
+                "numberOfEpisodes": "52",
+                "animeLink": "https://dc.fandom.com/wiki/Justice_League_(TV_Series)"
+            }
+        ],
+        "upNext": [
+            {
+                "animeName": "Trigun (Original)",
+                "animeImage": "",
+                "animeGenre": "Action, Adventure, Sci-Fi",
+                "numberOfEpisodes": "26",
+                "animeLink": ""
+            },
+            {
+                "animeName": "Trigun Stampede",
+                "animeImage": "",
+                "animeGenre": "Action, Adventure, Sci-Fi",
+                "numberOfEpisodes": "12",
+                "animeLink": ""
+            },
+            {
+                "animeName": "NieR:Automata Ver1.1a",
+                "animeImage": "",
+                "animeGenre": "Action, Fantasy, Sci-Fi",
+                "numberOfEpisodes": "24",
+                "animeLink": ""
+            }
+        ],
+        "upcomming": [
+            {
+                "animeName": "Madoka Magica",
+                "animeImage": "",
+                "animeGenre": "Drama, Mahou Shoujo, Suspense",
+                "numberOfEpisodes": "12",
+                "animeLink": ""
+            },
+            {
+                "animeName": "Demon Slayer",
+                "animeImage": "",
+                "animeGenre": "Action, Fantasy",
+                "numberOfEpisodes": "63",
+                "animeLink": ""
+            },
+            {
+                "animeName": "Godzilla Singular Point",
+                "animeImage": "",
+                "animeGenre": "Sci-Fi, Mystery",
+                "numberOfEpisodes": "13",
+                "animeLink": ""
+            },
+            {
+                "animeName": "Steins;Gate (incl. 0)",
+                "animeImage": "",
+                "animeGenre": "Drama, Sci-Fi, Suspense",
+                "numberOfEpisodes": "49",
+                "animeLink": ""
+            },
+            {
+                "animeName": "Asura Cryin'",
+                "animeImage": "",
+                "animeGenre": "Action, Sci-Fi, Supernatural",
+                "numberOfEpisodes": "26",
+                "animeLink": ""
+            },
+            {
+                "animeName": "A Certain Scientific Railgun",
+                "animeImage": "",
+                "animeGenre": "Action, Sci-Fi",
+                "numberOfEpisodes": "73",
+                "animeLink": ""
+            },
+            {
+                "animeName": "Tiger and Bunny",
+                "animeImage": "",
+                "animeGenre": "Action, Mystery, Sci-Fi",
+                "numberOfEpisodes": "50",
+                "animeLink": ""
+            },
+            {
+                "animeName": "She-Ra and the Princesses of Power",
+                "animeImage": "",
+                "animeGenre": "Action, Adventure, Fantasy",
+                "numberOfEpisodes": "52",
+                "animeLink": ""
+            },
+            {
+                "animeName": "Bleach (Original + TYBW)",
+                "animeImage": "",
+                "animeGenre": "Action, Adventure, Fantasy",
+                "numberOfEpisodes": "406",
+                "animeLink": ""
+            },
+            {
+                "animeName": "The Wrong Way to Use Healing Magic",
+                "animeImage": "",
+                "animeGenre": "Action, Fantasy",
+                "numberOfEpisodes": "13",
+                "animeLink": ""
+            },
+            {
+                "animeName": "Gamera: Rebirth",
+                "animeImage": "",
+                "animeGenre": "Action, Sci-Fi",
+                "numberOfEpisodes": "6",
+                "animeLink": ""
+            },
+            {
+                "animeName": "High Card",
+                "animeImage": "",
+                "animeGenre": "Action, Fantasy",
+                "numberOfEpisodes": "24",
+                "animeLink": ""
+            },
+            {
+                "animeName": "Gushing over Magical Girls",
+                "animeImage": "",
+                "animeGenre": "Comedy, Fantasy, Ecchi",
+                "numberOfEpisodes": "13",
+                "animeLink": ""
+            },
+            {
+                "animeName": "One Piece (Live Action)",
+                "animeImage": "",
+                "animeGenre": "Action, Adventure, Fantasy",
+                "numberOfEpisodes": "8",
+                "animeLink": ""
+            },
+            {
+                "animeName": "Digimon Adventure 01",
+                "animeImage": "",
+                "animeGenre": "Action, Adventure, Fantasy",
+                "numberOfEpisodes": "54",
+                "animeLink": ""
+            },
+            {
+                "animeName": "Digimon Adventure 02",
+                "animeImage": "",
+                "animeGenre": "Action, Adventure, Fantasy",
+                "numberOfEpisodes": "50",
+                "animeLink": ""
+            },
+            {
+                "animeName": "Digimon Tamers",
+                "animeImage": "",
+                "animeGenre": "Action, Adventure, Drama, Fantasy",
+                "numberOfEpisodes": "51",
+                "animeLink": ""
+            },
+            {
+                "animeName": "Digimon Frontier",
+                "animeImage": "",
+                "animeGenre": "Action, Adventure, Fantasy",
+                "numberOfEpisodes": "50",
+                "animeLink": ""
+            },
+            {
+                "animeName": "Bungo Stray Dogs",
+                "animeImage": "",
+                "animeGenre": "Action, Mystery, Supernatural",
+                "numberOfEpisodes": "61",
+                "animeLink": ""
+            },
+            {
+                "animeName": "Mario Bros Z",
+                "animeImage": "",
+                "animeGenre": "Action, Adventure",
+                "numberOfEpisodes": "8",
+                "animeLink": ""
+            },
+            {
+                "animeName": "A Certain Scientific Accelerator",
+                "animeImage": "",
+                "animeGenre": "Action, Sci-Fi",
+                "numberOfEpisodes": "12",
+                "animeLink": ""
+            },
+            {
+                "animeName": "Akame Ga Kill",
+                "animeImage": "",
+                "animeGenre": "Action, Fantasy",
+                "numberOfEpisodes": "24",
+                "animeLink": ""
+            },
+            {
+                "animeName": "Interspecies Reviewers",
+                "animeImage": "",
+                "animeGenre": "Comedy, Fantasy, Ecchi",
+                "numberOfEpisodes": "12",
+                "animeLink": ""
+            },
+            {
+                "animeName": "Star Wars: The Clone Wars",
+                "animeImage": "",
+                "animeGenre": "Action, Adventure, Sci-Fi",
+                "numberOfEpisodes": "133",
+                "animeLink": ""
+            },
+            {
+                "animeName": "My Adventures with Superman",
+                "animeImage": "",
+                "animeGenre": "Action, Adventure, Sci-Fi",
+                "numberOfEpisodes": "20",
+                "animeLink": ""
+            },
+            {
+                "animeName": "Ys 1 & 2",
+                "animeImage": "",
+                "animeGenre": "Action, Adventure, Fantasy",
+                "numberOfEpisodes": "11",
+                "animeLink": ""
+            },
+            {
+                "animeName": "Creature Commandos",
+                "animeImage": "",
+                "animeGenre": "Action, Adventure, Fantasy",
+                "numberOfEpisodes": "7",
+                "animeLink": ""
+            },
+            {
+                "animeName": "Avatar: TLA (Live Action)",
+                "animeImage": "",
+                "animeGenre": "Action, Adventure, Fantasy",
+                "numberOfEpisodes": "8",
+                "animeLink": ""
+            },
+            {
+                "animeName": "Shangri-La Frontier",
+                "animeImage": "",
+                "animeGenre": "Action, Adventure, Fantasy",
+                "numberOfEpisodes": "50",
+                "animeLink": ""
+            },
+            {
+                "animeName": "Steven Universe + Movie + Future",
+                "animeImage": "",
+                "animeGenre": "Action, Adventure, Fantasy, Sci-Fi",
+                "numberOfEpisodes": "180",
+                "animeLink": ""
+            },
+            {
+                "animeName": "Starfire TV Series",
+                "animeImage": "",
+                "animeGenre": "Action, Adventure, Sci-Fi",
+                "numberOfEpisodes": "TBD",
+                "animeLink": ""
+            },
+            {
+                "animeName": "Dandadan",
+                "animeImage": "",
+                "animeGenre": "Action, Comedy, Sci-Fi, Supernatural",
+                "numberOfEpisodes": "12",
+                "animeLink": ""
+            },
+            {
+                "animeName": "Kirakira Pretty Cure A La Mode",
+                "animeImage": "",
+                "animeGenre": "Action, Fantasy, Mahou Shoujo",
+                "numberOfEpisodes": "49",
+                "animeLink": ""
+            },
+            {
+                "animeName": "To Be Hero",
+                "animeImage": "",
+                "animeGenre": "Comedy, Supernatural",
+                "numberOfEpisodes": "12",
+                "animeLink": ""
+            },
+            {
+                "animeName": "To Be Heroine",
+                "animeImage": "",
+                "animeGenre": "Comedy, Supernatural",
+                "numberOfEpisodes": "7",
+                "animeLink": ""
+            },
+            {
+                "animeName": "To Be Hero X",
+                "animeImage": "",
+                "animeGenre": "Action, Comedy, Supernatural",
+                "numberOfEpisodes": "TBD",
+                "animeLink": ""
+            },
+            {
+                "animeName": "Gargoyles",
+                "animeImage": "",
+                "animeGenre": "Action, Adventure, Fantasy",
+                "numberOfEpisodes": "78",
+                "animeLink": ""
+            },
+            {
+                "animeName": "The Dragon Prince",
+                "animeImage": "",
+                "animeGenre": "Action, Adventure, Fantasy",
+                "numberOfEpisodes": "63",
+                "animeLink": ""
+            },
+            {
+                "animeName": "Metallic Rouge",
+                "animeImage": "",
+                "animeGenre": "Action, Sci-Fi",
+                "numberOfEpisodes": "13",
+                "animeLink": ""
+            }
+        ],
+        "alreadyWatched": [
+            {
+                "animeName": "Scott Pilgrim Takes Off",
+                "animeImage": "",
+                "animeGenre": "Action, Adventure, Fantasy",
+                "numberOfEpisodes": "8",
+                "animeLink": ""
+            },
+            {
+                "animeName": "Assassination Classroom",
+                "animeImage": "",
+                "animeGenre": "Action, Comedy",
+                "numberOfEpisodes": "47",
+                "animeLink": ""
+            },
+            {
+                "animeName": "JoJo Part 1/2",
+                "animeImage": "",
+                "animeGenre": "Action, Adventure, Supernatural",
+                "numberOfEpisodes": "26",
+                "animeLink": ""
+            },
+            {
+                "animeName": "JoJo Part 3",
+                "animeImage": "",
+                "animeGenre": "Action, Adventure, Supernatural",
+                "numberOfEpisodes": "48",
+                "animeLink": ""
+            },
+            {
+                "animeName": "Fallout TV Series",
+                "animeImage": "",
+                "animeGenre": "Action, Adventure, Sci-Fi",
+                "numberOfEpisodes": "8",
+                "animeLink": ""
+            },
+            {
+                "animeName": "The Owl House",
+                "animeImage": "",
+                "animeGenre": "Adventure, Comedy, Fantasy",
+                "numberOfEpisodes": "43",
+                "animeLink": ""
+            },
+            {
+                "animeName": "The Apothecary Diaries",
+                "animeImage": "",
+                "animeGenre": "Drama, Mystery, Medical",
+                "numberOfEpisodes": "24",
+                "animeLink": ""
+            },
+            {
+                "animeName": "Gurren Lagann",
+                "animeImage": "",
+                "animeGenre": "Action, Adventure, Sci-Fi",
+                "numberOfEpisodes": "27",
+                "animeLink": ""
+            },
+            {
+                "animeName": "Spy X Family",
+                "animeImage": "",
+                "animeGenre": "Action, Comedy",
+                "numberOfEpisodes": "37",
+                "animeLink": ""
+            },
+            {
+                "animeName": "Brand New Animal",
+                "animeImage": "",
+                "animeGenre": "Action, Fantasy, Sci-Fi",
+                "numberOfEpisodes": "12",
+                "animeLink": ""
+            },
+            {
+                "animeName": "Harley Quinn (Season 1 & 2)",
+                "animeImage": "",
+                "animeGenre": "Action, Comedy, Crime",
+                "numberOfEpisodes": "26",
+                "animeLink": ""
+            },
+            {
+                "animeName": "Zoids Chaotic Century",
+                "animeImage": "",
+                "animeGenre": "Action, Adventure, Sci-Fi",
+                "numberOfEpisodes": "67",
+                "animeLink": ""
+            },
+            {
+                "animeName": "JoJo Part 4",
+                "animeImage": "",
+                "animeGenre": "Action, Adventure, Supernatural",
+                "numberOfEpisodes": "39",
+                "animeLink": ""
+            },
+            {
+                "animeName": "Delicious in Dungeon (Season 1)",
+                "animeImage": "",
+                "animeGenre": "Adventure, Comedy, Fantasy",
+                "numberOfEpisodes": "24",
+                "animeLink": ""
+            },
+            {
+                "animeName": "Harley Quinn (Season 3 & 4)",
+                "animeImage": "",
+                "animeGenre": "Action, Comedy, Crime",
+                "numberOfEpisodes": "20",
+                "animeLink": ""
+            },
+            {
+                "animeName": "Suicide Squad: ISEKAI",
+                "animeImage": "",
+                "animeGenre": "Action, Fantasy",
+                "numberOfEpisodes": "10",
+                "animeLink": ""
+            },
+            {
+                "animeName": "Restaurant to Another World",
+                "animeImage": "",
+                "animeGenre": "Fantasy, Gourmet",
+                "numberOfEpisodes": "24",
+                "animeLink": ""
+            },
+            {
+                "animeName": "Secret Level",
+                "animeImage": "",
+                "animeGenre": "Sci-Fi, Fantasy",
+                "numberOfEpisodes": "15",
+                "animeLink": ""
+            },
+            {
+                "animeName": "Vox Machina",
+                "animeImage": "",
+                "animeGenre": "Action, Adventure, Fantasy",
+                "numberOfEpisodes": "36",
+                "animeLink": ""
+            },
+            {
+                "animeName": "Arcane",
+                "animeImage": "",
+                "animeGenre": "Action, Adventure, Fantasy, Sci-Fi",
+                "numberOfEpisodes": "18",
+                "animeLink": ""
+            },
+            {
+                "animeName": "JoJo Part 5",
+                "animeImage": "",
+                "animeGenre": "Action, Adventure, Supernatural",
+                "numberOfEpisodes": "39",
+                "animeLink": ""
+            },
+            {
+                "animeName": "Mecha-Ude: Mechanical Arms",
+                "animeImage": "",
+                "animeGenre": "Action, Sci-Fi",
+                "numberOfEpisodes": "12",
+                "animeLink": ""
+            },
+            {
+                "animeName": "JoJo Part 6",
+                "animeImage": "",
+                "animeGenre": "Action, Adventure, Supernatural",
+                "numberOfEpisodes": "38",
+                "animeLink": ""
+            },
+            {
+                "animeName": "Frieren: Beyond Journey's End",
+                "animeImage": "",
+                "animeGenre": "Adventure, Drama, Fantasy",
+                "numberOfEpisodes": "28",
+                "animeLink": ""
+            },
+            {
+                "animeName": "X-Men '97 (Season 1)",
+                "animeImage": "",
+                "animeGenre": "Action, Adventure, Sci-Fi",
+                "numberOfEpisodes": "10",
+                "animeLink": ""
+            },
+            {
+                "animeName": "X-Men Evolution",
+                "animeImage": "",
+                "animeGenre": "Action, Adventure, Sci-Fi",
+                "numberOfEpisodes": "52",
+                "animeLink": ""
+            },
+            {
+                "animeName": "Flip Flappers",
+                "animeImage": "",
+                "animeGenre": "Action, Adventure, Sci-Fi, Mahou Shoujo",
+                "numberOfEpisodes": "13",
+                "animeLink": ""
+            },
+            {
+                "animeName": "Overlord",
+                "animeImage": "",
+                "animeGenre": "Action, Adventure, Fantasy",
+                "numberOfEpisodes": "52",
+                "animeLink": ""
+            },
+            {
+                "animeName": "BanG! Dream Ave Mujica",
+                "animeImage": "",
+                "animeGenre": "Music",
+                "numberOfEpisodes": "13",
+                "animeLink": ""
+            },
+            {
+                "animeName": "Girls Band Cry",
+                "animeImage": "",
+                "animeGenre": "Drama, Music",
+                "numberOfEpisodes": "13",
+                "animeLink": ""
+            },
+            {
+                "animeName": "The Apothecary Diaries Season 2",
+                "animeImage": "",
+                "animeGenre": "Drama, Mystery, Medical",
+                "numberOfEpisodes": "24",
+                "animeLink": ""
+            },
+            {
+                "animeName": "DCAU (Batman TAS Part 1)",
+                "animeImage": "",
+                "animeGenre": "Action, Adventure, Sci-Fi",
+                "numberOfEpisodes": "28",
+                "animeLink": ""
+            },
+            {
+                "animeName": "Persona 4",
+                "animeImage": "",
+                "animeGenre": "Mystery, Supernatural, Fantasy",
+                "numberOfEpisodes": "26",
+                "animeLink": ""
+            },
+            {
+                "animeName": "DCAU (Superman TAS Part 1)",
+                "animeImage": "",
+                "animeGenre": "Action, Adventure, Sci-Fi",
+                "numberOfEpisodes": "13",
+                "animeLink": ""
+            },
+            {
+                "animeName": "Persona 5",
+                "animeImage": "",
+                "animeGenre": "Mystery, Supernatural, Fantasy",
+                "numberOfEpisodes": "26",
+                "animeLink": ""
+            },
+            {
+                "animeName": "DCAU (Batman TAS Part 2)",
+                "animeImage": "",
+                "animeGenre": "Action, Adventure, Sci-Fi",
+                "numberOfEpisodes": "28",
+                "animeLink": ""
+            },
+            {
+                "animeName": "DCAU (Superman TAS Part 2)",
+                "animeImage": "",
+                "animeGenre": "Action, Adventure, Sci-Fi",
+                "numberOfEpisodes": "28",
+                "animeLink": ""
+            },
+            {
+                "animeName": "The Harley Quinn Show",
+                "animeImage": "",
+                "animeGenre": "Action, Comedy, Crime",
+                "numberOfEpisodes": "47",
+                "animeLink": ""
+            },
+            {
+                "animeName": "Kite Man: Hell Yeah!",
+                "animeImage": "",
+                "animeGenre": "Action, Comedy",
+                "numberOfEpisodes": "10",
+                "animeLink": ""
+            },
+            {
+                "animeName": "BanG Dream! It's MyGO!!!!!",
+                "animeImage": "",
+                "animeGenre": "Music",
+                "numberOfEpisodes": "13",
+                "animeLink": ""
+            },
+            {
+                "animeName": "DCAU (Batman Beyond)",
+                "animeImage": "",
+                "animeGenre": "Action, Adventure, Sci-Fi",
+                "numberOfEpisodes": "52",
+                "animeLink": ""
+            },
+            {
+                "animeName": "Tales of the Abyss",
+                "animeImage": "",
+                "animeGenre": "Action, Adventure, Fantasy",
+                "numberOfEpisodes": "26",
+                "animeLink": ""
+            },
+            {
+                "animeName": "Little Witch Academia",
+                "animeImage": "",
+                "animeGenre": "Adventure, Comedy, Fantasy",
+                "numberOfEpisodes": "25",
+                "animeLink": ""
+            },
+            {
+                "animeName": "The Mighty Nein (Season 1)",
+                "animeImage": "",
+                "animeGenre": "Action, Adventure, Fantasy",
+                "numberOfEpisodes": "12",
+                "animeLink": ""
+            }
+        ],
+        "backBurner": [
+            {
+                "animeName": "Beastars",
+                "animeImage": "",
+                "animeGenre": "Drama, Psychological",
+                "numberOfEpisodes": "48",
+                "animeLink": ""
+            },
+            {
+                "animeName": "Nature Documentaries",
+                "animeImage": "",
+                "animeGenre": "Documentary",
+                "numberOfEpisodes": "Varies",
+                "animeLink": ""
+            },
+            {
+                "animeName": "Godzilla (Season 2)",
+                "animeImage": "",
+                "animeGenre": "Sci-Fi",
+                "numberOfEpisodes": "13",
+                "animeLink": ""
+            },
+            {
+                "animeName": "Twin Star Exorcists",
+                "animeImage": "",
+                "animeGenre": "Action, Fantasy, Supernatural",
+                "numberOfEpisodes": "50",
+                "animeLink": ""
+            },
+            {
+                "animeName": "Re:Zero",
+                "animeImage": "",
+                "animeGenre": "Drama, Fantasy, Suspense",
+                "numberOfEpisodes": "63",
+                "animeLink": ""
+            },
+            {
+                "animeName": "Yu Yu Hakusho",
+                "animeImage": "",
+                "animeGenre": "Action, Supernatural",
+                "numberOfEpisodes": "112",
+                "animeLink": ""
+            },
+            {
+                "animeName": "So I'm a Spider, So What?",
+                "animeImage": "",
+                "animeGenre": "Action, Adventure, Fantasy",
+                "numberOfEpisodes": "24",
+                "animeLink": ""
+            },
+            {
+                "animeName": "Durarara!!",
+                "animeImage": "",
+                "animeGenre": "Action, Mystery, Supernatural",
+                "numberOfEpisodes": "60",
+                "animeLink": ""
+            },
+            {
+                "animeName": "That Time I Got Reincarnated as a Slime",
+                "animeImage": "",
+                "animeGenre": "Action, Adventure, Fantasy",
+                "numberOfEpisodes": "72",
+                "animeLink": ""
+            },
+            {
+                "animeName": "The Queen's Gambit",
+                "animeImage": "",
+                "animeGenre": "Drama",
+                "numberOfEpisodes": "7",
+                "animeLink": ""
+            },
+            {
+                "animeName": "Chainsaw Man",
+                "animeImage": "",
+                "animeGenre": "Action, Supernatural",
+                "numberOfEpisodes": "12",
+                "animeLink": ""
+            },
+            {
+                "animeName": "My Hero Academia",
+                "animeImage": "",
+                "animeGenre": "Action",
+                "numberOfEpisodes": "159",
+                "animeLink": ""
+            },
+            {
+                "animeName": "One Punch Man",
+                "animeImage": "",
+                "animeGenre": "Action, Comedy",
+                "numberOfEpisodes": "24",
+                "animeLink": ""
+            },
+            {
+                "animeName": "Danny Phantom",
+                "animeImage": "",
+                "animeGenre": "Action, Adventure, Comedy",
+                "numberOfEpisodes": "53",
+                "animeLink": ""
+            },
+            {
+                "animeName": "Mashle: Magic and Muscles",
+                "animeImage": "",
+                "animeGenre": "Action, Comedy, Fantasy",
+                "numberOfEpisodes": "24",
+                "animeLink": ""
+            },
+            {
+                "animeName": "Katanagatari",
+                "animeImage": "",
+                "animeGenre": "Action, Adventure, Romance",
+                "numberOfEpisodes": "12",
+                "animeLink": ""
+            },
+            {
+                "animeName": "Wednesday",
+                "animeImage": "",
+                "animeGenre": "Comedy, Fantasy, Mystery",
+                "numberOfEpisodes": "16",
+                "animeLink": ""
+            },
+            {
+                "animeName": "Cyberpunk: Edgerunners",
+                "animeImage": "",
+                "animeGenre": "Action, Sci-Fi",
+                "numberOfEpisodes": "10",
+                "animeLink": ""
+            },
+            {
+                "animeName": "Star Wars: Visions",
+                "animeImage": "",
+                "animeGenre": "Action, Sci-Fi",
+                "numberOfEpisodes": "18",
+                "animeLink": ""
+            },
+            {
+                "animeName": "Zoids: Fuzors",
+                "animeImage": "",
+                "animeGenre": "Action, Adventure, Sci-Fi",
+                "numberOfEpisodes": "26",
+                "animeLink": ""
+            },
+            {
+                "animeName": "Zoids: Genesis",
+                "animeImage": "",
+                "animeGenre": "Action, Adventure, Sci-Fi",
+                "numberOfEpisodes": "50",
+                "animeLink": ""
+            },
+            {
+                "animeName": "Dragon Ball",
+                "animeImage": "",
+                "animeGenre": "Action, Adventure, Comedy, Fantasy",
+                "numberOfEpisodes": "153",
+                "animeLink": ""
+            }
+        ]
+    },
+    {
+        "category": "Movies",
+        "upNext": [
+            { "movieName": "The Parent Trap" },
+            { "movieName": "Transformers: Bumblebee (2018)" },
+            { "movieName": "Soul" }
+        ],
+        "upcomming": [
+            { "movieName": "Godzilla Movies" },
+            { "movieName": "The Great Yokai War" },
+            { "movieName": "Great Wall" },
+            { "movieName": "What We Do in the Shadows" },
+            { "movieName": "Galaxy Quest" },
+            { "movieName": "Lucca" },
+            { "movieName": "Shazam" },
+            { "movieName": "Kung Fu Panda 3" },
+            { "movieName": "Sinbad: Legend of the Seven Seas" },
+            { "movieName": "ParaNorman" },
+            { "movieName": "Transformers: Rise of the Beasts" },
+            { "movieName": "All You Need is Kill" },
+            { "movieName": "The Lord of the Rings: The War of the Rohirrim" },
+            { "movieName": "Weathering with You" },
+            { "movieName": "The Boy and the Heron" },
+            { "movieName": "The Colors Within" },
+            { "movieName": "Suzume" },
+            { "movieName": "Dragon Quest: Your Story" },
+            { "movieName": "5 Centimeters per Second" },
+            { "movieName": "Satellite Girl and Milk Cow" },
+            { "movieName": "The Mummy" },
+            { "movieName": "Mad Max: Fury Road" },
+            { "movieName": "Werewolf by Night" },
+            { "movieName": "Ever After" },
+            { "movieName": "Peter Pan" },
+            { "movieName": "Pan's Labyrinth" },
+            { "movieName": "Hellboy" },
+            { "movieName": "Pacific Rim" },
+            { "movieName": "Onward" },
+            { "movieName": "The Matrix" },
+            { "movieName": "Wicked" },
+            { "movieName": "Wicked: For Good" }
+        ],
+        "alreadyWatched": [
+            { "movieName": "Godzilla (2014)" },
+            { "movieName": "Kong: Skull Island" },
+            { "movieName": "Wolf Children" },
+            { "movieName": "Puss in Boots: The Last Wish" },
+            { "movieName": "Promare" },
+            { "movieName": "Coco" },
+            { "movieName": "Godzilla Minus One" },
+            { "movieName": "The Bad Guys" },
+            { "movieName": "One Piece Film: Red" },
+            { "movieName": "The Suicide Squad" },
+            { "movieName": "Godzilla (1954)" },
+            { "movieName": "Birds of Prey" },
+            { "movieName": "Spy X Family Code: White" },
+            { "movieName": "Godzilla Mothra Introduction" },
+            { "movieName": "Inside Out" },
+            { "movieName": "The Transformers: The Movie (1986)" },
+            { "movieName": "The Boy and the Beast" },
+            { "movieName": "Flow" },
+            { "movieName": "Speed Racer (Live Action)" },
+            { "movieName": "Justice League vs. the Fatal Five" },
+            { "movieName": "Kung Fu Panda 2" },
+            { "movieName": "You Are Umasou" },
+            { "movieName": "Inside Out 2" },
+            { "movieName": "The Lego Batman Movie" },
+            { "movieName": "Overlord Movie 3" },
+            { "movieName": "Elemental" },
+            { "movieName": "K-pop Demon Slayers" },
+            { "movieName": "Persona 3 Movies 1-4" },
+            { "movieName": "Wonder Woman" },
+            { "movieName": "The Bad Guys 2" },
+            { "movieName": "Pride and Prejudice and Zombies" },
+            { "movieName": "Ride Your Wave" },
+            { "movieName": "Dungeons & Dragons: Honor Among Thieves" }
+        ],
+        "backBurner": [
+            { "movieName": "Alien Movies" },
+            { "movieName": "Predator Movies" }
+        ]
+    }
+]

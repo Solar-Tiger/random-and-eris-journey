@@ -43,10 +43,8 @@ async function createWatchlistCards() {
         animeCardTableHead.appendChild(animeCardTableHeadRow);
 
         // Create table body information
-        for (const data in watchlistData[0].currentlyWatching[i]) {
-            if (data === 'animeName' || data === 'animeImage') {
-                continue;
-            } else {
+        Object.keys(watchlistData[0].currentlyWatching[i]).forEach((data) => {
+            if (data !== 'animeName' && data !== 'animeImage') {
                 const animeCardBodyRow = document.createElement('tr');
                 const animeCardBodyTitle = document.createElement('th');
                 const animeCardBodyData = document.createElement('td');
@@ -61,26 +59,20 @@ async function createWatchlistCards() {
                         watchlistData[0].currentlyWatching[i][data];
 
                     animeCardBodyData.appendChild(animeCardBodyLink);
-                } else if (data !== 'animeName' && data !== 'animeImage') {
-                    if (data === 'animeGenre') {
-                        animeCardBodyTitle.textContent = 'Genre:';
-                    } else {
-                        animeCardBodyTitle.textContent = 'Episodes:';
-                    }
-
+                } else if (data === 'animeGenre') {
+                    animeCardBodyTitle.textContent = 'Genre:';
+                    animeCardBodyData.textContent =
+                        watchlistData[0].currentlyWatching[i][data];
+                } else {
+                    animeCardBodyTitle.textContent = 'Episodes:';
                     animeCardBodyData.textContent =
                         watchlistData[0].currentlyWatching[i][data];
                 }
 
-                animeCardTableBody.appendChild(animeCardBodyRow);
-
                 animeCardBodyRow.append(animeCardBodyTitle, animeCardBodyData);
-
-                animeCard.append(animeCardImage, animeCardTable);
-
-                watchlistAnimeListContainer.appendChild(animeCard);
+                animeCardTableBody.appendChild(animeCardBodyRow);
             }
-        }
+        });
     }
 
     watchlistSection.append(watchlistTitle, watchlistAnimeListContainer);

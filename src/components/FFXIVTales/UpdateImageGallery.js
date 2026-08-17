@@ -16,7 +16,7 @@ function updateImageGallery(directoryName, objs) {
 
     // Make sure it's an Object else do nothing with it
     else if (objs === Object(objs)) {
-        let ffxivTalesImageGalery = document.querySelector(
+        const ffxivTalesImageGalery = document.querySelector(
             '.ffxiv-tales-image-gallery'
         );
 

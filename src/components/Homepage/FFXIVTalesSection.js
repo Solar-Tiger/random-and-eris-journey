@@ -52,7 +52,7 @@ function updateFFXIVTalesContent(slideIndex) {
 }
 
 function changeDisplayedContent() {
-    let totalSlideLength = ourFFXIVTalesContent.length;
+    const totalSlideLength = ourFFXIVTalesContent.length;
 
     return {
         nextSlide: () => {

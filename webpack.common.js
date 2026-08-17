@@ -1,3 +1,4 @@
+/* eslint-disable n/no-unpublished-import */
 import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import CopyPlugin from 'copy-webpack-plugin';

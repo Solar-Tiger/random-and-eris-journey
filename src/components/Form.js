@@ -1,10 +1,10 @@
-import { newElement } from '../utils/createElement';
+import newElement from '../utils/createElement';
 
 export function newForm(method, action = '') {
-  const form = newElement('form');
+    const form = newElement('form');
 
-  form.method = method;
-  form.action = action;
+    form.method = method;
+    form.action = action;
 
-  return form;
+    return form;
 }

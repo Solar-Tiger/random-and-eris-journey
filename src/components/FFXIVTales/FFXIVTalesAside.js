@@ -4,6 +4,7 @@ async function getImageData() {
     const imageData = '../../data/ffxiv_tales.json';
 
     try {
+        // eslint-disable-next-line n/no-unsupported-features/node-builtins
         const response = await fetch(imageData);
 
         const result = await response.json();
@@ -11,9 +12,11 @@ async function getImageData() {
         return result;
     } catch (error) {
         console.error(error.message);
+        throw error;
     }
 }
 
+// eslint-disable-next-line no-unused-vars
 function listAllItems(objs) {
     // Check if the argument is an object
     if (objs === Object(objs) && !Array.isArray(objs)) {
@@ -26,9 +29,9 @@ function listAllItems(objs) {
             //     listAllItems(objs.children[i]);
             // }
 
-            for (const item of objs.children) {
+            objs.children.forEach((item) => {
                 listAllItems(item);
-            }
+            });
         }
         // else if (Array.isArray(objs.children)) {
         //     for (const file of objs.children) {
@@ -39,15 +42,15 @@ function listAllItems(objs) {
 }
 
 function capitalizeFirstLetterOfEachWord(word) {
-    let myCharacters = word.split('');
+    const myCharacters = word.split('');
 
-    let myNewCharacters = myCharacters.map((x) =>
+    const myNewCharacters = myCharacters.map((x) =>
         x === '_' || x === '-' ? ' ' : x
     );
 
-    let notCapitalizedWords = myNewCharacters.join('');
+    const notCapitalizedWords = myNewCharacters.join('');
 
-    let stillNotCapitalizedWords = notCapitalizedWords.split(' ');
+    const stillNotCapitalizedWords = notCapitalizedWords.split(' ');
 
     for (let i = 0; i < stillNotCapitalizedWords.length; i++) {
         if (
@@ -60,8 +63,6 @@ function capitalizeFirstLetterOfEachWord(word) {
             stillNotCapitalizedWords[i] =
                 stillNotCapitalizedWords[i][0].toUpperCase() +
                 stillNotCapitalizedWords[i].substring(1);
-        } else {
-            stillNotCapitalizedWords[i] === stillNotCapitalizedWords[i];
         }
     }
 
@@ -79,7 +80,7 @@ function createSidebarList(objs) {
         details.appendChild(summary);
         details.appendChild(innerUl);
 
-        let capitalizeDirectoryNames = capitalizeFirstLetterOfEachWord(
+        const capitalizeDirectoryNames = capitalizeFirstLetterOfEachWord(
             objs.directory
         );
 
@@ -97,11 +98,11 @@ function createSidebarList(objs) {
             summary.textContent = capitalizeDirectoryNames;
         }
 
-        for (const items of objs.children) {
+        objs.children.forEach((items) => {
             if (typeof items.children[0] === 'string') {
                 const lowestLi = document.createElement('li');
 
-                let capitalizeFileNames = capitalizeFirstLetterOfEachWord(
+                const capitalizeFileNames = capitalizeFirstLetterOfEachWord(
                     items.directory
                 );
 
@@ -122,7 +123,7 @@ function createSidebarList(objs) {
 
                 innerUl.appendChild(innerLi);
             }
-        }
+        });
     }
 
     return details;
@@ -138,9 +139,9 @@ async function getFFXIVTalesSidebar() {
 
     // Create: details, summary (directory name), ul, li and repeat
 
-    for (const sidebarItems in fetchImageData) {
-        aside.appendChild(createSidebarList(fetchImageData[sidebarItems]));
-    }
+    Object.values(fetchImageData).forEach((sidebarItem) => {
+        aside.appendChild(createSidebarList(sidebarItem));
+    });
 
     return aside;
 }
